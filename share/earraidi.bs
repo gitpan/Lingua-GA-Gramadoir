@@ -3,12 +3,14 @@ Abderus Aibdéireas
 Absolute Absalóid
 Abyssinia Aibisín
 Achaean Acaech
-Achilles Aichill,_Aicilléas
+Achilles Aichill
+Achilles Aicilléas
 Aden Áidin
 Admete Aidméité
-Adrianople Cathair_Aidriain
+Adrianople Cathair Aidriain
 Advent Aidbhint
 Aeacus Aecas
+Aeinéas Aenéas
 Aeneas Aenéas
 Aeneid Aeniad
 Aeolus Aeólas
@@ -21,6 +23,7 @@ Africa Afraic
 Afro-Asiatic Afra-Áisic
 Agamemnon Agaimeimneon
 Ahmose Amós
+Aine Áine
 Alaska Alasca
 Albania Albáin
 Albion Breatain
@@ -29,7 +32,7 @@ Alcmaeon Alcmaeón
 Alcmene Ailcméiné
 Alcoran Córan
 Algeria Ailgéir
-Algiers Cathair_na_hAilgéire
+Algiers Cathair na hAilgéire
 Alpheus Ailféis
 Alps Alpa
 Amazon Amasóin
@@ -41,16 +44,16 @@ Amos Amós
 Amosis Amósas
 Amsterdam Amstardam
 Amulius Amúileas
-Andersonstown Baile_Andarsan
+Andersonstown Baile Andarsan
 Andes Aindéis
 Andorra Andóra
 Andromeda Andraiméide
-Angelus Fáilte_an_Aingil
+Angelus Fáilte an Aingil
 Anglo-Irishman Gall-Ghael
 Anglophile Gallbhách
 Anglophone Béarlóir
 Angola Angóla
-Annunciation Teachtaireacht_an_Aingil
+Annunciation Teachtaireacht an Aingil
 Antaeus Antaes
 Antarctica Antartaice
 Anthesteria Antaistéiria
@@ -64,26 +67,32 @@ Antrim Aontroim
 Antwerp Antuairp
 Anubis Anúbas
 Aphrodite Afradaíté
-Apollo Apaill,_Apolló
+Apollo Apaill
+Apollo Apolló
 Apollonius Apallóinias
 Appenines Aipiníní
 April Aibreán
-Aquarius Iompróir_an_Uisce,_Uisceadóir
+Aquarius Iompróir an Uisce
+Aquarius Uisceadóir
 Aquila Iolar
 Arabia Araib
 Arabian Arabach
+Arainn Árainn
+Arann Árann
 Archimedes Airciméidéas
-Areopagus Cnoc_Airéis
-Ares Airéas,_Airéis
+Areopagus Cnoc Airéis
+Ares Airéas
+Ares Airéis
 Aretus Airéiteas
 Argentina Airgintín
-Argonaut Arganát,_Argónátach
+Argonaut Arganát
+Argonaut Argónátach
 Argos Argas
 Ariadne Airianna
 Aries Reithe
 Aristophanes Arastofainéas
 Aristotle Arastotail
-Armagh Ard_Mhacha
+Armagh Ard Mhacha
 Armenia Airméin
 Artemis Artaimís
 Asgard Ascar
@@ -94,14 +103,16 @@ Assyria Aisiria
 Astarte Astarta
 Astrakhan Astracán
 Atha Átha
-Athena Aitéiné,_Ataene
+Athena Aitéiné
+Athena Ataene
 Athene Aitéiné
 Athens Aithin
 Atlantis Atlantas
 Attica Aitice
 Audumla Ódamla
 Augean Áigéis
-Augeas Áigéas,_Áigéis
+Augeas Áigéas
+Augeas Áigéis
 August Lúnasa
 Augustus Águstas
 Aurelius Áiréilias
@@ -114,7 +125,7 @@ Autolycus Átailíceas
 Autonoe Átanae
 Avaris Avaras
 Azerbaijan Asarbaiseáin
-Azores Oileáin_Asóir
+Azores Oileáin Asóir
 Babel Báibil
 Babylon Bablóin
 Bacchus Bacas
@@ -123,7 +134,7 @@ Baghdad Bagdad
 Bahamas Bahámaí
 Bahrain Bairéin
 Balder Baldar
-Baleares Oileáin_Bhailéaracha
+Baleares Oileáin Bhailéaracha
 Balkans Balcáin
 Baluchistan Balúcastáin
 Bangkok Bancác
@@ -136,9 +147,10 @@ Batavia Batáiv
 Baugi Babhgaí
 Bavaria Baváir
 Bechuanaland Beachuanlainn
-Beijing Béising,_Péicing
+Beijing Béising
+Beijing Péicing
 Beirut Béarút
-Belfast Béal_Feirste
+Belfast Béal Feirste
 Belgium Beilg
 Belgrade Béalgrád
 Belisarius Beileasáirias
@@ -152,6 +164,7 @@ Bermuda Beirmiúdaí
 Bern Beirn
 Bethlehem Beithil
 Bhoston Bhostún
+Bhuirne Bhúirne
 Bhutan Bútáin
 Bible Bíobla
 Bistones Biostónaigh
@@ -184,6 +197,7 @@ Buddhist Búdaí
 Bulgaria Bulgáir
 Burgundy Burgúin
 Buri Búirí
+Burren Boirinn
 Burundi Burúin
 Buryatia Buiriáit
 Byblos Bíoblós
@@ -201,12 +215,12 @@ Canada Ceanada
 Canadian Ceanadach
 Cancer Portán
 Cancun Cancún
-Candlemas Lá_Fhéile_Muire_na_gCoinneal
+Candlemas Lá Fhéile Muire na gCoinneal
 Canterbury Cantarbaraí
 Cappadocia Chapadóic
 Capricorn Gabhar
 Cardiff Caerdydd
-Caribbean Muir_Chairib
+Caribbean Muir Chairib
 Carpathia Cairp
 Carthage Cartaig
 Cashmere Caismír
@@ -240,10 +254,12 @@ Christ Críost
 Christendom Críostaíocht
 Christianity Críostaíocht
 Christina Cristín
-Christmas Lá_Nollag,_Nollaig
+Christmas Lá Nollag
+Christmas Nollaig
 Christmastide Nollaig
 Chrommyum Cróimiam
 Chronos Cronas
+Chábháin Chabháin
 Cicero Cicearó
 Claith Cliath
 Cleito Cléató
@@ -253,23 +269,28 @@ Coke Cóc
 Colchis Coilcís
 Cologne Köln
 Colombia Colóim
-Columbine Choluimbín,_Coluimbín
+Columbine Choluimbín
+Columbine Coluimbín
 Columbkille Colmcille
-Columbus Cholambas,_Colambas
+Columbus Cholambas
+Columbus Colambas
 Commonwealth Comhlathas
 Communion Comaoin
-Comoros Oileáin_Chomóra,_Oileánrach_Chomóir
+Comoros Oileáin Chomóra
+Comoros Oileánrach Chomóir
 Comptroller Ard-Reachtaire
-Congo Congó,_Poblacht_an_Chongó
+Congo Congó
+Congo Poblacht an Chongó
 Connaught Connacht
 Connemara Conamara
-Constantine Chonstaintín,_Constaintín
+Constantine Chonstaintín
+Constantine Constaintín
 Constitution Bunreacht
 Copenhagen Cóbanhávan
 Corfu Corfú
 Corinth Coraint
 Cork Corcaigh
-Cornwall Corn_na_Breataine
+Cornwall Corn na Breataine
 Coroibus Coróbas
 Corsica Corsaic
 Cothon Cotón
@@ -277,15 +298,19 @@ Crete Créit
 Crimea Crimé
 Croatia Cróit
 Croesus Créasas
-Cromwell Chromail,_Cromail
+Cromwell Chromail
+Cromwell Cromail
 Crucifixion Céasadh
-Crusades Cogaí_na_Croise
+Crusades Cogaí na Croise
 Cuba Cúba
-Cuchulainn Chúchulainn,_Cúchulainn
+Cuchulainn Chúchulainn
+Cuchulainn Cúchulainn
+Cuiv Cuív
 Cupid Cúipid
 Curacao Curasao
 Cyclops Cioclóp
-Cygnus Cros_an_Tuaiscirt,_Eala
+Cygnus Cros an Tuaiscirt
+Cygnus Eala
 Cyprus Cipir
 Cyrus Cíoras
 Czech Seicis
@@ -301,10 +326,12 @@ Dane Danar
 Danube Danóib
 Dardanelles Dardainéil
 Darius Dáirias
-December Mí_na_Nollag,_Nollaig
+December Mí na Nollag
+December Nollaig
 Deianeira Déinéire
 Delhi Deilí
-Delphi Deilfe,_Dheilfe
+Delphi Deilfe
+Delphi Dheilfe
 Demeter Déiméatar
 Demosthenes Déamóstainéas
 Denmark Danmhairg
@@ -312,34 +339,49 @@ Devil Áibhirseoir
 Dido Díodó
 Dingle Daingean
 Diogenes Deoiginéas
-Dionysus Diníosas,_Diníseas
-Donegal Dún_na_nGall,_Tír_Chonaill
-Doomsday Lá_an_Bhreithiúnais,_Lá_an_Bhrátha,_Lá_an_Luain
+Dionysus Diníosas
+Dionysus Diníseas
+Donegal Dún na nGall
+Donegal Tír Chonaill
+Doomsday Lá an Bhreithiúnais
+Doomsday Lá an Bhrátha
+Doomsday Lá an Luain
 Dostyevsky Dostaighéavscaí
 Dover Dobhar
 Down Dún
 Draco Dragan
 Duamutef Duamútaf
-Dublin Baile_Átha_Cliath
+Dublin Baile Átha Cliath
 Dun Dún
+Dóbhair Dobhair
 Eanair Eanáir
 Easter Cáisc
 Eastertide Cáisc
 Ebro Éabró
 Ecuador Eacuadór
-Eden Gairdín_Pharthais,_Gairdín_Éidin
-Edinburgh Dún_Éideann
-Edirne Cathair_Aidriain
+Eden Gairdín Pharthais
+Eden Gairdín Éidin
+Edinburgh Dún Éideann
+Edirne Cathair Aidriain
 Egypt Éigipt
 Egyptology Éigipteolaíocht
+Eireann Éireann
+Eireannach Éireannach
+Eireannacha Éireannacha
+Eireannaigh Éireannaigh
+Eirinn Éirinn
 Elbe Eilbe
 Electra Éileictre
-Elysium Tír_na_nÓg,_Éilísiam
+Elysium Tír na nÓg
+Elysium Éilísiam
 England Sasana
-Enlightenment Eagnaíocht,_Soilsiú
+Enlightenment Eagnaíocht
+Enlightenment Soilsiú
 Epicurus Eipiciúras
 Epimetheus Eipiméitéas
-Epiphany Eipeafáine,_Lá_Chinn,_Lá_Nollag_Beag
+Epiphany Eipeafáine
+Epiphany Lá Chinn
+Epiphany Lá Nollag Beag
 Eritrea Eiritré
 Eros Earós
 Erythia Eirit
@@ -353,7 +395,8 @@ Euphrates Eofrait
 Eurasia Eoráise
 Euridanus Eoradánas
 Euripides Eoiripidéas
-Europe Eoraip,_Mór-Roinn
+Europe Eoraip
+Europe Mór-Roinn
 Eurovision Eoraifís
 Eurystheus Eoraistéas
 Eurytion Eoratón
@@ -361,17 +404,20 @@ Eurytus Eoratas
 Evenor Eiveanóir
 Evenus Eivinis
 Exchequer Státchiste
-Famine Drochshaol,_Gorta_Mór
+Famine Drochshaol
+Famine Gorta Mór
 Faroese Faróch
 Faustalus Fástalas
 February Feabhra
 Feinne Fiann
+Feiriste Feirste
 Fenian Fínín
 Fiji Fidsí
 Finland Fionlainn
-Firbolgs Fir_Bolg
+Firbolgs Fir Bolg
 Flanders Flóndras
-Florence Firenze,_Flórans
+Florence Firenze
+Florence Flórans
 Fomhair Fómhair
 Formosa Formósa
 France Frainc
@@ -379,12 +425,15 @@ Francophone Frainciseoir
 Friday Aoine
 Friesland Freaslainn
 Furies Fúire
+Féirste Feirste
 Gabon Gabúin
-Gaedhael Gael
-Gaelic Gaeilge_na_hAlban
+Gaeilgoir Gaeilgeoir
+Gaeilgoirí Gaeilgeoirí
+Gaelic Gaeilge na hAlban
 Gaelicization Gaelú
 Gaelicizing Gaelú
 Gaelige Gaeilge
+Gaililí Gailílí
 Gaius Gáias
 Galicia Gailís
 Galilee Gailíl
@@ -402,7 +451,7 @@ Germany Gearmáin
 Geryon Géarón
 Ghana Gána
 Ghengis Geingeas
-Ghàidhlig Ghaeilge_na_hAlban
+Ghàidhlig Ghaeilge na hAlban
 Gibraltar Giobráltar
 Glasgow Glaschú
 Glooskap Glúscap
@@ -418,16 +467,16 @@ Guadeloupe Guadalúip
 Guatemala Guatamala
 Guernsey Geansaí
 Guinea Guine
-Guinea-Bissau Guine_Bhissau
+Guinea-Bissau Guine Bhissau
 Guyana Guáin
 Gypsy Romanaí
-Gàidhlig Gaeilge_na_hAlban
-Gàidhlige Gaeilge_na_hAlban
+Gàidhlig Gaeilge na hAlban
+Gàidhlige Gaeilge na hAlban
 Hades Háidéas
 Hadrian Haidrian
 Hague Háig
 Haiti Háítí
-Halloween Oíche_Shamhna
+Halloween Oíche Shamhna
 Hannibal Hannabal
 Hanoi Hanáí
 Hapy Hapaí
@@ -435,19 +484,22 @@ Hathor Határ
 Havana Havána
 Hawaii Haváí
 Hebe Héibé
-Hebrides Inse_Ghall
+Hebrides Inse Ghall
 Hekat Heiceat
 Hellenic Heilléinic
-Hellenist Gréagóir,_Heilléanaí
+Hellenist Gréagóir
+Hellenist Heilléanaí
 Helsinki Heilsincí
 Hephaestus Héafaestas
-Hera Héara,_Héire
-Hercules Earcail,_Heirciléas
+Hera Héara
+Hera Héire
+Hercules Earcail
+Hercules Heirciléas
 Herdsman Aoire
 Hermes Heirméas
 Herodotus Heireadótas
 Hesperides Heispirídí
-Hesperus Réalta_Nóna
+Hesperus Réalta Nóna
 Hestia Heistia
 Himalayas Himiléithe
 Hindu Hiondúch
@@ -456,29 +508,34 @@ Hindustan Hiondustáin
 Hippocrates Hipeacraitéas
 Hippolyte Hipilité
 Hispaniola Easpáinneoil
-Hogmanay Oíche_Chinn_Bhliana
-Holland Ollainn,_Ísiltír
+Hogmanay Oíche Chinn Bhliana
+Holland Ollainn
+Holland Ísiltír
 Hollowtide Samhain
 Homer Hóiméar
 Honduras Hondúras
-Horace Horás,_Hórais
+Horace Horás
+Horace Hórais
 Horus Hóras
 Houy Húí
 Hungary Ungáir
 Hydra Hiodra
 Hyllus Hilleas
+Iarchonnachta Iar-Chonnachta
 Iberia Ibéir
 Iceland Íoslainn
 Idun Íodan
 Ignatius Iognáid
 Imhotep Imeotap
 Imsety Imsití
-Indian Indiach_Dearg
+Indian Indiach Dearg
 Indies Indiacha
 Indochina Ind-Sín
 Inquisition Cúistiúnacht
+Internet Idirlíon
 Iolaus Ialás
 Iole Iailé
+Iosa Íosa
 Iphitus Ífiteas
 Iran Iaráin
 Iraq Iaráic
@@ -526,8 +583,8 @@ Khons Cons
 Khufu Cúfú
 Khunanpu Cúnanpú
 Kiev Cív
-Kildare Cill_Dara
-Kilkenny Cill_Chainnigh
+Kildare Cill Dara
+Kilkenny Cill Chainnigh
 Kinshasa Cinseasa
 Kiribati Cireabaití
 Kong Cong
@@ -542,8 +599,9 @@ Kyoto Kiótó
 Kyrgyzstan Cirgeastáin
 Labrador Labradar
 Ladon Ladóin
-Lammas Lá_Lúnasa
-Lammastide Lá_Lúnasa
+Lairge Láirge
+Lammas Lá Lúnasa
+Lammastide Lá Lúnasa
 Lapland Laplainn
 Latin Laidin
 Latinist Laidineoir
@@ -552,7 +610,7 @@ Latvia Laitvia
 Laurasia Labhráise
 Lebanon Liobáin
 Leghorn Leigearn
-Leinster Cúige_Laighean
+Leinster Cúige Laighean
 Leitrim Liatroim
 Lent Carghas
 Leonidas Leonadas
@@ -593,10 +651,11 @@ Luxembourg Lucsamburg
 Lyceum Licéam
 Lydia Lidia
 Lyra Lir
+Lúcas Lúcás
 Macedonia Macadóin
 Machiavelli Maiciaiveillí
 Madeira Maidéara
-Madonna Maighdean_Mhuire
+Madonna Maighdean Mhuire
 Madrid Maidrid
 Maecenas Maecéanas
 Majorca Mallarca
@@ -604,7 +663,7 @@ Malawi Maláiv
 Malay Malaech
 Malayan Malaech
 Malaysia Malaeisia
-Maldives Oileáin_Mhaildíve
+Maldives Oileáin Mhaildíve
 Mali Mailí
 Malta Málta
 Manchester Manchain
@@ -617,14 +676,17 @@ Martinique Martainíc
 Mass Aifreann
 Mauretania Mhúratáin
 Mauritania Máratáin
-Mauritius Oileán_Mhuirís
+Mauritius Oileán Mhuirís
 May Bealtaine
-Mayo Maigh_Eo
+Mayo Maigh Eo
 Mecca Meice
 Medea Méidia
 Mediterranean Meánmhuir
 Medusa Meadúsa
 Megara Meigeara
+Meirceá Meiriceá
+Meirceánach Meiriceánach
+Meiricea Meiriceá
 Memphis Meimfís
 Menander Meineándar
 Menelaus Meinealás
@@ -636,7 +698,8 @@ Merikare Meireacara
 Mesopotamia Measpatáim
 Messiah Meisias
 Mexico Meicsiceo
-Michaelmas Lá_Fhéile_Michíl
+Michaelmas Lá Fhéile Michíl
+Micheal Mícheál
 Michéal Mícheál
 Milan Milano
 Minerva Mineirve
@@ -672,8 +735,11 @@ Muhamad Mahamad
 Muhammad Mahamad
 Muhammed Mahamad
 Munich München
-Munster Cúige_Mumhan,_Mumhain
-Myanmar Burma,_Maenmar
+Munster Cúige Mumhan
+Munster Mumhain
+Myanmar Burma
+Myanmar Maenmar
+Mícheal Mícheál
 Míchéal Mícheál
 Nakhichevan Nacaiseaváin
 Namibia Namaib
@@ -693,12 +759,14 @@ Neptune Neiptiún
 Nereid Néiriad
 Nereus Néiréas
 Nero Néaró
-Netherlands Ollainn,_Ísiltír
-Newfoundland Talamh_an_Éisc
+Netherlands Ollainn
+Netherlands Ísiltír
+Newfoundland Talamh an Éisc
 Niasaland Niasalainn
 Nicaragua Nicearagua
 Nicippe Nicipé
-Niger Abhainn_na_Nígire,_Nígir
+Niger Abhainn na Nígire
+Niger Nígir
 Nigeria Nigéir
 Nike Nicé
 Nile Níl
@@ -709,16 +777,17 @@ November Samhain
 Nuremberg Nürnburg
 Oceania Aigéine
 Octavian Octáivian
-October Deireadh_Fómhair
+October Deireadh Fómhair
 Odin Óidin
 Odysseus Odaiséas
 Oechalia Éacail
 Oedipus Éideapús
 Oeneus Éinéas
-Offaly Uíbh_Fhailí
+Offaly Uíbh Fhailí
+Oirr Oírr
 Olympia Oilimpia
 Olympiad Oilimpiad
-Olympics Cluichí_Oilimpeacha
+Olympics Cluichí Oilimpeacha
 Olympus Oilimpeas
 Omphale Omfailé
 Orient Oirthear
@@ -731,14 +800,16 @@ Oslo Osló
 Ossian Oisín
 Ostend Ostainn
 Ovid Oivid
+Padraig Pádraig
 Padua Padova
 Paibes Péibéas
 Pakistan Pacastáin
-Pale Galltacht,_Páil
+Pale Galltacht
+Pale Páil
 Palestine Palaistín
 Pantaloon Pantalún
 Pantheon Paintéón
-Paradise Gairdín_Pharthais
+Paradise Gairdín Pharthais
 Paraguay Paragua
 Parcae Pairche
 Paris Páras
@@ -748,17 +819,19 @@ Passionist Paiseadóir
 Passover Cáisc
 Patagonia Patagóin
 Pegasus Peigeasas
-Peking Béising,_Péicing
+Peking Béising
+Peking Péicing
 Pentateuch Peintiteoch
 Pentecost Cincís
 Persephone Peirseifine
-Perseus Peirséas,_Pheirséis
+Perseus Peirséas
+Perseus Pheirséis
 Persia Peirs
 Peru Peiriú
 Peruvian Peiriúch
 Phaeton Faetón
 Pharaoh Forann
-Philippines Oileáin_Fhilipíneacha
+Philippines Oileáin Fhilipíneacha
 Phoebus Féabas
 Phoenicia Féiníc
 Pict Piocht
@@ -768,15 +841,18 @@ Piraeus Pioraes
 Pisces Éisc
 Plato Platón
 Plautus Plátas
-Pleiads Pléadach,_Streoillín,_Tréidín,_Éillín
+Pleiads Pléadach
+Pleiads Streoillín
+Pleiads Tréidín
+Pleiads Éillín
 Pliny Plinias
 Plow Seisreach
 Plutarch Plútarc
 Pluto Plútón
 Poland Polainn
-Polaris Réalta_Thuaidh
+Polaris Réalta Thuaidh
 Pole Mol
-Police Garda_Síochána
+Police Garda Síochána
 Pollux Pollacs
 Polydeuces Polaideoicéis
 Polyphemus Polaiféimeas
@@ -791,7 +867,8 @@ Prometheus Proiméitéas
 Proserpine Proiseirpine
 Proteus Próitéas
 Psyche Sícé
-Ptolemy Tolamaes,_dTolamaesach
+Ptolemy Tolamaes
+Ptolemy dTolamaesach
 Publius Puiblias
 Punjab Puinseaib
 Pyrenees Piréiní
@@ -800,7 +877,7 @@ Pythean Píotach
 Pythia Pitia
 Python Píotón
 Qatar Catar
-Quakers Cumann_na_gCairde
+Quakers Cumann na gCairde
 Quebec Québec
 Quintilian Cuintilian
 Quixote Cíochóité
@@ -810,9 +887,9 @@ Remus Réamas
 Renaissance Athbheochan
 Repeal Reipéil
 Reykjavik Réicivíc
-Reynard Donncha_rua
+Reynard Donncha rua
 Rhine Réin
-Rhineland Dúiche_na_Réine
+Rhineland Dúiche na Réine
 Rhodes Ródas
 Rhone Róin
 Riga Ríge
@@ -822,10 +899,10 @@ Romania Rómáin
 Romany Romanaí
 Rome Róimh
 Romulus Rómalas
-Rosary Coróin_Mhuire
-Roscommon Ros_Comáin
-Rosicrucians Róschrosaigh
+Rosary Coróin Mhuire
+Roscommon Ros Comáin
 Roundhead Maolcheann
+Rover Ródaí
 Russifying Rúisiú
 Russophile Rúisbhách
 Rwanda Ruanda
@@ -833,13 +910,15 @@ Saar Sár
 Saarland Sárbruc
 Sabbatarian Sabóidire
 Sabbath Sabóid
-Sagitta Saighde,_Saighead
+Sagitta Saighde
+Sagitta Saighead
 Sagittarius Saighdeoir
 Sahara Sahára
 Saladin Saladan
 Salvador Salvadóir
 Samaria Samáir
-Sammarinese San_Mairíneach
+Sami Sáimis
+Sammarinese San Mairíneach
 Samoa Samó
 Samoan Samóch
 Sanskrit Sanscrait
@@ -851,7 +930,7 @@ Sardinia Sairdín
 Sark Sairc
 Saturday Satharn
 Saturn Satarn
-Saturnalia Féile_Satairn
+Saturnalia Féile Satairn
 Satyavan Sáiteaván
 Savitri Saivitrí
 Savoy Saváí
@@ -860,13 +939,13 @@ Scandinavia Lochlainn
 Scheldt Sceilt
 Scorpio Scairp
 Scotland Albain
-Scots Béarla_na_hAlban
+Scots Béarla na hAlban
 Scylla Sciolla
 Scythia Scitia
 Seneca Seinice
 Senegal Seineagáil
 Sennedjem Seinnidim
-September Meán_Fómhair
+September Meán Fómhair
 Septuagesima Seaptuaigéas
 Serbia Seirbia
 Severn Sabhrainn
@@ -878,7 +957,8 @@ Shrovetide Inid
 Siberia Sibéir
 Sicily Sicil
 Singapore Singeapór
-Sirius Réalta_an_Mhadra
+Sionnaine Sionainne
+Sirius Réalta an Mhadra
 Sisyphus Siosafas
 Slovakia Slóvaic
 Slovenia Slóivéin
@@ -892,7 +972,7 @@ Sophocles Sofaicléas
 Sothis Sótas
 Soviet Sóivéid
 Spain Spáinn
-Speaker Ceann_Comhairle
+Speaker Ceann Comhairle
 Statius Stáitias
 Stentor Steintear
 Sthenelus Steinileas
@@ -925,8 +1005,9 @@ Tatar Tatair
 Taurus Tarbh
 Templar Teamplóir
 Teye Téighe
-Thailand Siam,_Téalainn
-Thanksgiving Lá_an_Altaithe
+Thailand Siam
+Thailand Téalainn
+Thanksgiving Lá an Altaithe
 Thebes Téibh
 Theocritus Teocratas
 Thermodon Tearmódón
@@ -940,8 +1021,8 @@ Tiberius Tibéirias
 Tibet Tibéid
 Timbuktu Timbeactú
 Timor Tíomór
-Tipperary Tiobraid_Árann
-Tir-na-nog Tír_na_nÓg
+Tipperary Tiobraid Árann
+Tir-na-nog Tír na nÓg
 Tirida Tiride
 Tirol Tioról
 Titan Tíotán
@@ -957,8 +1038,9 @@ Treasury Státchiste
 Trent Trionta
 Trento Trionta
 Triangulum Triantán
-Trinidad Oileán_na_Tríonóide
+Trinidad Oileán na Tríonóide
 Trinity Tríonóid
+Trionóide Tríonóide
 Tripoli Tripilí
 Triton Tríotón
 Tuesday Máirt
@@ -968,13 +1050,16 @@ Turkestan Turcastáin
 Turkey Tuirc
 Turkmenistan Tuircméanastáin
 Turkoman Turcamáin
+Tuscany Toscana
 Tuscany Tuscáin
 Tutankhamon Tútancáman
 Tyrol Tioról
-Tyrone Tír_Eoghain
+Tyrone Tír Eoghain
 Ukraine Úcráin
-Ulster Cúige_Uladh,_Ulaidh
-Ulstermen Ulaidh,_Ultaibh
+Ulster Cúige Uladh
+Ulster Ulaidh
+Ulstermen Ulaidh
+Ulstermen Ultaibh
 Ulysses Uiliséas
 Unionist Aontachtaí
 Ural Úrail
@@ -996,19 +1081,20 @@ Vishnu Visniú
 Vistula Viostúile
 Vulcan Bolcán
 Vulgate Vulgáid
-Wales Breatain_Bheag
+Wales Breatain Bheag
 Warsaw Vársá
-Waterford Port_Láirge
+Waterford Port Láirge
 Wednesday Céadaoin
 Welsh Breatnaigh
 Westmeath Iarmhí
-Wexford Loch_Garman
+Wexford Loch Garman
 Whig Fuig
-Whiteboy Buachaill_Bán
+Whiteboy Buachaill Bán
 Whitsun Cincís
 Whitsuntide Cincís
-Wicklow Cill_Mhantáin
+Wicklow Cill Mhantáin
 Wight Iocht
+Wikipedia Vicipéid
 Xenophon Seineafón
 Yakutsk Iacútsc
 Yama Iáma
@@ -1017,7 +1103,8 @@ Ymir Ímir
 York Eabhrac
 Yugoslavia Iúgslaiv
 Zagreb Ságrab
-Zaire Poblacht_Dhaonlathach_an_Chongó,_Sáír
+Zaire Poblacht Dhaonlathach an Chongó
+Zaire Sáír
 Zambia Saimbia
 Zanzibar Sainsibeár
 Zeeland Séalainn
@@ -1029,132 +1116,836 @@ Zoroaster Sóróstar
 Zulu Súlú
 Zululand Súlúlainn
 Zurich Zürich
+abalta ábalta
+abhaineann a bhaineann
+abhaint a bhaint
 abhair ábhair
+abhar ábhar
+abhartha ábhartha
+abheith a bheith
+abhfuil a bhfuil
+abhí a bhí
+achinntiú a chinntiú
+achmhainn acmhainn
+achmhainne acmhainne
+achmhainní acmhainní
+achtachan achtachán
+achur a chur
+adhmháil admháil
+adhmhála admhála
+adhéanamh a dhéanamh
+adhéanann a dhéanann
+admhail admháil
+afach áfach
+afheabhsú a fheabhsú
+afhorbairt a fhorbairt
+afháil a fháil
 afách áfach
-agan ag_an
-agna ag_na
+agan ag an
+aghlacadh a ghlacadh
+agna ag na
 agsu agus
+agu agus
 agua agus
-agusan agus_an
-agusna agus_na
+aguisin aguisín
+agusa agus a
+agusan agus an
+agusna agus na
+aigeán aigéan
+aineoinn ainneoin
+ainilís anailís
+aiteanna áiteanna
+aithine aithne
+aitiúil áitiúil
+aitiúla áitiúla
+aitreabh áitreabh
+aitribh áitribh
+alainn álainn
+aleanas a leanas
+alán a lán
+amarach amárach
+ambeidh a mbeidh
 amhain amháin
+amhrain amhráin
+amhran amhrán
 amháín amháin
-aonduine aon_duine
-araghaidh ar_aghaidh
-aran ar_an
-arfáil ar_fáil
+anchuid an-chuid
+anios aníos
+anmhór an-mhór
+ansiud ansiúd
+antábhachtach an-tábhachtach
+aonduine aon duine
+arachais árachais
+arachas árachas
+araghaidh ar aghaidh
+aran ar an
+arann árann
+aras áras
+arasán árasán
+arfáil ar fáil
+aris arís
+ars'an arsa an
+arsa'n arsa an
+asholáthar a sholáthar
+atha átha
+athabhairt a thabhairt
+athbreithniú athbhreithniú
 augs agus
+b'fheidir b'fhéidir
+bad bád
+bainistiochta bainistíochta
+baire báire
+bais báis
+ballstait ballstáit
+ballstat ballstát
+beagainín beagáinín
+beagan beagán
+beal béal
+bearla béarla
+beim béim
 bfhuil bhfuil
+bfhéidir b'fhéidir
+bhaineannle bhaineann le
+bhaintamach bhaint amach
+bhfui bhfuil
+bhful bhfuil
+bhi bhí
 bhuil bhfuil
-cadé cad_é
+bhíuil bhfuil
+biodh bíodh
+bionn bíonn
+bios bíos
+blathanna bláthanna
+bliaina bliana
+bliaintúil bliantúil
+boithre bóithre
+bothar bóthar
+braid bráid
+brea breá
+bri brí
+buiochas buíochas
+bunaiodh bunaíodh
+buntaiste buntáiste
+bunus bunús
+bunusach bunúsach
+c'ainm cén t-ainm
+cadiad cad iad
+cadé cad é
+cadí cad í
+caighdeain caighdeáin
+caighdean caighdeán
 caighdéan caighdeán
+cail cáil
+cailin cailín
+cailiní cailíní
+cailithe cáilithe
+cain cáin
 caisléan caisleán
+canbhasáil canbhásáil
+carráid earráid
+cartaí cártaí
+casanna cásanna
 ce cé
+ceadunas ceadúnas
+cearnog cearnóg
+ceile céile
+ceim céim
 cen cén
-chaighdéan chaighdeán
-chaisléan chaisleán
 cheád chéad
-chinéal chineál
-choiméad choimeád
-choras chóras
-chunna chun_na
+chomhmaith chomh maith
+choích choíche
+chunna chun na
+churar chur ar
+churchun chur chun
+ciallaionn ciallaíonn
+cibe cibé
+cile eile
+cineal cineál
+cinealacha cineálacha
 cinéal cineál
+cirghe éirí
+ciuin ciúin
+clair cláir
+clar clár
+claraithe cláraithe
+clarlann clárlann
+clarú clárú
+clo cló
+coimead coimeád
+coimeadán coimeádán
+coimisineir coimisinéir
+coimisiuin coimisiúin
+coimisiun coimisiún
 coiméad coimeád
+coinniollacha coinníollacha
+coinníolacha coinníollacha
+colaiste coláiste
+colas eolas
+comhairli comhairlí
+comhaith cómhaith
+comhlionadh comhlíonadh
+comhreir comhréir
+comhtheacs comhthéacs
+comparaid comparáid
+conaithe cónaithe
+conaí cónaí
+contac contae
+corais córais
 coras córas
+crich crích
+criche críche
+crioch críoch
+criocha críocha
+criochnaithe críochnaithe
+croi croí
+críchcanna críocha
+cuig cúig
+cuirt cúirt
+cuirte cúirte
+cuirtéis cúirtéis
+cuis cúis
+cuiseanna cúiseanna
+cul cúl
+cultur cultúr
+culturtha cultúrtha
+cumarsaide cumarsáide
+cunamh cúnamh
+curaim cúraim
+curam cúram
+curamach cúramach
+cursa cúrsa
+cursaí cúrsaí
+cuspoir cuspóir
+céana céanna
+céiliúradh ceiliúradh
+cóireál cóireáil
+d'aineoinn d'ainneoin
 da dá
+dail dáil
+dala dála
+daltai daltaí
+dan dán
+danta dánta
+daois d'aois
+data dáta
 deag déag
-dechuid de_chuid
+dean déan
+deanamh déanamh
+deanann déanann
+deanaí déanaí
+deanfadh déanfadh
+deanfaidh déanfaidh
+deanfar déanfar
+deanta déanta
+deantar déantar
+dechuid de chuid
+deileáil déileáil
+deontaisi deontais
 deánamh déanamh
 deánta déanta
-dheánamh dhéanamh
-dheánta dhéanta
+dfhonn d'fhonn
+dfhéadfadh d'fhéadfadh
+dfhógair d'fhógair
+dhaidh dhiaidh
+dicheall dícheall
+difiriúil difriúil
+difiriúla difriúla
+dilis dílis
+diobh díobh
+diol díol
+diolaim díolaim
+diospóireachtaí díospóireachtaí
+direach díreach
+dirithe dírithe
+diriú díriú
+dith díth
+diuitethe diúitéithe
+diúltiú diúltú
+dlithe dlíthe
+dlithiúil dlíthiúil
 docha dócha
-dtína dtí_na
+dochais dóchais
+dochas dóchas
+dochasach dóchasach
+doibh dóibh
+doicimead doiciméad
+doicimeid doiciméid
+doigh dóigh
+dti dtí
+dtína dtí na
+duchais dúchais
+duiche dúiche
+duinn dúinn
 duirt dúirt
+duli dul i
+dun dún
+duradh dúradh
+dushlán dúshlán
+dáirire dáiríre
+déanai déanaí
+déanmh déanamh
+déirigh d'éirigh
+díogras díograis
+díoma díomá
+dóthin dóthain
+eacnamaioch eacnamaíoch
+eacnamaiocht eacnamaíocht
+eacnamaiochta eacnamaíochta
+eacnamíocht eacnamaíocht
+eacnamíochta eacnamaíochta
+eadaigh éadaigh
+eadan éadan
+eadaí éadaí
+eagraiocht eagraíocht
+eagran eagrán
 eagsuil éagsúil
 eagsula éagsúla
+eagsúil éagsúil
+eagsúla éagsúla
+ealain ealaín
+ealaine ealaíne
+ealaion ealaíon
+ealaiona ealaíona
+ealú éalú
+eanlaithe éanlaithe
+eard éard
+earnail earnáil
+eifeacht éifeacht
+eifeachtach éifeachtach
+eigean éigean
+eigin éigin
+eileamh éileamh
+eilithe éilithe
+eineacht éineacht
+einne aon duine
+eisiuint eisiúint
+eisteacht éisteacht
+eisteachta éisteachta
+eolaiochta eolaíochta
+eolaíchta eolaíochta
 eís éis
 fa faoi
+fado fadó
+fag fág
+fagtha fágtha
+failte fáilte
+faisneis faisnéis
+faisneise faisnéise
+faoí faoi
+fas fás
+fasta fásta
+fath fáth
 fe faoi
+feach féach
+feachaint féachaint
+feachana féachana
+feidhmniú feidhmiú
+feidir féidir
+feile féile
 fein féin
-fháíl fháil
+fen faoin
+fiain fiáin
+filiochta filíochta
+fior fíor
+firicí fíricí
+firínne fírinne
+fobairt forbairt
+foglaim foghlaim
+fogra fógra
+foill fóill
+foilsiodh foilsíodh
+foirsteanach fóirsteanach
+folair foláir
+fomhair fómhair
+foralacha forálacha
+foram fóram
+formhor formhór
+forsa fórsa
+forsaí fórsaí
+fostaiochta fostaíochta
+fresin freisin
+frid tríd
 fritheadh fuarthas
+fuarathas fuarthas
+fuithi fúithi
+futhu fúthu
 futhú fúthu
+fáisnéis faisnéis
+fáisnéise faisnéise
 fáíl fáil
+féachána féachana
+féarr fearr
 féín féin
+fírínne fírinne
+fúd fud
+gaeilge Gaeilge
+gael Gael
 gatáir gátair
 gatár gátar
-gcinéal gcineál
-gcoiméad gcoimeád
-ghatáir ghátair
-ghatár ghátar
-gobhfuil go_bhfuil
-gombeidh go_mbeidh
+gear géar
+gearan gearán
+ginearalta ginearálta
+gnath gnáth
+gne gné
+gneithe gnéithe
+gniomh gníomh
+gniomhach gníomhach
+gniomhartha gníomhartha
+gno gnó
+gnothaí gnóthaí
+gnóthai gnóthaí
+gobhfuil go bhfuil
+gombeidh go mbeidh
+gra grá
+greine gréine
+grupa grúpa
+grupaí grúpaí
+gán gan
+hEireann hÉireann
+hEirinn hÉirinn
 habhair hábhair
+habhar hábhar
+he hé
 heictéar heicteár
+hoglach hóglach
+hudaráis húdaráis
+hudarás húdarás
+héireann hÉireann
+iarrthoir iarrthóir
+idirnaisiúnta idirnáisiúnta
+idtaobh i dtaobh
+igcrích i gcrích
+inaghaidh in aghaidh
+inioctha iníoctha
+inion iníon
+iniuchadh iniúchadh
+iniúcadh iniúchadh
+inmheanach inmheánach
 inmhéanach inmheánach
+institiuid institiúid
+institiúd institiúid
+ioc íoc
+iocaíocht íocaíocht
+iocaíochta íocaíochta
+iocaíochtaí íocaíochtaí
+iocfar íocfar
+iochtarach íochtarach
+iomaiocht iomaíocht
+iomlan iomlán
+ionnanais ionannais
+ionnanas ionannas
 ionnannais ionannais
 ionnannas ionannas
+isea is ea
+iseal íseal
+isiad is iad
+isle ísle
+isé is é
+isí is í
+iul iúl
 la lá
-lehaghaidh le_haghaidh
+laidir láidir
+laidre láidre
+laimh láimh
+laimhe láimhe
+laithreach láithreach
+lamh lámh
+lamha lámha
+lan lán
+lanúin lánúin
+lar lár
+larnach lárnach
+lathair láthair
+leanuint leanúint
+leanunach leanúnach
+leargas léargas
+leasaitear leasaítear
+leathnach leathanach
+lehaghaidh le haghaidh
 lei léi
+leibheal leibhéal
+leibheil leibhéil
 leibheál leibhéal
-leisan leis_an
-leisna leis_na
+leinn léinn
+leir léir
+leirigh léirigh
+leirithe léirithe
+leiriú léiriú
+leisan leis an
+leisean leis-sean
+leisna leis na
+leitheid leithéid
+leitheoirí léitheoirí
+lelinn le linn
+lenan-áirítear lena n-áirítear
 leí léi
+limistear limistéar
+limisteir limistéir
+line líne
+linte línte
+lion líon
+lionadh líonadh
+litriocht litríocht
+liuntais liúntais
+liuntas liúntas
+luthchleas lúthchleas
+luthchleasa lúthchleasa
+léithéid leithéid
 léí léi
+líomátaiste líomatáiste
+lúchair lúcháir
 mBoston mBostún
 ma má
-maidirle maidir_le
+macnamh machnamh
+maguaird máguaird
+maidirle maidir le
 mas más
-mhor mhór
-mhuinéal mhuineál
+mathair máthair
+me mé
+mead méad
+meadú méadú
+meain meáin
+mean meán
+meastú meas tú
+meid méid
+mile míle
+milliun milliún
+milte mílte
+minigh mínigh
+minithe mínithe
+miniú míniú
+miosa míosa
+mna mná
+moiminte móiminte
 mor mór
+mora móra
 moran mórán
-muinéal muineál
-nGaedhael nGael
-nGàidhlig nGaeilge_na_hAlban
+morán mórán
+muineadh múineadh
+muinin muinín
+muinteoir múinteoir
+muinteoirí múinteoirí
+másé más é
+móran mórán
+nGàidhlig nGaeilge na hAlban
+nabliana na bliana
+nachbhfuil nach bhfuil
+nadúr nádúr
+nadúrtha nádúrtha
+nahÉireann na hÉireann
+naire náire
+nais n-ais
 naisiunta náisiúnta
+naisiúnta náisiúnta
+naistriú n-aistriú
 nar nár
+narbh nárbh
+neagraíochtaí n-eagraíochtaí
+nealaíon n-ealaíon
+neamhspleach neamhspleách
 neamhspléach neamhspleách
-ni ní
+ngíomh ngníomh
+nil níl
 nior níor
+niorbh níorbh
 nios níos
+no nó
+noibríonn n-oibríonn
+noidhreacht n-oidhreacht
+noileán n-oileán
+noiméad nóiméad
 nos nós
+nosanna nósanna
+nota nóta
+nuachtain nuachtáin
+nuachtan nuachtán
+nábhar n-ábhar
+nádurtha nádúrtha
+náisiunta náisiúnta
+náisúnta náisiúnta
+néireodh n-éireodh
+níosmó níos mó
+nóa nó a
+nóimead nóiméad
+núdarás n-údarás
+núicleach núicléach
+núicleacha núicléacha
+o ó
+ocáid ócáid
+ocáideach ócáideach
+ocáideacha ócáideacha
+ofigiúil oifigiúil
 og óg
+oga óga
+oglach óglach
 oiche oíche
+oidreacht oidhreacht
+oidreachta oidhreachta
+oig óig
+oige óige
+oileain oileáin
+oilean oileán
+oiliuint oiliúint
+oiliuna oiliúna
+oiliúnt oiliúint
 oiléain oileáin
 oiléan oileán
-ostáin óstlainne,_óstlanna
+oiriunach oiriúnach
+oiriúnt oiriúint
+oirúnach oiriúnach
+ol ól
+omós ómós
+on ón
+ona óna
+oráid óráid
+oráidí óráidí
+ospideal ospidéal
+ostáin óstlainne
+ostáin óstlanna
 ostán óstlann
+pa pá
+pairt páirt
+pairteach páirteach
+pairtithe páirtithe
+pairtí páirtí
+pictiuir pictiúir
+pictiur pictiúr
+pictúir pictiúr
+piosa píosa
+ple plé
+pleanala pleanála
+poibli poiblí
+polaitiochta polaitíochta
+priosún príosún
+proiseas próiseas
+páipear páipéar
+ra rá
+rafla ráfla
+raflaí ráflaí
+raidio raidió
+raite ráite
+raiteas ráiteas
+rannog rannóg
+rannphairtíocht rannpháirtíocht
+reabhlóid réabhlóid
+reachtaiocht reachtaíocht
+reamhamharc réamhamharc
+reasúin réasúin
+reasún réasún
+reidh réidh
+reigiún réigiún
+reim réim
+reimse réimse
+reir réir
+reiteach réiteach
+rialachain rialacháin
+rialachan rialachán
+riarachain riaracháin
+riomh ríomh
+riomhaire ríomhaire
+riomhphost ríomhphost
+roint roinnt
+rol ról
+run rún
+runaí rúnaí
+réasuin réasúin
+réasun réasún
+réasunta réasúnta
+sach sách
+said siad
+sanáireamh san áireamh
+saorail saoráil
+sarú sárú
+sasta sásta
+scaileán scáileán
+scannan scannán
+scath scáth
+sceal scéal
+sceala scéala
+scealta scéalta
+sceil scéil
+sceim scéim
+sceimeanna scéimeanna
+scribhinn scríbhinn
+scribhneoir scríbhneoir
+scriobh scríobh
+scriofa scríofa
+scruduithe scrúduithe
+scrudú scrúdú
 scáiléan scáileán
+se sé
 seiminéar seimineár
 seipeal séipéal
-sheiminéar sheimineár
-sheipeal shéipéal
-shólais shóláis
-shólas shólás
+seirbhis seirbhís
+seirbhise seirbhíse
+seirbhisí seirbhísí
+seoa seo a
+sina sin a
+siolta síolta
+siud siúd
+siul siúl
+slainte sláinte
+slan slán
+socmhainn sócmhainn
+soileir soiléir
+soisialaigh sóisialaigh
+soisialta sóisialta
+solathar soláthar
+soléir soiléir
+sonraitear sonraítear
+sort sórt
+sparáil spáráil
+spas spás
+specialta speisialta
+speis spéis
+spesialta speisialta
+spoirt spóirt
+sport spórt
+sraid sráid
+stadas stádas
 stadáis stádais
 stadás stádas
+staidear staidéar
+staideir staidéir
 staideár staidéar
+staisiúin stáisiúin
+staisiún stáisiún
+stait stáit
+stat stát
+straiteis straitéis
+struchtuir struchtúir
+struchtur struchtúr
 stráinséar strainséir
+stáidéar staidéar
+suil súil
+suile súile
+suiomh suíomh
+sábhailte sábháilte
+séirbhís seirbhís
+síochana síochána
+síochán síocháin
+sóiléir soiléir
 sólais sóláis
 sólas sólás
 ta tá
+tabairt tabhairt
+tabhacht tábhacht
+tabhachtach tábhachtach
+tabhachtaí tábhachtaí
 tabhairne tábhairne
+tabla tábla
+tacaiocht tacaíocht
+tacaiochta tacaíochta
+tagraitear tagraítear
+taille táille
+taim táim
+taimid táimid
+tainig táinig
+tainm t-ainm
+taire tAire
+tairgead t-airgead
+tairgí táirgí
+taiscealaithe taiscéalaithe
+taiscealaí taiscéalaí
+taiscealaíocht taiscéalaíocht
+taiscealaíochta taiscéalaíochta
 taisceál taiscéal
 taisceáladh taiscéaladh
+taispeaint taispeáint
+taispeantas taispeántas
+talann tallann
+talmhaiochta talmhaíochta
+talt t-alt
+talun talún
 tam t-am
-thaisceál thaiscéal
-thaisceáladh thaiscéaladh
-thogail thógáil
+taon t-aon
+tarlaionn tarlaíonn
+tathar táthar
+teacs téacs
+teagmhail teagmháil
+teagmhala teagmhála
+tearma téarma
+teastail teastáil
+teastaionn teastaíonn
+teilfíse teilifíse
+teilifis teilifís
+teilifise teilifíse
+teolas t-eolas
+thios thíos
+tháing tháinig
+tháinigh tháinig
+thángas thángthas
+tiarratasóir t-iarratasóir
+tiogair tíogair
+tiortha tíortha
+tir tír
+tire tíre
+tithiochta tithíochta
+titithe tite
+tog tóg
+togadh tógadh
 togail tógáil
+toghchain toghcháin
+toghchan toghchán
+togtha tógtha
+togáil tógáil
+tordú t-ordú
+tra trá
 tracht trácht
+tradisiún traidisiún
+tradisiúnta traidisiúnta
+traidisiun traidisiún
+traidisiunta traidisiúnta
+trath tráth
+trathnóna tráthnóna
+tre trí
+treimhse tréimhse
+treor treoir
+tri trí
+trid tríd
+trina trína
+triur triúr
+triú tríú
+trím trí mo
 tsort sórt
+tuairiscthe tuairiscithe
+tuarascail tuarascáil
+tuisce túisce
+turlabhraí t-urlabhraí
+tus tús
+tábhar t-ábhar
+tádh t-ádh
+tógail tógáil
+túdar t-údar
+túdarás t-údarás
+uachtaran uachtarán
+ud úd
+udar údar
+udarais údaráis
+udaraithe údaraithe
 udaras údarás
+udaráis údaráis
+udarás údarás
 usaid úsáid
+usaide úsáide
+usáid úsáid
+usáide úsáide
+usáidtear úsáidtear
+vota vóta
 Éanair Eanáir
 Éanáir Eanáir
+Éirean Éirean
+áiritear áirítear
+áitiúl áitiúil
 áta atá
+éadán éadan
+éile eile
+éireann Éireann
+éirinn Éirinn
+íochta íoctha
 óiche oíche
 údaras údarás
+údáráis údaráis
+úsaid úsáid
+úsaide úsáide
+úsaidtear úsáidtear

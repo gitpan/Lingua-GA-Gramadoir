@@ -1,21 +1,20 @@
-package Lingua::GA::Gramadoir::Languages::de;
-# Deutsche �bersetzungen f�r gramadoir
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gramadoir package.
-# Karl Eichwalder <ke@gnu.franken.de>, 2003.
-# Martin Gregory <martin.gregory@sas.com>, 2003.
-# Roland Illig <roland.illig@gmx.de>, 2004.
+package Lingua::GA::Gramadoir::Languages::cy;
+# translation of cy.po to Cymraeg
+# translation of gramadoir.po to Cymraeg
+# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) YEAR Kevin P. Scannell.
+# Kyfieithu <kyfieithu@dotmon.com>, 2004.
 #
 #msgid ""
 #msgstr ""
 #"Project-Id-Version: gramadoir 0.5\n"
 #"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
 #"POT-Creation-Date: 2005-03-02 22:40-0600\n"
-#"PO-Revision-Date: 2004-10-16 08:54+0100\n"
-#"Last-Translator: Roland Illig <roland.illig@gmx.de>\n"
-#"Language-Team: German <de@li.org>\n"
+#"PO-Revision-Date: 2004-09-19 11:43+0100\n"
+#"Last-Translator: Kyfieithu <kyfieithu@dotmon.com>\n"
+#"Language-Team: Cymraeg <cy@li.org>\n"
 #"MIME-Version: 1.0\n"
-#"Content-Type: text/plain; charset=ISO-8859-1\n"
+#"Content-Type: text/plain; charset=UTF-8\n"
 #"Content-Transfer-Encoding: 8bit\n"
 
 use strict;
@@ -26,280 +25,280 @@ use vars qw(%Lexicon);
 
 %Lexicon = (
     "Line %d: [_1]\n"
- => "Zeile %d: [_1]\n",
+ => "Llinell %d: [_1]\n",
 
     "unrecognized option [_1]"
- => "unbekannte Option [_1]",
+ => "dewisiad anadnabyddus [_1]",
 
     "option [_1] requires an argument"
- => "Ein Argument ist bei der Option [_1] erforderlich",
+ => "mae ymresymiad yn gofynnol ar gyfer dewisiad [_1]",
 
     "option [_1] does not allow an argument"
- => "Ein Argument ist bei der Option [_1] nicht erlaubt",
+ => "nid yw'r dewisiad [_1] yn caniatáu ymresymiad",
 
     "error parsing command-line options"
- => "Fehler beim Interpretieren der Kommandozeilenoptionen",
+ => "gwall wrth ddosrannu'r dewisiadau llinell orchymyn",
 
     "Unable to set output color to [_1]"
- => "Unable to set output color to [_1]",
+ => "Methu gosod y lliw allbwn i [_1]",
 
     "Language [_1] is not supported."
- => "Die Sprache [_1] wird nicht unterstützt.",
+ => "Ni chynhelir yr iaith [_1]",
 
     "An Gramadoir"
  => "An Gramadóir",
 
     "Try [_1] for more information."
- => "[_1] eingeben, um weitere Informationen zu erhalten.",
+ => "Ceisiwch [_1] am ragor o wybodaeth.",
 
     "version [_1]"
- => "Version [_1]",
+ => "fersiwn [_1]",
 
     "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
- => "Dieses Programm ist freie Software; die Bedingungen, unter denen Sie es\nkopieren dürfen, finden Sie in dem Quellcode. Es ist OHNE IRGENDEINE GARANTIE,\nsogar ohne die implizite Garantie der MARKTREIFE oder der VERWENDBARKEIT FÜR\nEINEN BESTIMMTEN ZWECK.",
+ => "Meddalwedd rhydd yw hwn; gweler y tarddiad ar gyfer amodau copïo.  Nid oes DIM\ngwarant; nid hyd yn oed ar gyfer MASNACHEIDDRWYDD neu ADDASRWYDD AR GYFER PWRPAS PENODOL, \nhyd yr eithaf a ganiateir gan y gyfraith.",
 
     "Usage: [_1] ~[OPTIONS~] ~[FILES~]"
- => "Syntax: [_1] ~[OPTIONEN~] ~[DATEIEN~]",
+ => "Defnydd: [_1] ~[DEWISIADAU~]~[FFEILIAU~]",
 
     "Options for end-users:"
- => "Optionen für Endbenutzer:",
+ => "Dewisiadau ar gyfer defnyddwyr:",
 
     "    --iomlan       report all errors (i.e. do not use ~/.neamhshuim)"
- => "    --iomlan       alle Fehler protokollieren; ~/.neamhshuim wird nicht gelesen",
+ => "    --iomlan       adrodd pob gwall (h.y. peidiwch â defnyddio ~/.neamhshuim - ffeil anwybyddu)",
 
     "    --ionchod=ENC  specify the character encoding of the text to be checked"
- => "    --ionchod=ENC  Zeichensatz des zu überprüfenden Textes",
+ => "    --ionchod=AMG  penodi'r amgodiad nodau o'r testun i'w gywiro",
 
     "    --aschod=ENC   specify the character encoding for output"
- => "    --aschod=ENC   Zeichencodierung für die Ausgabe wählen",
+ => "    --aschod=AMG   penodi'r amgodiad nodau ar gyfer allbwn",
 
     "    --comheadan=xx choose the language for error messages"
- => "    --comheadan=xx Sprache für Fehlermeldungen wählen",
+ => "    --comheadan=xx dewis yr iaith ar gyfer negeseuon gwall",
 
     "    --dath=COLOR   specify the color to use for highlighting errors"
- => "    --dath=FARBE   Farbe zum Hervorheben von Fehlern wählen",
+ => "    --dath=LLIW   penodi'r lliw i'w ddefnyddio ar gyfer amlygu gwallau",
 
     "    --litriu       write misspelled words to standard output"
- => "    --litriu       falsch geschriebene Wörter auf Standardausgabe ausgeben",
+ => "    --litriu       ysgrifennu geiriau a gamsillafwyd i allbwn safonol",
 
     "    --aspell       suggest corrections for misspellings"
- => "    --aspell       Rechtschreibkorrekturen vorschlagen",
+ => "    --aspell       awgrymu cywiriadau ar gyfer camsillafiadau",
 
     "    --aschur=FILE  write output to FILE"
- => "    --aschur=DATEI Ausgabe in DATEI schreiben",
+ => "    --aschur=FFEIL ysgrifennu allbwn i FFEIL",
 
     "    --help         display this help and exit"
- => "    --help         diese Kurzanleitung anzeigen",
+ => "    --help         dangos y cymorth yma a terfynu",
 
     "    --version      output version information and exit"
- => "    --version      Versionsnummer anzeigen",
+ => "    --version      dangos gwybodaeth am y fersiwn a terfynu",
 
     "Options for developers:"
- => "Optionen für Entwickler:",
+ => "Dewisiadau ar gyfer datblygwyr:",
 
     "    --api          output a simple XML format for use with other applications"
- => "    --api          Einfaches XML-Dateiformat zur Benutzung in anderen Anwendungen ausgeben",
+ => "    --api          allbynnu fformat XML syml i'w defnyddio efo cymhwysiadau eraill",
 
     "    --html         produce HTML output for viewing in a web browser"
- => "    --html         Ausgabe im HTML-Format erzeugen",
+ => "    --html         cynhyrchu allbwn HTML i'w weld mewn porydd gwe",
 
     "    --no-unigram   do not resolve ambiguous parts of speech by frequency"
- => "    --no-unigram   Mehrdeutige Satzteile nicht auflösen",
+ => "    --no-unigram   peidio â datrys rhannau ymadrodd amwys gan amlder",
 
     "    --xml          write tagged XML stream to standard output, for debugging"
- => "    --xml          Ausgabe im XML-Format zu Zwecken der Fehlersuche erzeugen",
+ => "    --xml          ysgrifennu llif XML wedi'i dagio i allbwn safonol, ar gyfer dadnamu",
 
     "If no file is given, read from standard input."
- => "Falls keine Datei angegeben wird, wird von der Standardeingabe gelesen.",
+ => "Os ni roddir ffeil, darllenir o fewnbwn safonol.",
 
     "Send bug reports to <[_1]>."
- => "Fehlermeldungen an <[_1]> schicken.\nProbleme mit der Übersetzung an die Mailingliste de\@li.org melden.",
+ => "Anfonwch adroddiadau nam i <[_1]>",
 
     "There is no such file."
- => "Datei nicht vorhanden.",
+ => "Nid oes y math ffeil.",
 
     "Is a directory"
- => "Ist ein Verzeichnis",
+ => "Yn gyfeiriadur",
 
     "Permission denied"
- => "Zugriff nicht erlaubt",
+ => "Gwrthodwyd caniatâd",
 
     "[_1]: warning: problem closing [_2]\n"
- => "[_1]: Warnung: Problem beim Schließen von [_2]\n",
+ => "[_1]: rhybudd: problem wrth gau [_2]\n",
 
     "Currently checking [_1]"
- => "[_1] wird gerade geprüft",
+ => "Gwirio [_1] ar hyn o bryd",
 
     "    --ilchiall     report unresolved ambiguities, sorted by frequency"
- => "    --ilchiall     Nicht aufgelöste Mehrdeutigkeiten berichten, nach Häufigkeit sortiert",
+ => "    --ilchiall     adrodd amwyseddau annatrys, wedi eu trefnu gan amlder",
 
     "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
- => "    --minic        Alle Tags nach Häufigkeit sortiert ausgeben (für unigram-xx.txt)",
+ => "    --minic        allbynnu pob tag, wedi'u trefnu gan amlder (ar gyfer unigram-xx.txt)",
 
     "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
- => "    --brill        Eindeutigkeitsregeln mit Brill's unbeaufsichtigtem Algorithmus finden",
+ => "    --brill        canfod rheolau dileu amwysedd gan ddefnyddio algorithm diarolygiaeth Brill",
 
     "[_1]: problem reading the database\n"
- => "[_1]: Problem beim Lesen der Datenbank\n",
+ => "[_1]: problem wrth ddarllen y gronfa ddata\n",
 
     "[_1]: `[_2]' corrupted at [_3]\n"
- => "[_1]: `[_2]' beschädigt bei [_3]\n",
+ => "[_1]: `[_2]' wedi ei lygru wrth [_3]\n",
 
     "conversion from [_1] is not supported"
- => "Umwandlung von [_1] wird nicht unterstützt.",
+ => "ni chynhelir trosi o [_1]",
 
     "[_1]: illegal grammatical code\n"
- => "[_1]: ungültiger grammatische Code\n",
+ => "[_1]: côd gramadegol anghyfreithlon\n",
 
     "[_1]: no grammar codes: [_2]\n"
- => "[_1]: keine grammatischen Codes: [_2]\n",
+ => "[_1]: dim codau gramadeg: [_2]\n",
 
     "[_1]: unrecognized error macro: [_2]\n"
- => "unbekannte Option [_1]",
+ => "dewisiad anadnabyddus [_1]",
 
     "Valid word but extremely rare in actual usage"
- => "Gültiges Wort, wird aber extrem selten wirklich benutzt",
+ => "Gair dilys, ond eithriadol o brin mewn defnydd gwirioneddol",
 
     "Repeated word"
- => "Wortwiederholung",
+ => "Gair wedi'i ailadrodd",
 
     "Unusual combination of words"
- => "Ungewöhnliche Wortkombination",
+ => "Cyfuniad anarferol o eiriau",
 
     "The plural form is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Mae'r cyflwr genidol yn ofynnol yma",
 
     "The singular form is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Mae'r cyflwr genidol yn ofynnol yma",
 
     "Comparative adjective required"
- => "Adjektiv im Komparativ benötigt",
+ => "Mae ansoddair cymharol yn ofynnol",
 
     "Definite article required"
  => "Definite article required",
 
     "Unnecessary use of the definite article"
- => "Unnötige Benutzung des bestimmten Artikels",
+ => "Defnydd diangen o'r fannod benodol",
 
     "Unnecessary use of the genitive case"
- => "Unnötige Benutzung des bestimmten Artikels",
+ => "Defnydd diangen o'r fannod benodol",
 
     "The genitive case is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Mae'r cyflwr genidol yn ofynnol yma",
 
     "It seems unlikely that you intended to use the subjunctive here"
  => "It seems unlikely that you intended to use the subjunctive here",
 
     "Usually used in the set phrase /[_1]/"
- => "Normalerweise im Satz /[_1]/ benutzt",
+ => "Defnyddir fel rheol yn yr ymadrodd sefydlog /[_1]/",
 
     "You should use /[_1]/ here instead"
- => "An dieser Stelle besser /[_1]/ benutzen",
+ => "Dylech ddefnyddio /[_1]/ yma yn lle",
 
     "Non-standard form of /[_1]/"
- => "Nicht dem Standard entsprechende Form von /[_1]/",
+ => "Ffurf ansafonol o /[_1]/",
 
     "Derived from a non-standard form of /[_1]/"
- => "Abgeleitet von der nicht dem Standard entsprechenden Form /[_1]/",
+ => "Deilliwyd o ffurf ansafonol o /[_1]/",
 
     "Derived incorrectly from the root /[_1]/"
- => "Falsch abgeleitet von der Wurzel /[_1]/",
+ => "Deilliwyd yn anghywir o'r gwreiddyn /[_1]/",
 
     "Unknown word"
- => "Unbekanntes Wort",
+ => "Gair anhysbys",
 
     "Unknown word: /[_1]/?"
- => "Unbekanntes Wort",
+ => "Gair anhysbys",
 
     "Valid word but more often found in place of /[_1]/"
  => "Valid word but more often found in place of /[_1]/",
 
     "Not in database but apparently formed from the root /[_1]/"
- => "Nicht in der Datenbank, aber anscheinend aus der Wurzel /[_1]/ gebildet",
+ => "Dim yn y gronfa ddata, ond yn ôl pob golwg deilliwyd o'r gwreiddyn /[_1]/",
 
     "The word /[_1]/ is not needed"
  => "The word /[_1]/ is not needed",
 
     "Do you mean /[_1]/?"
- => "Meinen Sie /[_1]/?",
+ => "Ydych yn golygu /[_1]/?",
 
     "Derived form of common misspelling /[_1]/?"
- => "Abgeleitete Form der beliebten Falschschreibung /[_1]/?",
+ => "Ffurf ddeilliedig o'r camsillafiad cyffredin /[_1]/?",
 
     "Not in database but may be a compound /[_1]/?"
- => "Nicht in der Datenbank, aber könnte es ein zusammengesetztes /[_1]/ sein?",
+ => "Dim yn y gronfa ddata ond efallai cyfansoddair o /[_1]/?",
 
     "Not in database but may be a non-standard compound /[_1]/?"
- => "Nicht in der Datenbank, aber könnte es ein ungewöhnliches zusammengesetztes /[_1]/ sein?",
+ => "Dim yn y gronfa ddata ond efallai cyfansoddair ansafonol o /[_1]/?",
 
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
- => "Wahrscheinlich ein Fremdwort (die Folge /[_1]/ ist sehr unwahrscheinlich)",
+ => "Efallai gair dieithr (mae'r dilyniant /[_1]/ yn annhebygol iawn)",
 
     "Prefix /h/ missing"
- => "Präfix /h/ fehlt",
+ => "Rhagddodiad /h/ ar goll",
 
     "Prefix /t/ missing"
- => "Präfix /t/ fehlt",
+ => "Rhagddodiad /t/ ar goll",
 
     "Prefix /d'/ missing"
- => "Präfix /h/ fehlt",
+ => "Rhagddodiad /h/ ar goll",
 
     "Unnecessary prefix /h/"
- => "Unnötiges Präfix /h/",
+ => "Rhagddodiad diangen /h/",
 
     "Unnecessary prefix /t/"
- => "Unnötiges Präfix /t/",
+ => "Rhagddodiad diangen /t/",
 
     "Unnecessary prefix /d'/"
- => "Unnötiges Präfix /h/",
+ => "Rhagddodiad diangen /h/",
 
     "Unnecessary initial mutation"
- => "Unnötige Lenierung",
+ => "Treiglad meddal diangen",
 
     "Initial mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Treiglad cychwynnol ar goll",
 
     "Unnecessary lenition"
- => "Unnötige Lenierung",
+ => "Treiglad meddal diangen",
 
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
  => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
 
     "Lenition missing"
- => "Lenierung fehlt",
+ => "Treiglad meddal ar goll",
 
     "Unnecessary eclipsis"
- => "Unnötige Lenierung",
+ => "Treiglad meddal diangen",
 
     "Eclipsis missing"
- => "Eklipsis fehlt",
+ => "Treiglad trwynol ar goll",
 
     "The dative is used only in special phrases"
  => "The dative is used only in special phrases",
 
     "The dependent form of the verb is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Mae'r cyflwr genidol yn ofynnol yma",
 
     "Unnecessary use of the dependent form of the verb"
- => "Unnötige Benutzung des bestimmten Artikels",
+ => "Defnydd diangen o'r fannod benodol",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
  => "The synthetic (combined) form, ending in /[_1]/, is often used here",
 
     "Second (soft) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Treiglad cychwynnol ar goll",
 
     "Third (breathed) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Treiglad cychwynnol ar goll",
 
     "Fourth (hard) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Treiglad cychwynnol ar goll",
 
     "Fifth (mixed) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Treiglad cychwynnol ar goll",
 
     "Fifth (mixed) mutation after 'th missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Treiglad cychwynnol ar goll",
 
 );
 1;

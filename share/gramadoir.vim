@@ -7,7 +7,7 @@
 " Licence:          This program is free software; you can redistribute it
 "                   and/or modify it under the terms of the GNU General Public
 "                   License.  See http://www.gnu.org/copyleft/gpl.txt
-" Version:          0.4.1, 2004-02-08
+" Version:          0.5, 2004-07-28
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if exists("loaded_gramadoir") || &compatible
    finish
@@ -27,7 +27,7 @@ function s:Check()
     silent execute "w!".l:filename
   endif
   let errorfile = tempname()
-  let l:dummy=system('cat '. escape(l:filename,' \')." | gram-ga.pl --html --aspell --aschod=iso-8859-1 | sed 's/<br>//g; s/ class=gramadoir//g' > ".escape(errorfile,' \'))
+  let l:dummy=system('cat '. escape(l:filename,' \')." | gram-ga.pl --html --aschod=iso-8859-1 | sed 's/<br>//g; s/ class=gramadoir//g' > ".escape(errorfile,' \'))
   silent exe 'split ' . errorfile
   execute "normal \<C-W>b"
   execute "normal \<C-W>K"

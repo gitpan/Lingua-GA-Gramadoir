@@ -2,14 +2,14 @@ package Lingua::GA::Gramadoir::Languages::ga;
 # Irish translations for gramadoir.
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gramadoir package.
-# Kevin Patrick Scannell <scannell@SLU.EDU>, 2003.
+# Kevin Patrick Scannell <scannell@SLU.EDU>, 2003, 2004, 2005.
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: gramadoir 0.5\n"
+#"Project-Id-Version: gramadoir 0.6\n"
 #"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2004-07-28 08:43-0500\n"
-#"PO-Revision-Date: 2004-07-28 15:58-0500\n"
+#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
+#"PO-Revision-Date: 2005-03-02 23:33-0600\n"
 #"Last-Translator: Kevin Patrick Scannell <scannell@SLU.EDU>\n"
 #"Language-Team: Irish <ga@li.org>\n"
 #"MIME-Version: 1.0\n"
@@ -23,20 +23,38 @@ use base qw(Lingua::GA::Gramadoir::Languages);
 use vars qw(%Lexicon);
 
 %Lexicon = (
+    "Line %d: [_1]\n"
+ => "Líne %d: [_1]\n",
+
+    "unrecognized option [_1]"
+ => "rogha anaithnid [_1]",
+
+    "option [_1] requires an argument"
+ => "ní foláir argóint don rogha [_1]",
+
+    "option [_1] does not allow an argument"
+ => "ní cheadaítear argóint i ndiaidh na rogha [_1]",
+
+    "error parsing command-line options"
+ => "earráid agus roghanna líne na n-orduithe á miondealú",
+
+    "Unable to set output color to [_1]"
+ => "Níorbh fhéidir dath an aschuir a shocrú mar [_1]",
+
+    "Language [_1] is not supported."
+ => "Níl an teanga [_1] ar fáil.",
+
     "An Gramadoir"
  => "An Gramadóir",
 
-    "Currently checking [_1]"
- => "Ag seiceáil [_1]",
+    "Try [_1] for more information."
+ => "Bain triail as [_1] chun tuilleadh eolais a fháil.",
 
-    "There is no such file."
- => "Níl a leithéid de chomhad ann",
+    "version [_1]"
+ => "leagan [_1]",
 
-    "Is a directory"
- => "Is comhadlann é",
-
-    "Permission denied"
- => "Cead diúltaithe",
+    "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
+ => "Is saorbhogearra an ríomhchlár seo; féach ar an bhunchód le haghaidh\ncoinníollacha cóipeála.  Níl baránta AR BITH ann; go fiú níl baránta ann\nd'INDÍOLTACHT nó FEILIÚNACHT DO FHEIDHM AR LEITH, an oiread atá ceadaithe\nde réir dlí.",
 
     "Usage: [_1] ~[OPTIONS~] ~[FILES~]"
  => "Úsáid: [_1] ~[ROGHANNA~] ~[COMHAD~]",
@@ -50,41 +68,38 @@ use vars qw(%Lexicon);
     "    --ionchod=ENC  specify the character encoding of the text to be checked"
  => "    --ionchod=CÓD  socraigh an t-ionchódú den téacs le seiceáil",
 
+    "    --aschod=ENC   specify the character encoding for output"
+ => "    --aschod=CÓD   socraigh an t-ionchódú le haschur",
+
+    "    --comheadan=xx choose the language for error messages"
+ => "    --comheadan=xx socraigh an teanga de na teachtaireachtaí",
+
+    "    --dath=COLOR   specify the color to use for highlighting errors"
+ => "    --dath=DATH    aibhsigh earráidí sa DATH seo",
+
     "    --litriu       write misspelled words to standard output"
  => "    --litriu       scríobh focail mílitrithe chuig an aschur caighdeánach",
 
-    "    --aspell       suggest corrections for misspellings (requires GNU aspell)"
- => "    --aspell       mol ceartúcháin d'fhocail mílitrithe (is gá le GNU aspell)",
+    "    --aspell       suggest corrections for misspellings"
+ => "    --aspell       mol ceartúcháin d'fhocail mílitrithe",
 
     "    --aschur=FILE  write output to FILE"
  => "    --aschur=COMHAD scríobh aschur chuig COMHAD",
 
-    "    --teanga=XX    specify the language of the text to be checked (default=ga)"
- => "    --teanga=XX    socraigh an teanga den téacs le seiceáil (loicthe=ga)",
-
     "    --help         display this help and exit"
- => "    --help         taispeáin an chabhair seo agus éirigh as",
+ => "    --help         taispeáin an chabhair seo agus scoir",
 
     "    --version      output version information and exit"
- => "    --version      taispeáin eolas faoin leagan agus éirigh as",
+ => "    --version      taispeáin eolas faoin leagan agus scoir",
 
     "Options for developers:"
  => "Roghanna d'fhorbróirí:",
 
     "    --api          output a simple XML format for use with other applications"
- => "    --api          scríobh i bhformáid XML mar comhéadan le feidhmchláir eile",
-
-    "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
- => "    --brill        gin rialacha aonchiallacha le halgartam féinlathach de Brill",
+ => "    --api          scríobh i bhformáid XML mar chomhéadan le feidhmchláir eile",
 
     "    --html         produce HTML output for viewing in a web browser"
  => "    --html         aschur i gcruth HTML chun féachaint le brabhsálaí",
-
-    "    --ilchiall     report unresolved ambiguities, sorted by frequency"
- => "    --ilchiall     taispeáin focail ilchiallacha, de réir minicíochta",
-
-    "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
- => "    --minic        taispeáin gach clib de réir minicíochta (do unigram-xx.txt)",
 
     "    --no-unigram   do not resolve ambiguous parts of speech by frequency"
  => "    --no-unigram   ná réitigh ranna cainte ilchiallacha de réir minicíochta",
@@ -98,68 +113,50 @@ use vars qw(%Lexicon);
     "Send bug reports to <[_1]>."
  => "Seol tuairiscí fabhtanna chuig <[_1]>.",
 
-    "version [_1]"
- => "leagan [_1]",
+    "There is no such file."
+ => "Níl a leithéid de chomhad ann",
 
-    "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
- => "Is saorbhogearra an ríomhchlár seo; féach ar an bhunchód le haghaidh\ncoinníollacha cóipeála.  Níl baránta AR BITH ann; go fiú níl baránta ann\nd'INDÍOLTACHT nó FEILIÚNACHT DO FHEIDHM AR LEITH, an oiread atá ceadaithe\nde réir dlí.",
+    "Is a directory"
+ => "Is comhadlann é",
 
-    "Try [_1] for more information."
- => "Bain triail as [_1] chun tuilleadh eolais a fháil.",
+    "Permission denied"
+ => "Cead diúltaithe",
 
-    "unrecognized option [_1]"
- => "rogha anaithnid [_1]",
+    "[_1]: warning: problem closing [_2]\n"
+ => "[_1]: rabhadh: fadhb ag dúnadh [_2]\n",
 
-    "option [_1] requires an argument"
- => "ní foláir argóint don rogha [_1]",
+    "Currently checking [_1]"
+ => "Ag seiceáil [_1]",
 
-    "option [_1] does not allow an argument"
- => "ní cheadaítear argóint i ndiaidh an rogha [_1]",
+    "    --ilchiall     report unresolved ambiguities, sorted by frequency"
+ => "    --ilchiall     taispeáin focail ilchiallacha, de réir minicíochta",
 
-    "Language [_1] is not supported."
- => "Níl an teanga [_1] ar fáil.",
+    "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
+ => "    --minic        taispeáin gach clib de réir minicíochta (do unigram-xx.txt)",
+
+    "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
+ => "    --brill        gin rialacha aonchiallacha le halgartam féinlathach de Brill",
+
+    "[_1]: problem reading the database\n"
+ => "[_1]: fadhb ag léamh an bhunachair sonraí\n",
+
+    "[_1]: `[_2]' corrupted at [_3]\n"
+ => "[_1]: `[_2]' truaillithe ag [_3]\n",
 
     "conversion from [_1] is not supported"
- => "níl aon fháil ar tiontú ón ionchódú [_1]",
+ => "níl aon fháil ar thiontú ón ionchódú [_1]",
 
-    "aspell-[_1] is not installed"
- => "Níl aspell-[_1] ar fáil",
+    "[_1]: illegal grammatical code\n"
+ => "[_1]: cód gramadach neamhcheadaithe\n",
 
-    "Unknown word"
- => "Focal anaithnid",
+    "[_1]: no grammar codes: [_2]\n"
+ => "[_1]: níl aon chód gramadaí ann: [_2]\n",
 
-    "Unknown word (ignoring remainder in this sentence)"
- => "Focal anaithnid (scaoilfear an chuid eile san abairt seo)",
+    "[_1]: unrecognized error macro: [_2]\n"
+ => "[_1]: macra anaithnid earráide: [_2]\n",
 
     "Valid word but extremely rare in actual usage"
  => "Focal ceart ach an-neamhchoitianta",
-
-    "Usually used in the set phrase /[_1]/"
- => "Ní úsáidtear an focal seo ach san abairtín /[_1]/ de ghnáth",
-
-    "You should use /[_1]/ here instead"
- => "Ba chóir duit /[_1]/ a úsáid anseo",
-
-    "Non-standard form of /[_1]/"
- => "Foirm neamhchaighdeánach de /[_1]/",
-
-    "Initial mutation missing"
- => "Urú nó séimhiú ar iarraidh",
-
-    "Unnecessary lenition"
- => "Séimhiú gan ghá",
-
-    "Prefix /h/ missing"
- => "Réamhlitir /h/ ar iarraidh",
-
-    "Prefix /t/ missing"
- => "Réamhlitir /t/ ar iarraidh",
-
-    "Lenition missing"
- => "Séimhiú ar iarraidh",
-
-    "Eclipsis missing"
- => "Urú ar iarraidh",
 
     "Repeated word"
  => "Focal céanna faoi dhó",
@@ -167,86 +164,140 @@ use vars qw(%Lexicon);
     "Unusual combination of words"
  => "Cor cainte aisteach",
 
+    "The plural form is required here"
+ => "Tá gá leis an leagan iolra anseo",
+
+    "The singular form is required here"
+ => "Tá gá leis an leagan uatha anseo",
+
     "Comparative adjective required"
  => "Ba chóir duit an bhreischéim a úsáid anseo",
 
-    "Unnecessary prefix /h/"
- => "Réamhlitir /h/ gan ghá",
-
-    "Unnecessary prefix /t/"
- => "Réamhlitir /t/ gan ghá",
+    "Definite article required"
+ => "Ba chóir duit an t-alt cinnte a úsáid",
 
     "Unnecessary use of the definite article"
  => "Ní gá leis an alt cinnte anseo",
 
+    "Unnecessary use of the genitive case"
+ => "Ní gá leis an leagan ginideach anseo",
+
     "The genitive case is required here"
  => "Tá gá leis an leagan ginideach anseo",
 
-    "[_1]: out of memory\n"
- => "[_1]: cuimhne ídithe\n",
+    "It seems unlikely that you intended to use the subjunctive here"
+ => "Ní dócha go raibh intinn agat an modh foshuiteach a úsáid anseo",
 
-    "[_1]: `%s' corrupted at %s\n"
- => "[_1]: `%s' truaillithe ag %s\n",
+    "Usually used in the set phrase /[_1]/"
+ => "Ní úsáidtear an focal seo ach san abairtín «[_1]» de ghnáth",
 
-    "[_1]: warning: check size of %s: %d?\n"
- => "[_1]: rabhadh: deimhnigh méid de %s: %d?\n",
+    "You should use /[_1]/ here instead"
+ => "Ba chóir duit «[_1]» a úsáid anseo",
 
-    "[_1]: warning: problem closing %s\n"
- => "[_1]: rabhadh: fadhb ag dúnadh %s\n",
-
-    "[_1]: no grammar codes: %s\n"
- => "[_1]: níl aon cód gramadaí ann: %s\n",
-
-    "problem with the `cuardach' command\n"
- => "fadhb leis an ordú 'cuardach'\n",
-
-    "[_1]: problem reading the database\n"
- => "[_1]: fadhb ag léamh an bhunachair sonraí\n",
-
-    "[_1]: illegal grammatical code\n"
- => "[_1]: cód gramadach neamhcheadaithe\n",
-
-    "Line %d: [_1]\n"
- => "Líne %d: [_1]\n",
-
-    "error parsing command-line options"
- => "earráid agus roghanna líne na n-orduithe á miondealú",
-
-    "    --aschod=ENC   specify the character encoding for output"
- => "    --aschod=CÓD   socraigh an t-ionchódú le haschur",
-
-    "    --comheadan=xx choose the language for error messages"
- => "    --comheadan=xx socraigh an teanga de na teachtaireachtaí",
-
-    "    --dath=COLOR   specify the color to use for highlighting errors"
- => "    --dath=DATH    aibhsigh earráidí sa DHATH seo",
-
-    "    --aspell       suggest corrections for misspellings"
- => "    --aspell       mol ceartúcháin d'fhocail mílitrithe",
+    "Non-standard form of /[_1]/"
+ => "Foirm neamhchaighdeánach de «[_1]»",
 
     "Derived from a non-standard form of /[_1]/"
- => "Bunaithe ar foirm neamhchaighdeánach de /[_1]/",
+ => "Bunaithe ar fhoirm neamhchaighdeánach de «[_1]»",
 
     "Derived incorrectly from the root /[_1]/"
- => "Bunaithe go mícheart ar an bhfréamh /[_1]/",
+ => "Bunaithe go mícheart ar an bhfréamh «[_1]»",
+
+    "Unknown word"
+ => "Focal anaithnid",
+
+    "Unknown word: /[_1]/?"
+ => "Focal anaithnid: «[_1]»?",
+
+    "Valid word but more often found in place of /[_1]/"
+ => "Focal ceart ach aimsítear é níos minice in ionad «[_1]»",
 
     "Not in database but apparently formed from the root /[_1]/"
- => "Focal anaithnid ach bunaithe ar /[_1]/ is dócha",
+ => "Focal anaithnid ach bunaithe ar «[_1]» is dócha",
+
+    "The word /[_1]/ is not needed"
+ => "Ní gá leis an fhocal «[_1]»",
 
     "Do you mean /[_1]/?"
- => "An raibh /[_1]/ ar intinn agat?",
+ => "An raibh «[_1]» ar intinn agat?",
 
     "Derived form of common misspelling /[_1]/?"
- => "Bunaithe ar focal mílitrithe go coitianta /[_1]/?",
+ => "Bunaithe ar fhocal mílitrithe go coitianta «[_1]»?",
 
     "Not in database but may be a compound /[_1]/?"
- => "Focal anaithnid ach is féidir gur comhfhocal /[_1]/ é?",
+ => "Focal anaithnid ach is féidir gur comhfhocal «[_1]» é?",
 
     "Not in database but may be a non-standard compound /[_1]/?"
- => "Focal anaithnid ach is féidir gur comhfhocal neamhchaighdeánach /[_1]/ é?",
+ => "Focal anaithnid ach is féidir gur comhfhocal neamhchaighdeánach «[_1]» é?",
 
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
- => "Is féidir gur focal iasachta é seo (tá na litreacha /[_1]/ neamhdhóchúil)",
+ => "Is féidir gur focal iasachta é seo (tá na litreacha «[_1]» neamhdhóchúil)",
+
+    "Prefix /h/ missing"
+ => "Réamhlitir «h» ar iarraidh",
+
+    "Prefix /t/ missing"
+ => "Réamhlitir «t» ar iarraidh",
+
+    "Prefix /d'/ missing"
+ => "Réamhlitir «d'» ar iarraidh",
+
+    "Unnecessary prefix /h/"
+ => "Réamhlitir «h» gan ghá",
+
+    "Unnecessary prefix /t/"
+ => "Réamhlitir «t» gan ghá",
+
+    "Unnecessary prefix /d'/"
+ => "Réamhlitir «d'» gan ghá",
+
+    "Unnecessary initial mutation"
+ => "Urú nó séimhiú gan ghá",
+
+    "Initial mutation missing"
+ => "Urú nó séimhiú ar iarraidh",
+
+    "Unnecessary lenition"
+ => "Séimhiú gan ghá",
+
+    "Often the preposition /[_1]/ causes lenition, but this case is unclear"
+ => "Leanann séimhiú an réamhfhocal «[_1]» go minic, ach ní léir é sa chás seo",
+
+    "Lenition missing"
+ => "Séimhiú ar iarraidh",
+
+    "Unnecessary eclipsis"
+ => "Urú gan ghá",
+
+    "Eclipsis missing"
+ => "Urú ar iarraidh",
+
+    "The dative is used only in special phrases"
+ => "Ní úsáidtear an tabharthach ach in abairtí speisialta",
+
+    "The dependent form of the verb is required here"
+ => "Tá gá leis an fhoirm spleách anseo",
+
+    "Unnecessary use of the dependent form of the verb"
+ => "Ní gá leis an fhoirm spleách",
+
+    "The synthetic (combined) form, ending in /[_1]/, is often used here"
+ => "Is an fhoirm tháite, leis an iarmhír «[_1]», a úsáidtear go minic",
+
+    "Second (soft) mutation missing"
+ => "An dara claochlú (bog) ar iarraidh",
+
+    "Third (breathed) mutation missing"
+ => "An tríú claochlú (análach) ar iarraidh",
+
+    "Fourth (hard) mutation missing"
+ => "An ceathrú claochlú (crua) ar iarraidh",
+
+    "Fifth (mixed) mutation missing"
+ => "An cúigiú claochlú (measctha) ar iarraidh",
+
+    "Fifth (mixed) mutation after 'th missing"
+ => "An cúigiú claochlú (measctha) i ndiaidh «'th» ar iarraidh",
 
 );
 1;

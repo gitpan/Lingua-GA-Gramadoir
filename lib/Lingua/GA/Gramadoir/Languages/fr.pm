@@ -6,10 +6,10 @@ package Lingua::GA::Gramadoir::Languages::fr;
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: GNU gramadoir 0.4\n"
+#"Project-Id-Version: GNU gramadoir 0.5\n"
 #"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2004-07-28 08:43-0500\n"
-#"PO-Revision-Date: 2004-01-09 08:00-0500\n"
+#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
+#"PO-Revision-Date: 2004-08-26 08:00-0500\n"
 #"Last-Translator: Michel Robitaille <robitail@IRO.UMontreal.CA>\n"
 #"Language-Team: French <traduc@traduc.org>\n"
 #"MIME-Version: 1.0\n"
@@ -23,20 +23,38 @@ use base qw(Lingua::GA::Gramadoir::Languages);
 use vars qw(%Lexicon);
 
 %Lexicon = (
+    "Line %d: [_1]\n"
+ => "Ligne %d: [_1]\n",
+
+    "unrecognized option [_1]"
+ => "[_1] option non reconnue",
+
+    "option [_1] requires an argument"
+ => "option [_1] requiert un argument",
+
+    "option [_1] does not allow an argument"
+ => "option [_1] ne permet pas un argument",
+
+    "error parsing command-line options"
+ => "erreur d'analyse de syntaxe des options de la ligne de commande",
+
+    "Unable to set output color to [_1]"
+ => "Unable to set output color to [_1]",
+
+    "Language [_1] is not supported."
+ => "Le langage [_1] n'est pas supporté.",
+
     "An Gramadoir"
  => "Un Gramadoir",
 
-    "Currently checking [_1]"
- => "Vérification en cours [_1]",
+    "Try [_1] for more information."
+ => "Essayez [_1] pour plus d'informations.",
 
-    "There is no such file."
- => "Il n'y a pas un tel fichier",
+    "version [_1]"
+ => "version [_1]",
 
-    "Is a directory"
- => "Est un répertoire",
-
-    "Permission denied"
- => "Permission refusée",
+    "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
+ => "Ce logiciel est libre; voir les sources pour les conditions de\nreproduction. AUCUNE garantie n'est donnée; tant pour des raisons\nCOMMERCIALES que pour RÉPONDRE À UN BESOIN PARTICULIER,\nselon que les lois le permettent",
 
     "Usage: [_1] ~[OPTIONS~] ~[FILES~]"
  => "Usage: [_1] ~[OPTIONS~] ~[FICHIERS~]",
@@ -50,17 +68,23 @@ use vars qw(%Lexicon);
     "    --ionchod=ENC  specify the character encoding of the text to be checked"
  => "    --ionchod=ENC  spécifier l'encodage des caractères du texte à vérifier",
 
+    "    --aschod=ENC   specify the character encoding for output"
+ => "    --aschod=ENC   spécifier l'encodage des caractères pour la sortie",
+
+    "    --comheadan=xx choose the language for error messages"
+ => "    --comheadan=xx choisir le langage pour les message d'erreur",
+
+    "    --dath=COLOR   specify the color to use for highlighting errors"
+ => "    --dath=COULEUR spécifier la COULEUR à utiliser pour surligner les erreurs",
+
     "    --litriu       write misspelled words to standard output"
  => "    --litriu       écrire les mots mal orthographiés sur la sortie standard",
 
-    "    --aspell       suggest corrections for misspellings (requires GNU aspell)"
- => "    --aspell       suggérer des corrections pour les erreurs d'orhographe (GNU aspell requis)",
+    "    --aspell       suggest corrections for misspellings"
+ => "    --aspell       suggérer des corrections pour les erreurs d'orhographe",
 
     "    --aschur=FILE  write output to FILE"
- => "    --aschur=FILE  write output to FILE",
-
-    "    --teanga=XX    specify the language of the text to be checked (default=ga)"
- => "    --teanga=XX    spécifier le langage du texte à vérifier (par défaut=ga)",
+ => "    --aschur=FICHIER  écrire la sortie dans le FICHIER",
 
     "    --help         display this help and exit"
  => "    --help         afficher l'aide-mémoire et quitter",
@@ -72,19 +96,10 @@ use vars qw(%Lexicon);
  => "Options pour les développeurs:",
 
     "    --api          output a simple XML format for use with other applications"
- => "    --api          output a simple XML format for use with other applications",
-
-    "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
- => "    --brill        trouver des règle de clarification à l'aide de l'algorithme non supervisé de Brill",
+ => "    --api          produire un format XML simple de sortie avec d'autres applications",
 
     "    --html         produce HTML output for viewing in a web browser"
  => "    --html         produire une sortie HTML pour un logiciel de navigation Internet",
-
-    "    --ilchiall     report unresolved ambiguities, sorted by frequency"
- => "    --ilchiall     rapporter les ambiguïtés non résolues, triées selon la fréquence",
-
-    "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
- => "    --minic        afficher toutes les étiquettes,  triées selon la fréquence (pour unigram-xx.txt)",
 
     "    --no-unigram   do not resolve ambiguous parts of speech by frequency"
  => "    --no-unigram   ne pas résoudre les parties ambiguës de la langue selon la fréquence",
@@ -98,41 +113,80 @@ use vars qw(%Lexicon);
     "Send bug reports to <[_1]>."
  => "Transmettre un rapport d'anomalies à <[_1]>.",
 
-    "version [_1]"
- => "version [_1]",
+    "There is no such file."
+ => "Il n'y a pas un tel fichier",
 
-    "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
- => "Ce logiciel est libre; voir les sources pour les conditions de\nreproduction. AUCUNE garantie n'est donnée; tant pour des raisons\nCOMMERCIALES que pour RÉPONDRE À UN BESOIN PARTICULIER,\nselon que les lois le permettent",
+    "Is a directory"
+ => "Est un répertoire",
 
-    "Try [_1] for more information."
- => "Essayez [_1] pour plus d'informations.",
+    "Permission denied"
+ => "Permission refusée",
 
-    "unrecognized option [_1]"
- => "[_1] option non reconnue",
+    "[_1]: warning: problem closing [_2]\n"
+ => "[_1]: AVERTISSEMENT: problème de fermeture de [_2]\n",
 
-    "option [_1] requires an argument"
- => "option [_1] requiert un argument",
+    "Currently checking [_1]"
+ => "Vérification en cours [_1]",
 
-    "option [_1] does not allow an argument"
- => "option [_1] ne permet pas un argument",
+    "    --ilchiall     report unresolved ambiguities, sorted by frequency"
+ => "    --ilchiall     rapporter les ambiguïtés non résolues, triées selon la fréquence",
 
-    "Language [_1] is not supported."
- => "Le langage [_1] n'est pas supporté.",
+    "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
+ => "    --minic        afficher toutes les étiquettes,  triées selon la fréquence (pour unigram-xx.txt)",
+
+    "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
+ => "    --brill        trouver des règle de clarification à l'aide de l'algorithme non supervisé de Brill",
+
+    "[_1]: problem reading the database\n"
+ => "[_1]: problème de lecture de la base de données\n",
+
+    "[_1]: `[_2]' corrupted at [_3]\n"
+ => "[_1]: « [_2] » corrompu à [_3]\n",
 
     "conversion from [_1] is not supported"
  => "la conversion 'a partir de [_1] n'est pas supportée",
 
-    "aspell-[_1] is not installed"
- => "aspell-[_1] n'est pas installé",
+    "[_1]: illegal grammatical code\n"
+ => "[_1]: code grammatical illégal\n",
 
-    "Unknown word"
- => "Mot inconnu",
+    "[_1]: no grammar codes: [_2]\n"
+ => "[_1]: pas de codes de grammaire: [_2]\n",
 
-    "Unknown word (ignoring remainder in this sentence)"
- => "Mot inconnu (le reste de la phrase est ignoré)",
+    "[_1]: unrecognized error macro: [_2]\n"
+ => "[_1] option non reconnue",
 
     "Valid word but extremely rare in actual usage"
  => "mot valide mais extrêmement rare selon l'usage actuel",
+
+    "Repeated word"
+ => "mot répété",
+
+    "Unusual combination of words"
+ => "combinaison de mots inusité",
+
+    "The plural form is required here"
+ => "le cas génitif est requis ici",
+
+    "The singular form is required here"
+ => "le cas génitif est requis ici",
+
+    "Comparative adjective required"
+ => "adjectif comparatif nécessaire",
+
+    "Definite article required"
+ => "Definite article required",
+
+    "Unnecessary use of the definite article"
+ => "usage non nécessaire de l'article défini",
+
+    "Unnecessary use of the genitive case"
+ => "usage non nécessaire de l'article défini",
+
+    "The genitive case is required here"
+ => "le cas génitif est requis ici",
+
+    "It seems unlikely that you intended to use the subjunctive here"
+ => "It seems unlikely that you intended to use the subjunctive here",
 
     "Usually used in the set phrase /[_1]/"
  => "habituellement utilisé dans le jeu de phrases /[_1]/",
@@ -141,13 +195,43 @@ use vars qw(%Lexicon);
  => "Vous devriez utiliser /[_1]/ ici à la place",
 
     "Non-standard form of /[_1]/"
- => "Forme non conforme: utiliser plutôt /[_1]/?",
+ => "Forme non standard de /[_1]/",
 
-    "Initial mutation missing"
- => "Mutation initiale manquante",
+    "Derived from a non-standard form of /[_1]/"
+ => "Dérivé d'une forme non standard de /[_1]/",
 
-    "Unnecessary lenition"
- => "Lénition non nécessaire",
+    "Derived incorrectly from the root /[_1]/"
+ => "Dérivé incorrectement de la racine /[_1]/",
+
+    "Unknown word"
+ => "Mot inconnu",
+
+    "Unknown word: /[_1]/?"
+ => "Mot inconnu",
+
+    "Valid word but more often found in place of /[_1]/"
+ => "Valid word but more often found in place of /[_1]/",
+
+    "Not in database but apparently formed from the root /[_1]/"
+ => "N'est pas dans la base de données mais apparemment formé à partir de la racine /[_1]/",
+
+    "The word /[_1]/ is not needed"
+ => "The word /[_1]/ is not needed",
+
+    "Do you mean /[_1]/?"
+ => "Entendez-vous /[_1]/?",
+
+    "Derived form of common misspelling /[_1]/?"
+ => "Forme dérivée d'une erreur d'orthographe commune /[_1]/?",
+
+    "Not in database but may be a compound /[_1]/?"
+ => "N'est pas dans la base de données mais peut être composé /[_1]/?",
+
+    "Not in database but may be a non-standard compound /[_1]/?"
+ => "N'est pas dans la base de données mais peut être composé de manière non standard /[_1]/?",
+
+    "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
+ => "Possiblement un mot étranger (la séquence /[_1]/ est hautement improbable)",
 
     "Prefix /h/ missing"
  => "Préfixe /h/ manquant",
@@ -155,20 +239,8 @@ use vars qw(%Lexicon);
     "Prefix /t/ missing"
  => "Préfixe /t/ manquant",
 
-    "Lenition missing"
- => "Lénition manquante",
-
-    "Eclipsis missing"
- => "Éclipsis manquante",
-
-    "Repeated word"
- => "mot répété",
-
-    "Unusual combination of words"
- => "combinaison de mots inusité",
-
-    "Comparative adjective required"
- => "adjectif comparatif nécessaire",
+    "Prefix /d'/ missing"
+ => "Préfixe /h/ manquant",
 
     "Unnecessary prefix /h/"
  => "préfixe non nécessaire /h/",
@@ -176,77 +248,56 @@ use vars qw(%Lexicon);
     "Unnecessary prefix /t/"
  => "préfixe non nécessaire /t/",
 
-    "Unnecessary use of the definite article"
- => "usage non nécessaire de l'article défini",
+    "Unnecessary prefix /d'/"
+ => "préfixe non nécessaire /h/",
 
-    "The genitive case is required here"
+    "Unnecessary initial mutation"
+ => "Lénition non nécessaire",
+
+    "Initial mutation missing"
+ => "Mutation initiale manquante",
+
+    "Unnecessary lenition"
+ => "Lénition non nécessaire",
+
+    "Often the preposition /[_1]/ causes lenition, but this case is unclear"
+ => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
+
+    "Lenition missing"
+ => "Lénition manquante",
+
+    "Unnecessary eclipsis"
+ => "Lénition non nécessaire",
+
+    "Eclipsis missing"
+ => "Éclipsis manquante",
+
+    "The dative is used only in special phrases"
+ => "The dative is used only in special phrases",
+
+    "The dependent form of the verb is required here"
  => "le cas génitif est requis ici",
 
-    "[_1]: out of memory\n"
- => "[_1]: mémoire épuisée\n",
+    "Unnecessary use of the dependent form of the verb"
+ => "usage non nécessaire de l'article défini",
 
-    "[_1]: `%s' corrupted at %s\n"
- => "[_1]: « %s » corrompu à %s\n",
+    "The synthetic (combined) form, ending in /[_1]/, is often used here"
+ => "The synthetic (combined) form, ending in /[_1]/, is often used here",
 
-    "[_1]: warning: check size of %s: %d?\n"
- => "[_1]: AVERTISSEMENT: vérifier la taille de %s: %d?\n",
+    "Second (soft) mutation missing"
+ => "Mutation initiale manquante",
 
-    "[_1]: warning: problem closing %s\n"
- => "[_1]: AVERTISSEMENT: problème de fermeture de %s\n",
+    "Third (breathed) mutation missing"
+ => "Mutation initiale manquante",
 
-    "[_1]: no grammar codes: %s\n"
- => "[_1]: pas de codes de grammaire: %s\n",
+    "Fourth (hard) mutation missing"
+ => "Mutation initiale manquante",
 
-    "problem with the `cuardach' command\n"
- => "problème avec la commande « cuardach »\n",
+    "Fifth (mixed) mutation missing"
+ => "Mutation initiale manquante",
 
-    "[_1]: problem reading the database\n"
- => "[_1]: problème de lecture de la base de données\n",
-
-    "[_1]: illegal grammatical code\n"
- => "[_1]: code grammatical illégal\n",
-
-    "Line %d: [_1]\n"
- => "Ligne %d: [_1]\n",
-
-    "error parsing command-line options"
- => "error parsing command-line options",
-
-    "    --aschod=ENC   specify the character encoding for output"
- => "    --aschod=ENC   specify the character encoding for output",
-
-    "    --comheadan=xx choose the language for error messages"
- => "    --comheadan=xx choose the language for error messages",
-
-    "    --dath=COLOR   specify the color to use for highlighting errors"
- => "    --dath=COLOR   specify the color to use for highlighting errors",
-
-    "    --aspell       suggest corrections for misspellings"
- => "    --aspell       suggérer des corrections pour les erreurs d'orhographe",
-
-    "Derived from a non-standard form of /[_1]/"
- => "Derived from a non-standard form of /[_1]/",
-
-    "Derived incorrectly from the root /[_1]/"
- => "Derived incorrectly from the root /[_1]/",
-
-    "Not in database but apparently formed from the root /[_1]/"
- => "Not in database but apparently formed from the root /[_1]/",
-
-    "Do you mean /[_1]/?"
- => "Do you mean /[_1]/?",
-
-    "Derived form of common misspelling /[_1]/?"
- => "Derived form of common misspelling /[_1]/?",
-
-    "Not in database but may be a compound /[_1]/?"
- => "Not in database but may be a compound /[_1]/?",
-
-    "Not in database but may be a non-standard compound /[_1]/?"
- => "Not in database but may be a non-standard compound /[_1]/?",
-
-    "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
- => "Possibly a foreign word (the sequence /[_1]/ is highly improbable)",
+    "Fifth (mixed) mutation after 'th missing"
+ => "Mutation initiale manquante",
 
 );
 1;

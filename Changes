@@ -1,6 +1,33 @@
 ChangeLog Summary
 
-Version 0.4->0.5 (Perl Module 0.50)
+Version 0.51->0.60
+  * Lexicon additions, improvements, and bug fixes (some unnecessary
+    inflections removed)
+  * Rule set more than tripled in size, now covering a wide range of Irish
+    grammar, including nearly all rules concerning missing or unnecessary
+    initial mutations
+  * Simplification of the tagset, some regular expression optimizations,
+    less dependence on part-of-speech macros, and the restructuring of a few
+    slow rules lead to another 5% speed improvement despite the massively
+    larger rule set
+  * Added warnings for many "dangerous pairs" based on corpus analysis
+  * Now correctly tokenizes numerals, including years, ordinals like "5ú",
+    and plurals like "1950í".
+  * Many morphological rules added for treating pre-standard orthography;
+    together with work on the replacement file, these allow An Gramadóir to
+    be used as a "normalizer" for indexing, information retrieval, etc.
+
+Version 0.50->0.51
+  * Lexicon additions and improvements
+  * Improved error trapping
+  * Improved Perl code generation (consistent use of non-capturing
+    parentheses, etc.) giving 5% speed improvement.
+  * Perl implementation of developer options "--brill", "--freq", "--ambig"
+    distributed in the language pack gramadoir-ga-0.51.
+  * Added "--no-unigram" option to gram-ga.pl
+  * POD documentation for gram-ga.pl
+
+Version 0.4->0.50
   * Complete rewrite of core engine entirely in Perl
   * Default output encoding is now utf8; added a "--aschod" option to change
     this

@@ -1,20 +1,132 @@
 #!/usr/bin/perl
-# This is a command-line front end to An Gramadoir,
-# an open-source Irish language grammar checker.
-# Copyright (C) 2004 Kevin P. Scannell <scannell@slu.edu>
-#
-# This script will check the grammar of Irish language text files
-# specified on the command line, or read from standard input if no arguments
-# are given.   The default behavior is to write a summary of possible errors
-# to standard output.
-#
-# Use "--help" to see a list of available command line options.  
-# More detailed information is available from the project web page:
-# http://borel.slu.edu/gramadoir/
-#
-# This is free software; you can redistribute it and/or modify
-# it under the same terms as Perl itself, either Perl version 5.8.2 or,
-# at your option, any later version of Perl 5 you may have available.
+
+=head1 NAME
+
+gram-ga.pl - Command-line interface to An GramadE<oacute>ir
+
+=head1 SYNOPSIS
+
+B<gram-ga.pl> [I<options>] [I<FILE>...]
+
+=head1 DESCRIPTION
+
+This script checks the grammar of Irish language input
+I<FILE>s (or standard input if no files are named).  The default behavior 
+is to write a summary of possible errors to standard output.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-a>, B<--all>,
+    B<--iomlan>     
+
+report all errors (i.e. do not use ~/.neamhshuim)
+
+=item B<-f>, B<--incode>,
+    B<--ionchod>=I<ENC>
+
+specify the character encoding of the text to be checked
+
+=item B<-t>, B<--outcode>,
+    B<--aschod>=I<ENC> 
+
+specify the character encoding for output
+
+=item B<--interface>,
+    B<--comheadan>=xx
+
+choose the language for error messages
+
+=item B<--color>, B<--colour>,
+    B<--dath>=I<COLOR> 
+
+specify the color to use for highlighting errors
+
+=item B<-l>, B<--list>,
+    B<--litriu>     
+
+write misspelled words to standard output
+
+=item B<--moltai>,
+    B<--aspell>     
+
+suggest corrections for misspellings
+
+=item B<-o>, B<--output>,
+    B<--aschur>=I<FILE>
+
+write output to I<FILE>
+
+=item B<-h>, B<--cabhair>,
+    B<--help>       
+
+display this help and exit
+
+=item B<-v>, B<--leagan>,
+    B<--version>    
+
+output version information and exit
+
+
+=item B<--api>        
+
+output a simple XML format for use with other applications
+
+=item B<--html>       
+
+produce HTML output for viewing in a web browser
+
+=item B<--no-unigram>
+
+do not resolve ambiguous parts of speech by frequency
+
+=item B<--xml>        
+
+write tagged XML stream to standard output, for debugging
+
+
+=back
+
+=head1 FILES
+
+If there are words you wish to be ignored by the grammar checker
+(proper names, etc.) you can place them in a file called I<.neamhshuim>
+in your home directory, one word per line.
+
+=head1 REQUIRES
+
+Perl 5.8, Lingua::GA::Gramadoir
+
+=head1 SEE ALSO
+
+=over 4
+
+=item *
+L<http://borel.slu.edu/gramadoir/>
+
+=item *
+L<Lingua::GA::Gramadoir>
+
+=item *
+L<perl(1)>
+
+=back
+
+=head1 AUTHOR
+
+Kevin P. Scannell, E<lt>scannell@slu.eduE<gt>.
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2004 Kevin P. Scannell
+                   
+
+This is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+=cut
 
 use strict;
 use warnings;
@@ -29,58 +141,64 @@ use Lingua::GA::Gramadoir::Languages;
 
 my $lh;
 my $clar;
-my $VERSION = '0.50';
+my $VERSION = '0.60';
 
 sub gettext
 {
-	my $string = shift;
+	my ( $string, @rest ) = @_;
 
 	$string =~ s/\\n/\n/g;
 	$string =~ s/\[/~[/g;
 	$string =~ s/\]/~]/g;
 	$string =~ s/\%s/[_1]/;
-	return $lh->maketext($string, @_);
+	$string =~ s/\%s/[_2]/;
+	return $lh->maketext($string, @rest);
 }
 
 sub localized_die
 {
 	my ( $signal ) = @_;
-	my $dieclar = gettext('An Gramadoir');  # can't use global $clar yet
+	my $msg;
 
-	if ( $signal =~ m/^getopt/ ) {
-		my $msg = gettext('error parsing command-line options');
-		my $helper = $0;
-		$helper =~ s#^.*/([^/]+)$#$1 --help#;
-		my $tryhelp = gettext('Try %s for more information.', $helper);
-		print STDERR "$dieclar: $msg\n$tryhelp\n";
-		exit 1;
+	if ( $signal =~ m/^Unknown option: (.*)/ ) {
+		my $arg = $1;
+		chomp $arg;
+		$msg = gettext('unrecognized option %s', '`'.$arg.'\'');
+	}
+	elsif ( $signal =~ m/^Option (.*) requires an argument/ ) {
+		$msg = gettext('option %s requires an argument', '`'.$1.'\'');
+	}
+	elsif ( $signal =~ m/^Option (.*) does not take/ ) {
+		$msg = gettext('option %s does not allow an argument', '`'.$1.'\'');
+	}
+	elsif ( $signal =~ m/^getopt/ ) {
+		$msg = gettext('error parsing command-line options');
+	}
+	elsif ( $signal =~ m/^Invalid attribute name ([^ ]*)/ ) {
+		$msg = gettext('Unable to set output color to %s', $1);
 	}
 	elsif ( $signal =~ m/^gram: maketext (.*)/ ) {
-		my $msg = gettext('Language %s is not supported.', $1);
-		print STDERR "$dieclar: $msg\n";
-		exit 1;
+		$msg = gettext('Language %s is not supported.', $1);
 	}
 	else {
 		die $signal;
 	}
+	my $dieclar = gettext('An Gramadoir');  # can't use global $clar yet
+	my $tryhelp = gettext('Try %s for more information.', '`gram-ga.pl --help\'');
+	print STDERR "$dieclar: $msg\n$tryhelp\n";
+	exit 1;
 }
 
 $lh = Lingua::GA::Gramadoir::Languages->get_handle();
 $SIG{__DIE__} = 'localized_die';
-my $api = '';
-my $aschur = '';
-my $aspell = '';
-my $comheadan = '';
-my $dath = 'bold red';
-my $help = '';
-my $html = '';
-my $iomlan = '';
-my $ionchod = 'ISO-8859-1';
-my $aschod = 'utf8';
-my $litriu = '';
-my $version = '';
-my $xml = '';
-GetOptions (	
+# scalars for global options
+use vars qw($api $aschur $aspell $comheadan $dath $help $html $iomlan $ionchod $aschod $litriu $version $xml $nounigram);
+$dath = 'bold red';
+$ionchod = 'ISO-8859-1';
+$aschod = 'utf8';
+eval { 
+	local $SIG{__WARN__} = 'localized_die';
+	GetOptions (	
 		'all|iomlan|a'          => \$iomlan,
 		'api'                   => \$api,
 		'aspell|moltai'         => \$aspell,
@@ -88,13 +206,21 @@ GetOptions (
 		'color|colour|dath=s'	=> \$dath,
 		'incode|ionchod|f=s'    => \$ionchod,
 		'outcode|aschod|t=s'    => \$aschod,
+		'no-unigram'		=> \$nounigram,
 		'help|cabhair|h'        => \$help,
 		'html'			=> \$html,
 		'interface|comheadan=s' => \$comheadan,
 		'output|aschur|o=s'     => \$aschur,
 		'version|leagan|v'      => \$version,
 		'xml'                   => \$xml,
-		) or die "getopt error";
+		) 
+};
+die "getopt error" if $@;
+
+$xml = 1 if $nounigram;
+unless ($dath eq "none") {
+eval { color $dath };
+}
 
 if ($aschur) {
 	unless ($^O eq 'MSWin32') {
@@ -108,6 +234,8 @@ else {
 		warn "Couldn't alias STDOUT: $!\n";
 	binmode OUTSTREAM, ":encoding($aschod)";  # must be after alias
 }
+
+binmode STDERR, ":encoding($aschod)";
 
 if ($comheadan) {
 	$lh = Lingua::GA::Gramadoir::Languages->get_handle($comheadan);
@@ -137,7 +265,7 @@ if ($version) {
 if ($help) {
 	my @helpmessages = (
 gettext(
-'Usage: %s [OPTIONS] [FILES]'),
+'Usage: %s [OPTIONS] [FILES]', "gram-ga.pl"),
 "",
 gettext(
 "Options for end-users:"),
@@ -179,6 +307,12 @@ gettext(
 "    --api          output a simple XML format for use with other applications"),
 gettext(
 "    --html         produce HTML output for viewing in a web browser"),
+# TRANSLATORS: By default, if there is no rule in the disambiguation module
+# for selecting the correct part of speech of an ambiguous word, the program
+# chooses the part of speech with the highest frequency.  This is sometimes
+# called "unigram" tagging.   The --no-unigram option turns this behavior off.
+gettext(
+"    --no-unigram   do not resolve ambiguous parts of speech by frequency"),
 # TRANSLATORS: The grammar checker works by passing the input text
 # through a sequence of filters which add XML markup indicating
 # important grammatical information.  The --xml option displays the
@@ -202,6 +336,7 @@ gettext(
 my $gr = new Lingua::GA::Gramadoir(
 	fix_spelling => $aspell,
 	use_ignore_file => ! $iomlan,
+	unigram_tagging => ! $nounigram,
 	interface_language => $comheadan,
 	input_encoding => $ionchod,
 );
@@ -233,7 +368,7 @@ while ($ARGV = shift @ARGV) {
 	}
 	local $/;  # slurp a file at a time
 	$_ = <ARGV>;
-	close ARGV;
+	warn gettext('%s: warning: problem closing %s\n', $clar, $ARGV) unless close ARGV;
 	if ($litriu) {
 		my $missp = $gr->spell_check($_);
 		foreach (@$missp) {
@@ -268,7 +403,7 @@ while ($ARGV = shift @ARGV) {
 				}
 			}
 			$s .= substr($3,$1+length($4));
-			$s .= "<br>\n$5.\n\n";
+			$s .= "<br>\n$5\n\n";  # don't add punctuation
 			if (!$html) {
 				$s =~ s/<br>//g;
 				$s =~ s/&quot;/"/g;
