@@ -1,5 +1,5 @@
 package Lingua::GA::Gramadoir::Languages::af;
-# An Gramad�ir - The Grammarian
+# An Gramadóir - The Grammarian
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Petri Jooste <rkwjpj@puk.ac.za>, 2004.
@@ -7,8 +7,8 @@ package Lingua::GA::Gramadoir::Languages::af;
 #msgid ""
 #msgstr ""
 #"Project-Id-Version: gramadoir 0.4\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-09-05 17:20-0500\n"
 #"PO-Revision-Date: 2004-03-02 16:38+0200\n"
 #"Last-Translator: Petri Jooste <rkwjpj@puk.ac.za>\n"
 #"Language-Team: Afrikaans <i18n@af.org.za>\n"
@@ -155,7 +155,7 @@ use vars qw(%Lexicon);
     "[_1]: unrecognized error macro: [_2]\n"
  => "onbekende opsie [_1]",
 
-    "Valid word but extremely rare in actual usage"
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
  => "Geldige woord, maar baie seldsaam",
 
     "Repeated word"
@@ -170,6 +170,9 @@ use vars qw(%Lexicon);
     "The singular form is required here"
  => "Die genitief word hier benodig",
 
+    "Plural adjective required"
+ => "Vergelykende adjektief benodig",
+
     "Comparative adjective required"
  => "Vergelykende adjektief benodig",
 
@@ -179,11 +182,20 @@ use vars qw(%Lexicon);
     "Unnecessary use of the definite article"
  => "Onnodige gebruik van die bepaalde lidwoord",
 
+    "No need for the first definite article"
+ => "Onnodige gebruik van die bepaalde lidwoord",
+
     "Unnecessary use of the genitive case"
  => "Onnodige gebruik van die bepaalde lidwoord",
 
     "The genitive case is required here"
  => "Die genitief word hier benodig",
+
+    "You should use the present tense here"
+ => "U moet hier eerder /[_1]/ gebruik",
+
+    "You should use the conditional here"
+ => "U moet hier eerder /[_1]/ gebruik",
 
     "It seems unlikely that you intended to use the subjunctive here"
  => "It seems unlikely that you intended to use the subjunctive here",
@@ -209,8 +221,8 @@ use vars qw(%Lexicon);
     "Unknown word: /[_1]/?"
  => "Onbekende woord",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Valid word but more often found in place of /[_1]/",
+    "Valid word but /[_1]/ is more common"
+ => "Valid word but /[_1]/ is more common",
 
     "Not in database but apparently formed from the root /[_1]/"
  => "Not in database but apparently formed from the root /[_1]/",
@@ -233,6 +245,15 @@ use vars qw(%Lexicon);
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
  => "Possibly a foreign word (the sequence /[_1]/ is highly improbable)",
 
+    "Gender disagreement"
+ => "Gender disagreement",
+
+    "Number disagreement"
+ => "Number disagreement",
+
+    "Case disagreement"
+ => "Case disagreement",
+
     "Prefix /h/ missing"
  => "Voorvoegsel /h/ ontbreek",
 
@@ -251,6 +272,9 @@ use vars qw(%Lexicon);
     "Unnecessary prefix /d'/"
  => "Onnodige voorvoegsel /h/",
 
+    "Unnecessary prefix /b'/"
+ => "Onnodige voorvoegsel /h/",
+
     "Unnecessary initial mutation"
  => "Onnodige linisie",
 
@@ -259,6 +283,9 @@ use vars qw(%Lexicon);
 
     "Unnecessary lenition"
  => "Onnodige linisie",
+
+    "The second lenition is unnecessary"
+ => "The second lenition is unnecessary",
 
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
  => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
@@ -298,6 +325,33 @@ use vars qw(%Lexicon);
 
     "Fifth (mixed) mutation after 'th missing"
  => "Aanvangsmutasie ontbreek",
+
+    "Aspirate mutation missing"
+ => "Aanvangsmutasie ontbreek",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "This word violates the rules of Igbo vowel harmony",
+
+    "#~ \"    --aspell       suggest corrections for misspellings (requires GNU \"#~ \"aspell)\""
+ => "#~ \"    --aspell       maak suggesties vir spelfoute (benodig GNU aspell)\"",
+
+    "#~ \"    --teanga=XX    specify the language of the text to be checked \"#~ \"(default=ga)\""
+ => "#~ \"    --teanga=XX    spesifiseer die taal van die teks wat nagegaan moet \"#~ \"word (verstek=ga)\"",
+
+    "aspell-[_1] is not installed"
+ => "aspell-[_1] is nie geïnstalleer nie",
+
+    "Unknown word (ignoring remainder in this sentence)"
+ => "Onbekende woord (die res van die sin word geïgnoreer)",
+
+    "[_1]: out of memory\n"
+ => "[_1]: te min geheue\n",
+
+    "[_1]: warning: check size of [_2]: %d?\n"
+ => "[_1]: waarskuwing: gaan die groote na van [_2]: %d?\n",
+
+    "problem with the `cuardach' command\n"
+ => "probleem met die `cuardach' bevel\n",
 
 );
 1;

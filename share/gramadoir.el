@@ -1,7 +1,5 @@
 ;;; gramadoir.el --- Interface to An Gramadóir
 
-;; $Id: gramadoir.el,v 1.6 2004/10/18 14:17:12 kps Exp $
-
 ;; Copyright (C) 2003  Free Software Foundation, Inc.
 
 ;; Author: Martin Gregory <Martin.Gregory@eur.sas.com>
@@ -19,8 +17,8 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs; see the file COPYING.  If not, write to
-;; the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-;; Boston, MA 02111-1307, USA.
+;; the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
 
 ;;; Commentary:
 

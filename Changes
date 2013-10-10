@@ -1,5 +1,11 @@
 ChangeLog Summary
 
+Version 0.60->0.70
+  * Massive expansion of lexicon, especially handling of non-standard
+    spellings for CaighdeÃ¡naitheoir
+  * Nearly double the number of grammatical rules
+  * Small bug fixes
+
 Version 0.51->0.60
   * Lexicon additions, improvements, and bug fixes (some unnecessary
     inflections removed)
@@ -11,10 +17,10 @@ Version 0.51->0.60
     slow rules lead to another 5% speed improvement despite the massively
     larger rule set
   * Added warnings for many "dangerous pairs" based on corpus analysis
-  * Now correctly tokenizes numerals, including years, ordinals like "5ú",
-    and plurals like "1950í".
+  * Now correctly tokenizes numerals, including years, ordinals like "5Ãº",
+    and plurals like "1950Ã­".
   * Many morphological rules added for treating pre-standard orthography;
-    together with work on the replacement file, these allow An Gramadóir to
+    together with work on the replacement file, these allow An GramadÃ³ir to
     be used as a "normalizer" for indexing, information retrieval, etc.
 
 Version 0.50->0.51
@@ -36,11 +42,11 @@ Version 0.4->0.50
   * Added a complete morphological analyzer which greatly improves the error
     messages when words are not found in the lexicon.
   * The morphology engine also improves handling of late capitals so words
-    like "d'Fhoras", "Sean-Nós" are passed over silently as correct now.
+    like "d'Fhoras", "Sean-NÃ³s" are passed over silently as correct now.
     Also, since the lowered version of a word like "hAire" is not
     automatically searched (since the capitalized version is in the
     lexicon), this gets the correct, unambiguous masculine POS tag. Or in
-    "bPáirtí Glas", the first word is now recognized unambiguously as a noun
+    "bPÃ¡irtÃ­ Glas", the first word is now recognized unambiguously as a noun
     which then has the added benefit of allowing "Glas" to be correctly
     recognized as an adjective.
   * Line numbers are now given where the error occurs (was the line number

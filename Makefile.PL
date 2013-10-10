@@ -26,7 +26,7 @@ if( build_hashes() ) {
 				},
   	  ($] >= 5.005 ?
    	   (ABSTRACT_FROM  => 'lib/Lingua/GA/Gramadoir.pm',
-   	    AUTHOR         => 'Kevin P. Scannell <scannell@slu.edu>') : ()),
+   	    AUTHOR         => 'Kevin P. Scannell <kscanne@gmail.com>') : ()),
 	);
 }
 else {
@@ -47,6 +47,7 @@ sub build_hashes {
 	my $posfile = File::Spec->catfile( $dir, 'pos.hash');
 	my $gramfile = File::Spec->catfile( $dir, '3grams.hash');
 	my $morphfile = File::Spec->catfile( $dir, 'morph.hash');
+	my $tokenfile = File::Spec->catfile( $dir, 'token.hash');
 	my $messagesfile = File::Spec->catfile( $dir, 'messages.hash');
 	my $rawfile;
 
@@ -57,19 +58,24 @@ sub build_hashes {
 	
 			$rawfile = File::Spec->catfile( $srcdir, "focail$i.bs");
 			open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
-			binmode DATABASE, ":bytes";
+			binmode DATABASE, ":utf8";
 			{
 			local $/ = "\cJ";
-			my $grambytes;  # byte semantics always
+			my $grambytes;
+			binmode DATABASE, ":bytes";
 			chomp(my $currword=<DATABASE>);
+			binmode DATABASE, ":utf8";
 			chomp($grambytes = <DATABASE>);
 			$FOCAIL{$currword} = $grambytes;
+			binmode DATABASE, ":bytes";
 			while (<DATABASE>) {
 				chomp;
 				m/^([0-9]?)(.*)/;
 				$currword = substr($currword,0,$1).$2;
+				binmode DATABASE, ":utf8";
 				chomp ($grambytes = <DATABASE>);
 				$FOCAIL{$currword} = $grambytes;
+				binmode DATABASE, ":bytes";
 			}
 			}
 			close DATABASE;
@@ -80,6 +86,7 @@ sub build_hashes {
 		my %EILE;
 		$rawfile = File::Spec->catfile( $srcdir, 'eile.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			chomp;
@@ -100,6 +107,7 @@ sub build_hashes {
 		my %EARRAIDI;
 		$rawfile = File::Spec->catfile( $srcdir, 'earraidi.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			chomp;
@@ -120,29 +128,54 @@ sub build_hashes {
 		my %POS;
 		$rawfile = File::Spec->catfile( $srcdir, 'pos.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			chomp;
-			m/^([^ ]*) (.*)$/;
-			$POS{$1} = $2;
+			s/^#.*$//;
+			if (/\S/) {
+				m/^([0-9]+)\s+(<[^>]+>) *$/;
+				$POS{pack('U',$1)} = $2;
+			}
 		}
 		close DATABASE;
 		store \%POS, $posfile;
+	}
+
+	unless ( -f $tokenfile ) {
+		my @TokenRules;
+		$rawfile = File::Spec->catfile( $srcdir, 'token.bs');
+		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
+		binmode DATABASE, ":bytes";
+		while (<DATABASE>) {
+			chomp;
+			s/^#.*$//;
+			if (/\S/) {
+				/^(.*):(<[^>]+>)$/;
+				push @TokenRules, {'patt' => "($1)", 'tag' => $2};
+			}
+		}
+		close DATABASE;
+		store \@TokenRules, $tokenfile;
 	}
 
 	unless ( -f $morphfile ) {
 		my @MorphRules;
 		$rawfile = File::Spec->catfile( $srcdir, 'morph.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			s/#.*$//;
 			if (/\S/) {
-				my ($patt, $repl, $level, $rootpos) = /\s*(\S+)\s+(\S+)\s+(\S+)\s+(<[^>]+>)/;
+				my ($patt, $repl, $level, $rootpos, $replpos) = /\s*(\S+)\s+(\S+)\s+(\S+)\s+(<[^>]+>)\s+(<[^>]+>)/;
 				$repl =~ s/(.*)/"$1"/;
 				$repl =~ s/\\l\$([1-9])/".mylcfirst(\$$1)."/g;
 				$repl =~ s/\\L\$([1-9])/".mylc(\$$1)."/g;
-				push @MorphRules, {'patt' => $patt, 'repl' => $repl, 'level' => $level, 'rootpos' => $rootpos};
+				$replpos =~ s/"/\\"/g;
+				$replpos =~ s/(.*)/"$1"/;
+				push @MorphRules, {'patt' => $patt, 'repl' => $repl, 'level' => $level, 'rootpos' => $rootpos, 'replpos' => $replpos};
 			}
 		}
 		close DATABASE;
@@ -153,6 +186,7 @@ sub build_hashes {
 		my %GRAMS;
 		$rawfile = File::Spec->catfile( $srcdir, '3grams.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			chomp;
@@ -166,6 +200,7 @@ sub build_hashes {
 		my %COMBO;
 		$rawfile = File::Spec->catfile( $srcdir, 'nocombo.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":utf8";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			chomp;
@@ -178,6 +213,7 @@ sub build_hashes {
 		my %MESSAGES;
 		$rawfile = File::Spec->catfile( $srcdir, 'messages.bs');
 		open(DATABASE, $rawfile) or die "Can't open dictionary: $!";
+		binmode DATABASE, ":bytes";
 		binmode DATABASE, ":bytes";
 		while (<DATABASE>) {
 			chomp;
@@ -193,5 +229,5 @@ sub build_hashes {
 	}
 	return ( -f $replfile and -f $combofile and -f $morphfile and
 		-f $errfile and -f $posfile and -f $gramfile and
-		-f $messagesfile);
+		-f $messagesfile and -f $tokenfile);
 }

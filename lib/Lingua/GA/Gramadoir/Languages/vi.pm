@@ -1,17 +1,18 @@
 package Lingua::GA::Gramadoir::Languages::vi;
-# Vietnamese Translation for gramadoir-0.5.
-# Copyright (C) 2005 Kevin P. Scannell (msgid)
-# Copyright (C) 2005 Free Software Foundation, Inc.
-# Clytie Siddall <clytie@riverland.net.au>, 2005.
+# Vietnamese Translation for Gramadoir.
+# Copyright © 2008 Kevin P. Scannell (msgid)
+# Copyright © 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gramadoir package.
+# Clytie Siddall <clytie@riverland.net.au>, 2005-2008.
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: gramadoir 0.5\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
-#"PO-Revision-Date: 2005-02-04 17:24+1030\n"
+#"Project-Id-Version: gramadoir 0.7\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-08-17 12:05-0500\n"
+#"PO-Revision-Date: 2008-09-08 21:57+0930\n"
 #"Last-Translator: Clytie Siddall <clytie@riverland.net.au>\n"
-#"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net> \n"
+#"Language-Team: Vietnamese <vi-VN@googlegroups.com>\n"
 #"MIME-Version: 1.0\n"
 #"Content-Type: text/plain; charset=utf-8\n"
 #"Content-Transfer-Encoding: 8bit\n"
@@ -36,10 +37,10 @@ use vars qw(%Lexicon);
  => "tùy chọn [_1] không cho phép đối số",
 
     "error parsing command-line options"
- => "gặp lỗi khi phân tách tùy chọn đường lệnh",
+ => "gặp lỗi khi phân tách tùy chọn dòng lệnh",
 
     "Unable to set output color to [_1]"
- => "Unable to set output color to [_1]",
+ => "Không lập được màu dữ liệu xuất thành [_1]",
 
     "Language [_1] is not supported."
  => "Chưa hỗ trợ ngôn ngữ [_1].",
@@ -48,13 +49,13 @@ use vars qw(%Lexicon);
  => "An Gramadóir",
 
     "Try [_1] for more information."
- => "Thử lệnh [_1] để tìm thông tin thêm.",
+ => "Thử lệnh [_1] để tìm thấy thông tin thêm.",
 
     "version [_1]"
  => "phiên bản [_1]",
 
     "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
- => "Phần mềm này tự do; hãy xem nguồn để tìm điều kiện sao chép.\nKhông bảo đảm gì cả, dù khả năng bán hay khả năng làm việc dứt khoát,\ntrong phạm vi mà luật cho phép.",
+ => "Phần mềm này tự do; hãy xem mã nguồn để tìm thấy điều kiện sao chép.\nKhông bảo đảm gì cả, dù khả năng bán hay khả năng làm việc dứt khoát,\ntrong phạm vi mà luật cho phép.",
 
     "Usage: [_1] ~[OPTIONS~] ~[FILES~]"
  => "Cách sử dụng: [_1] ~[TÙY_CHỌN~] ~[TẬP_TIN~]",
@@ -66,13 +67,13 @@ use vars qw(%Lexicon);
  => "    --iomlan       thông báo tất cả lỗi (thì không sử dụng ~/.neamhshuim)",
 
     "    --ionchod=ENC  specify the character encoding of the text to be checked"
- => "    --ionchod=MÃ  ghi rõ mã chữ của văn bản để kiểm tra",
+ => "    --ionchod=MÃ  ghi rõ mã ký tự của văn bản để kiểm tra",
 
     "    --aschod=ENC   specify the character encoding for output"
- => "    --aschod=MÃ   ghi rõ mã chữ để xuất",
+ => "    --aschod=MÃ   ghi rõ mã ký tự cho dư liệu xuất",
 
     "    --comheadan=xx choose the language for error messages"
- => "    --comheadan=xx chọn ngôn ngữ đối với thông điệp lỗi",
+ => "    --comheadan=xx chọn ngôn ngữ cho thông điệp lỗi",
 
     "    --dath=COLOR   specify the color to use for highlighting errors"
  => "    --dath=MÀU   ghi rõ màu để nổi bật lỗi",
@@ -99,7 +100,7 @@ use vars qw(%Lexicon);
  => "    --api          xuất khuôn dạng XML đơn giản để sử dụng với ứng dụng khác",
 
     "    --html         produce HTML output for viewing in a web browser"
- => "    --html         xuất bằng html để coi trong trình duyệt Mạng",
+ => "    --html         xuất bằng HTML để coi trong trình duyệt Mạng",
 
     "    --no-unigram   do not resolve ambiguous parts of speech by frequency"
  => "    --no-unigram   không giải quyết loại từ mơ hồ theo tần số",
@@ -129,13 +130,13 @@ use vars qw(%Lexicon);
  => "Hiện kiểm tra [_1]",
 
     "    --ilchiall     report unresolved ambiguities, sorted by frequency"
- => "    --ilchiall    thông báo các từ mơ hồ chưa giải quyết, sắp xếp theo tần số",
+ => "    --ilchiall    thông báo các điều mơ hồ chưa giải quyết, sắp xếp theo tần số",
 
     "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
- => "    --minic        xuất tất cả thẻ, sắp xếp theo tần số (đối với unigram-xx.txt)",
+ => "    --minic        xuất tất cả thẻ, sắp xếp theo tần số (cho unigram-xx.txt)",
 
     "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
- => "    --brill        tìm quy tắc giải quyết từ mơ hồ thông qua thuật toán không có giám sát của Brill",
+ => "    --brill        tìm quy tắc chống mơ hồ thông qua thuật toán không có giám sát của Brill",
 
     "[_1]: problem reading the database\n"
  => "[_1]: gặp khó đọc cơ sở dữ liệu\n",
@@ -144,7 +145,7 @@ use vars qw(%Lexicon);
  => "[_1]: `[_2]' bị hỏng tại [_3]\n",
 
     "conversion from [_1] is not supported"
- => "chưa hỗ trợ bản dịch sang [_1]",
+ => "chưa hỗ trợ dịch sang [_1]",
 
     "[_1]: illegal grammatical code\n"
  => "[_1]: không cho phép mã ngữ pháp ấy\n",
@@ -153,10 +154,10 @@ use vars qw(%Lexicon);
  => "[_1]: không có mã ngữ pháp: [_2]\n",
 
     "[_1]: unrecognized error macro: [_2]\n"
- => "chưa chấp nhận tùy chọn [_1]",
+ => "[_1]: chưa chấp nhận macrô lỗi: [_2]\n",
 
-    "Valid word but extremely rare in actual usage"
- => "Từ hợp lệ nhưng rất ít dụng",
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
+ => "Từ đúng nhưng rất ít dụng: nên dùng từ này không?",
 
     "Repeated word"
  => "Một từ hai lần",
@@ -165,73 +166,91 @@ use vars qw(%Lexicon);
  => "Phối hợp từ một cách không thường",
 
     "The plural form is required here"
- => "Ở đây thì cần đến cách sở hữu",
+ => "Ở đây thì cần đến kiểu ở số nhiều",
 
     "The singular form is required here"
- => "Ở đây thì cần đến cách sở hữu",
+ => "Ở đây thì cần đến kiểu ở số ít",
+
+    "Plural adjective required"
+ => "Cần tính từ ở số nhiều",
 
     "Comparative adjective required"
  => "Cần đến tính từ so sánh",
 
     "Definite article required"
- => "Definite article required",
+ => "Cần đến mạo từ hạn định",
 
     "Unnecessary use of the definite article"
  => "Không cần sử dụng mạo từ hạn định",
 
+    "No need for the first definite article"
+ => "Không cần mạo từ hạn định thứ nhất",
+
     "Unnecessary use of the genitive case"
- => "Không cần sử dụng mạo từ hạn định",
+ => "Không cần sử dụng cách sở hữu",
 
     "The genitive case is required here"
  => "Ở đây thì cần đến cách sở hữu",
 
+    "You should use the present tense here"
+ => "Ở đây thì nên dùng thời hiện tại",
+
     "It seems unlikely that you intended to use the subjunctive here"
- => "It seems unlikely that you intended to use the subjunctive here",
+ => "Ở đây bạn thật muốn sử dụng lối cầu khẩn?",
 
     "Usually used in the set phrase /[_1]/"
- => "Thường dụng trong cụm từ riêng /[_1]/",
+ => "Thường dụng trong cụm từ riêng ‘[_1]’",
 
     "You should use /[_1]/ here instead"
- => "Ở đây thì nên sử dụng /[_1]/ thay thế",
+ => "Ở đây thì nên sử dụng ‘[_1]’ thay thế",
 
     "Non-standard form of /[_1]/"
- => "Hình thái không chuẩn của /[_1]/",
+ => "Hình thái không chuẩn của ‘[_1]’",
 
     "Derived from a non-standard form of /[_1]/"
- => "Gốc là hình thái không chuẩn của /[_1]/",
+ => "Gốc là hình thái không chuẩn của ‘[_1]’",
 
     "Derived incorrectly from the root /[_1]/"
- => "Gốc (không đúng) là /[_1]/",
+ => "Gốc (không đúng) là ‘[_1]’",
 
     "Unknown word"
- => "Từ chưa biết",
+ => "Không biết từ",
 
     "Unknown word: /[_1]/?"
- => "Từ chưa biết",
+ => "Không biết từ: ‘[_1]’?",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Valid word but more often found in place of /[_1]/",
+    "Valid word but /[_1]/ is more common"
+ => "Từ đúng nhưng /[_1]/ thường dùng hơn",
 
     "Not in database but apparently formed from the root /[_1]/"
- => "Không trong cơ sở dữ liệu nhưng hình như có gốc /[_1]/",
+ => "Không trong cơ sở dữ liệu nhưng hình như có gốc ‘[_1]’",
 
     "The word /[_1]/ is not needed"
- => "The word /[_1]/ is not needed",
+ => "Không cần từ ‘[_1]’",
 
     "Do you mean /[_1]/?"
- => "Ý kiến bạn là /[_1]/ không??",
+ => "Ý kiến bạn là ‘[_1]’ không?",
 
     "Derived form of common misspelling /[_1]/?"
- => "Hình thái bắt nguồn từ sai chính tả /[_1]/ không?",
+ => "Hình thái bắt nguồn từ sai chính tả ‘[_1]’ không?",
 
     "Not in database but may be a compound /[_1]/?"
- => "Không trong cơ sở dữ liệu nhưng có lẽ là /[_1]/ ghép không?",
+ => "Không trong cơ sở dữ liệu nhưng có lẽ là ‘[_1]’ ghép không?",
 
     "Not in database but may be a non-standard compound /[_1]/?"
- => "Không trong cơ sở dữ liệu nhưng có lẽ là /[_1]/ ghép không chuẩn không?",
+ => "Không trong cơ sở dữ liệu nhưng có lẽ là ‘[_1]’ ghép không chuẩn không?",
 
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
- => "Có lẽ từ nước ngoài (sắp xếp  /[_1]/ rất không chắc)",
+ => "Có lẽ từ nước ngoài (dãy ‘[_1]’ rất không chắc)",
+
+    "Gender disagreement"
+ => "Giới tính không tương ứng",
+
+    "Number disagreement"
+ => "Số không tương ứng",
+
+    "Case disagreement"
+ => "Chữ hoa/thường không tương ứng",
 
     "Prefix /h/ missing"
  => "Thiếu tiền tố /h/",
@@ -240,7 +259,7 @@ use vars qw(%Lexicon);
  => "Thiếu tiền tố /t/",
 
     "Prefix /d'/ missing"
- => "Thiếu tiền tố /h/",
+ => "Thiếu tiền tố /d'/",
 
     "Unnecessary prefix /h/"
  => "Không cần tiền tố /h/",
@@ -249,10 +268,13 @@ use vars qw(%Lexicon);
  => "Không cần tiền tố /t/",
 
     "Unnecessary prefix /d'/"
- => "Không cần tiền tố /h/",
+ => "Không cần tiền tố /d'/",
+
+    "Unnecessary prefix /b'/"
+ => "Không cần tiền tố /b'/",
 
     "Unnecessary initial mutation"
- => "Không cần thêm chữ h để làm cho phụ âm đầu mềm hơn",
+ => "Không cần đổi phụ âm đầu",
 
     "Initial mutation missing"
  => "Thiếu cách đổi phụ âm đầu",
@@ -260,44 +282,53 @@ use vars qw(%Lexicon);
     "Unnecessary lenition"
  => "Không cần thêm chữ h để làm cho phụ âm đầu mềm hơn",
 
+    "The second lenition is unnecessary"
+ => "Không cần sự nhược hoá thứ hai",
+
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
- => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
+ => "Thường giới từ ‘[_1]’ gây ra thêm chữ h để là m cho phụ âm đầu mềm hơn, nhưng trường hợp này không rõ lắm",
 
     "Lenition missing"
  => "Thiếu cách thêm chữ h để làm cho phụ âm đầu mềm hơn",
 
     "Unnecessary eclipsis"
- => "Không cần thêm chữ h để làm cho phụ âm đầu mềm hơn",
+ => "Không cần che phụ âm đầu",
 
     "Eclipsis missing"
  => "Thiếu cách che phụ âm đầu",
 
     "The dative is used only in special phrases"
- => "The dative is used only in special phrases",
+ => "Chỉ sử dụng tặng cách trong cụm từ đặc biệt",
 
     "The dependent form of the verb is required here"
- => "Ở đây thì cần đến cách sở hữu",
+ => "Ở đây thì cần đến kiểu động từ phụ thuộc,",
 
     "Unnecessary use of the dependent form of the verb"
- => "Không cần sử dụng mạo từ hạn định",
+ => "Không cần sử dụng kiểu động tư phụ thuộc",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
- => "The synthetic (combined) form, ending in /[_1]/, is often used here",
+ => "Ở đây thì thường sử dụng kiểu tổng hợp (kết hợp) mà cuối cùng với ‘[_1]’",
 
     "Second (soft) mutation missing"
- => "Thiếu cách đổi phụ âm đầu",
+ => "Thiếu cách đổi phụ âm đầu thứ hai (mềm)",
 
     "Third (breathed) mutation missing"
- => "Thiếu cách đổi phụ âm đầu",
+ => "Thiếu cách đổi phụ âm đầu thứ ba (thở)",
 
     "Fourth (hard) mutation missing"
- => "Thiếu cách đổi phụ âm đầu",
+ => "Thiếu cách đổi phụ âm đầu thứ tư (cứng)",
 
     "Fifth (mixed) mutation missing"
- => "Thiếu cách đổi phụ âm đầu",
+ => "Thiếu cách đổi phụ âm đầu thứ năm (phối)",
 
     "Fifth (mixed) mutation after 'th missing"
- => "Thiếu cách đổi phụ âm đầu",
+ => "Thiếu cách đổi phụ âm đầu (phối) sau 'th",
+
+    "Aspirate mutation missing"
+ => "Thiếu sự biến đổi nguyên âm bật hơi",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "Từ này vi phạm quy tắc về hoà âm của âm Igbo",
 
 );
 1;

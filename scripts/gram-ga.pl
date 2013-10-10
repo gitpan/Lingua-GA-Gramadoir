@@ -115,12 +115,11 @@ L<perl(1)>
 
 =head1 AUTHOR
 
-Kevin P. Scannell, E<lt>scannell@slu.eduE<gt>.
+Kevin P. Scannell, E<lt>kscanne@gmail.comE<gt>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2004 Kevin P. Scannell
-                   
+Copyright (C) 2004, 2005, 2007 Kevin P. Scannell
 
 This is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.2 or,
@@ -141,7 +140,7 @@ use Lingua::GA::Gramadoir::Languages;
 
 my $lh;
 my $clar;
-my $VERSION = '0.60';
+my $VERSION = '0.70';
 
 sub gettext
 {
@@ -250,7 +249,7 @@ $clar = gettext('An Gramadoir');
 
 if ($version) {
 	my $vstring = gettext('version %s', $VERSION);
-	my $copyright = 'Copyright (C) 2003, 2004 Kevin P. Scannell';
+	my $copyright = 'Copyright (C) 2003-2007 Kevin P. Scannell';
 	my $gpl = gettext('This is free software; see the source for copying conditions.  There is NO\\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\\nto the extent permitted by law.');
 	if ($html) {
 		$copyright =~ s#(Kevin P. Scannell)#<a href="http://borel.slu.edu/">$1</a><br><br>#;
@@ -324,7 +323,7 @@ gettext(
 "If no file is given, read from standard input."),
 "",
 gettext(
-'Send bug reports to <%s>.','scannell@slu.edu'),
+'Send bug reports to <%s>.','kscanne@gmail.com'),
 ""
 );
 
@@ -379,31 +378,34 @@ while ($ARGV = shift @ARGV) {
 		print OUTSTREAM $gr->xml_stream($_);
 	}
 	elsif ($api) {
+		print OUTSTREAM '<?xml version="1.0" encoding="utf-8" standalone="no"?>'."\n".'<!DOCTYPE matches SYSTEM "http://borel.slu.edu/dtds/api-output.dtd">'."\n<matches>\n";
 		my $apierr = $gr->grammatical_errors($_);
 		foreach (@$apierr) {
 			print OUTSTREAM "$_\n";
 		}
+		print OUTSTREAM "</matches>\n";
 	}
 	else {   # vanilla or html
 		my $status = gettext('Currently checking %s', $ARGV);
 		print OUTSTREAM "$status\n" unless ($ARGV eq "-");
 		my $errs = $gr->grammatical_errors($_);
 		foreach my $error (@$errs) {
-			$error =~ m/^<E offset="([0-9]+)" fromy="([0-9]+)".* sentence="(.*)" errortext="([^"]+)" msg="([^"]+)">$/;
-			my $s = "<br><br>$2: ".substr($3,0,$1);
+			(my $ln, my $msg, my $snt, my $offset, my $len) = $error =~ m/^<error fromy="([0-9]+)".* msg="([^"]+)".* context="([^"]+)" contextoffset="([0-9]+)" errorlength="([0-9]+)"\/>$/;
+			my $errortext = substr($snt,$offset,$len);
+			$ln++;   # people count lines from 1
+			my $s = "<br><br>$ln: ".substr($snt,0,$offset);
 			if ($html) {
-				$s .= "<b class=gramadoir>$4</b>";
+				$s .= "<b class=gramadoir>$errortext</b>";
 			}
 			else {
 				if ($dath eq "none") {
-					$s .= $4;
+					$s .= $errortext;
 				}
 				else {
-					$s .= colored($4,$dath);
+					$s .= colored($errortext,$dath);
 				}
 			}
-			$s .= substr($3,$1+length($4));
-			$s .= "<br>\n$5\n\n";  # don't add punctuation
+			$s .= substr($snt,$offset+$len)."<br>\n$msg\n\n";  # don't add punctuation
 			if (!$html) {
 				$s =~ s/<br>//g;
 				$s =~ s/&quot;/"/g;

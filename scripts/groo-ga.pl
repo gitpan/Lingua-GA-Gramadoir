@@ -2,15 +2,15 @@
 
 =head1 NAME
 
-gram-ga.pl - Check the grammar of Irish language OpenOffice documents
+groo-ga.pl - Check the grammar of Irish language OpenOffice.org documents
 
 =head1 SYNOPSIS
 
-B<gram-ga.pl> I<filetocheck[.sxw]> I<errorfile[.sxw]>
+B<groo-ga.pl> I<filetocheck[.sxw]> I<errorfile[.sxw]>
 
 =head1 DESCRIPTION
 
-This script checks the grammar of the Irish language OpenOffice
+This script checks the grammar of the Irish language OpenOffice.org
 document given as the first argument, and creates a new document 
 with the errors highlighted and annotated with appropriate messages.
 
@@ -35,12 +35,11 @@ L<perl(1)>
 
 =head1 AUTHOR
 
-Kevin P. Scannell, E<lt>scannell@slu.eduE<gt>.
+Kevin P. Scannell, E<lt>kscanne@gmail.comE<gt>.
 
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2004 Kevin P. Scannell
-                   
 
 This is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.2 or,
@@ -115,26 +114,26 @@ print STDERR "Grammatical errors found...\n" if ($debug);
 $xml = decode("utf-8", $xml);
 my @xmllines = split /\n/, $xml;
 my $xmlans;
-my $curr_y = 1;
+my $curr_y = 0;
 my $curr_x = 0;
 my ($f_y, $f_x, $t_y, $t_x, $errmsg);
 foreach (@$errs) {
-	($f_y, $f_x, $t_y, $t_x, $errmsg) = m/^<E.*fromy="([0-9]+)" fromx="([0-9]+)" toy="([0-9]+)" tox="([0-9]+)".*msg="(.*)">$/;
+	($f_y, $f_x, $t_y, $t_x, $errmsg) = m/^<error fromy="([0-9]+)" fromx="([0-9]+)" toy="([0-9]+)" tox="([0-9]+)" .+msg="([^"]+)"/;
 	while ($curr_y < $f_y) {
-		$xmlans .= substr($xmllines[$curr_y-1], $curr_x)."\n";
+		$xmlans .= substr($xmllines[$curr_y], $curr_x)."\n";
 		$curr_y++;
 		$curr_x = 0;
 	}
-	$xmlans .= substr($xmllines[$f_y - 1], $curr_x, $f_x - $curr_x);
+	$xmlans .= substr($xmllines[$f_y], $curr_x, $f_x - $curr_x);
 	$curr_x = $f_x;
 	my $errorspan='';
 	while ($curr_y < $t_y) {
-		$errorspan .= substr($xmllines[$curr_y-1], $curr_x)."\n";
+		$errorspan .= substr($xmllines[$curr_y], $curr_x)."\n";
 		$curr_y++;
 		$curr_x = 0;
 	}
 	$t_x++;  # first char after error
-	$errorspan .= substr($xmllines[$t_y - 1], $curr_x, $t_x - $curr_x);
+	$errorspan .= substr($xmllines[$t_y], $curr_x, $t_x - $curr_x);
 	$errorspan =~ s/((\s*<[^>]+>\s*)+)/$closemarkup$1$markup/g;
 	$errorspan =~ s/^/$markup/;
 	$errorspan =~ s/$/$closemarkup/;
@@ -146,10 +145,10 @@ foreach (@$errs) {
 	$xmlans .= $closeann;
 }
 print STDERR "All error markup inserted...\n" if ($debug);
-$xmlans .= substr($xmllines[$curr_y - 1], $t_x);
+$xmlans .= substr($xmllines[$curr_y], $t_x);
 $curr_y++;
-while ($curr_y <= @xmllines) {
-	$xmlans .= $xmllines[$curr_y-1]."\n";
+while ($curr_y <= scalar @xmllines) {
+	$xmlans .= $xmllines[$curr_y]."\n";
 	$curr_y++;
 }
 print STDERR "New XML completed...\n" if ($debug);

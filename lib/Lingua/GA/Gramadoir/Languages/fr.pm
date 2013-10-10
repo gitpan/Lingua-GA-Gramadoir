@@ -1,16 +1,16 @@
 package Lingua::GA::Gramadoir::Languages::fr;
-# Messages fran�ais pour GNU concernant gramadoir.
-# Copyright � 2004 Free Software Foundation, Inc.
-# This file is distributed under the same license as the PACKAGE package.
+# Messages français pour GNU concernant gramadoir.
+# Copyright © 2004-2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gramadoir package.
 # Michel Robitaille <robitail@IRO.UMontreal.CA>, traducteur depuis/since 1996.
-#
+# Odile Bénassy <obenassy@april.org>, traductrice depuis 2008.
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: GNU gramadoir 0.5\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
-#"PO-Revision-Date: 2004-08-26 08:00-0500\n"
-#"Last-Translator: Michel Robitaille <robitail@IRO.UMontreal.CA>\n"
+#"Project-Id-Version: GNU gramadoir 0.7\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-09-05 17:20-0500\n"
+#"PO-Revision-Date: 2008-08-25 22:27+0200\n"
+#"Last-Translator: Odile Bénassy <obenassy@april.org>\n"
 #"Language-Team: French <traduc@traduc.org>\n"
 #"MIME-Version: 1.0\n"
 #"Content-Type: text/plain; charset=ISO-8859-1\n"
@@ -24,28 +24,28 @@ use vars qw(%Lexicon);
 
 %Lexicon = (
     "Line %d: [_1]\n"
- => "Ligne %d: [_1]\n",
+ => "Ligne %d : [_1]\n",
 
     "unrecognized option [_1]"
- => "[_1] option non reconnue",
+ => "option [_1] non reconnue",
 
     "option [_1] requires an argument"
- => "option [_1] requiert un argument",
+ => "l'option [_1] appelle un argument",
 
     "option [_1] does not allow an argument"
- => "option [_1] ne permet pas un argument",
+ => "l'option [_1] n'accepte pas d'argument",
 
     "error parsing command-line options"
- => "erreur d'analyse de syntaxe des options de la ligne de commande",
+ => "erreur d'analyse des options de la ligne de commande",
 
     "Unable to set output color to [_1]"
- => "Unable to set output color to [_1]",
+ => "Impossible de régler la couleur de sortie à [_1]",
 
     "Language [_1] is not supported."
- => "Le langage [_1] n'est pas supporté.",
+ => "La langue [_1] n'est pas implémentée.",
 
     "An Gramadoir"
- => "Un Gramadoir",
+ => "An Gramadóir",
 
     "Try [_1] for more information."
  => "Essayez [_1] pour plus d'informations.",
@@ -54,13 +54,13 @@ use vars qw(%Lexicon);
  => "version [_1]",
 
     "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
- => "Ce logiciel est libre; voir les sources pour les conditions de\nreproduction. AUCUNE garantie n'est donnée; tant pour des raisons\nCOMMERCIALES que pour RÉPONDRE À UN BESOIN PARTICULIER,\nselon que les lois le permettent",
+ => "Ceci est un logiciel libre ; voir les sources pour les conditions de reproduction. AUCUNE garantie n'est donnée; pas même celle de CAPACITÉ DE MISE SUR LE MARCHÉ ni celle d'ADAPTATION À UN BUT PARTICULIER, sous réserve des conditions légales.",
 
     "Usage: [_1] ~[OPTIONS~] ~[FILES~]"
- => "Usage: [_1] ~[OPTIONS~] ~[FICHIERS~]",
+ => "Usage : [_1] ~[OPTIONS~] ~[FICHIERS~]",
 
     "Options for end-users:"
- => "Options les usagers:",
+ => "Options pour les utilisateurs :",
 
     "    --iomlan       report all errors (i.e. do not use ~/.neamhshuim)"
  => "    --iomlan       rapporter toutes les erreurs (i.e. ne pas utiliser ~/.neamhshuim)",
@@ -75,13 +75,13 @@ use vars qw(%Lexicon);
  => "    --comheadan=xx choisir le langage pour les message d'erreur",
 
     "    --dath=COLOR   specify the color to use for highlighting errors"
- => "    --dath=COULEUR spécifier la COULEUR à utiliser pour surligner les erreurs",
+ => "    --dath=COULEUR spécifier la couleur à utiliser pour surligner les erreurs",
 
     "    --litriu       write misspelled words to standard output"
  => "    --litriu       écrire les mots mal orthographiés sur la sortie standard",
 
     "    --aspell       suggest corrections for misspellings"
- => "    --aspell       suggérer des corrections pour les erreurs d'orhographe",
+ => "    --aspell       suggérer des corrections pour les erreurs d'orthographe",
 
     "    --aschur=FILE  write output to FILE"
  => "    --aschur=FICHIER  écrire la sortie dans le FICHIER",
@@ -93,16 +93,16 @@ use vars qw(%Lexicon);
  => "    --version      afficher la version du logiciel et quitter",
 
     "Options for developers:"
- => "Options pour les développeurs:",
+ => "Options pour les développeurs :",
 
     "    --api          output a simple XML format for use with other applications"
- => "    --api          produire un format XML simple de sortie avec d'autres applications",
+ => "    --api          produire seulement un format XML à utiliser avec d'autres applications",
 
     "    --html         produce HTML output for viewing in a web browser"
  => "    --html         produire une sortie HTML pour un logiciel de navigation Internet",
 
     "    --no-unigram   do not resolve ambiguous parts of speech by frequency"
- => "    --no-unigram   ne pas résoudre les parties ambiguës de la langue selon la fréquence",
+ => "    --no-unigram   ne pas résoudre les parties ambiguës de la langue en fonction de la fréquence",
 
     "    --xml          write tagged XML stream to standard output, for debugging"
  => "    --xml          écrire un flot XML étiqueté sur la sortie standard, pour mise au point (debug)",
@@ -111,94 +111,106 @@ use vars qw(%Lexicon);
  => "Si aucun fichier n'est fourni, lire l'entrée standard",
 
     "Send bug reports to <[_1]>."
- => "Transmettre un rapport d'anomalies à <[_1]>.",
+ => "Transmettre les rapports d'anomalie à <[_1]>.",
 
     "There is no such file."
- => "Il n'y a pas un tel fichier",
+ => "Ce fichier n'existe pas.",
 
     "Is a directory"
  => "Est un répertoire",
 
     "Permission denied"
- => "Permission refusée",
+ => "Autorisation refusée",
 
     "[_1]: warning: problem closing [_2]\n"
- => "[_1]: AVERTISSEMENT: problème de fermeture de [_2]\n",
+ => "[_1] : AVERTISSEMENT: problème de fermeture de [_2]\n",
 
     "Currently checking [_1]"
- => "Vérification en cours [_1]",
+ => "Vérification en cours de [_1]",
 
     "    --ilchiall     report unresolved ambiguities, sorted by frequency"
- => "    --ilchiall     rapporter les ambiguïtés non résolues, triées selon la fréquence",
+ => "    --ilchiall     rapporter les ambiguïtés non résolues, classées par fréquence",
 
     "    --minic        output all tags, sorted by frequency (for unigram-xx.txt)"
- => "    --minic        afficher toutes les étiquettes,  triées selon la fréquence (pour unigram-xx.txt)",
+ => "    --minic        afficher toutes les étiquettes, classées par fréquence (pour unigram-xx.txt)",
 
     "    --brill        find disambiguation rules via Brill's unsupervised algorithm"
- => "    --brill        trouver des règle de clarification à l'aide de l'algorithme non supervisé de Brill",
+ => "    --brill        trouver des règles de clarification à l'aide de l'algorithme non supervisé de Brill",
 
     "[_1]: problem reading the database\n"
- => "[_1]: problème de lecture de la base de données\n",
+ => "[_1] : problème de lecture de la base de données\n",
 
     "[_1]: `[_2]' corrupted at [_3]\n"
- => "[_1]: « [_2] » corrompu à [_3]\n",
+ => "[_1] : « [_2] » corrompu à [_3]\n",
 
     "conversion from [_1] is not supported"
- => "la conversion 'a partir de [_1] n'est pas supportée",
+ => "la conversion à partir de [_1] n'est pas prise en charge",
 
     "[_1]: illegal grammatical code\n"
- => "[_1]: code grammatical illégal\n",
+ => "[_1] : code grammatical formellement incorrect\n",
 
     "[_1]: no grammar codes: [_2]\n"
- => "[_1]: pas de codes de grammaire: [_2]\n",
+ => "[_1] : pas de codes grammaticaux : [_2]\n",
 
     "[_1]: unrecognized error macro: [_2]\n"
- => "[_1] option non reconnue",
+ => "[_1] : erreur macro non reconnue : [_2]\n",
 
-    "Valid word but extremely rare in actual usage"
- => "mot valide mais extrêmement rare selon l'usage actuel",
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
+ => "Mot valide mais extrêmement rare en usage réel. Est-ce bien ce mot-là que vous voulez ?",
 
     "Repeated word"
- => "mot répété",
+ => "Mot répété",
 
     "Unusual combination of words"
- => "combinaison de mots inusité",
+ => "Combinaison de mots rarement utilisée",
 
     "The plural form is required here"
- => "le cas génitif est requis ici",
+ => "La forme au pluriel est requise ici",
 
     "The singular form is required here"
- => "le cas génitif est requis ici",
+ => "La forme au singulier est requise ici",
+
+    "Plural adjective required"
+ => "Cet adjectif doit être au pluriel",
 
     "Comparative adjective required"
- => "adjectif comparatif nécessaire",
+ => "L'adjectif comparatif est requis",
 
     "Definite article required"
- => "Definite article required",
+ => "L'article défini est requis",
 
     "Unnecessary use of the definite article"
- => "usage non nécessaire de l'article défini",
+ => "Usage non nécessaire de l'article défini",
+
+    "No need for the first definite article"
+ => "Le premier article défini n'est pas nécessaire",
 
     "Unnecessary use of the genitive case"
- => "usage non nécessaire de l'article défini",
+ => "Usage non nécessaire du génitif",
 
     "The genitive case is required here"
- => "le cas génitif est requis ici",
+ => "Il faut le génitif ici",
+
+    "You should use the present tense here"
+ => "Ici, vous devriez employer le présent",
+
+    "You should use the conditional here"
+ => "Ici, vous devriez employer le présent",
 
     "It seems unlikely that you intended to use the subjunctive here"
- => "It seems unlikely that you intended to use the subjunctive here",
+ => "Il semble peu probable que vous ayiez l'intention d'employer le subjonctif",
 
     "Usually used in the set phrase /[_1]/"
- => "habituellement utilisé dans le jeu de phrases /[_1]/",
+ => "habituellement utilisé dans l'expression /[_1]/",
 
     "You should use /[_1]/ here instead"
- => "Vous devriez utiliser /[_1]/ ici à la place",
+ => "Vous devriez utiliser plutôt /[_1]/ ici",
 
     "Non-standard form of /[_1]/"
- => "Forme non standard de /[_1]/",
+ => "Forme non-standard de /[_1]/",
 
     "Derived from a non-standard form of /[_1]/"
- => "Dérivé d'une forme non standard de /[_1]/",
+ => "Dérivé d'une forme non-standard de /[_1]/",
 
     "Derived incorrectly from the root /[_1]/"
  => "Dérivé incorrectement de la racine /[_1]/",
@@ -207,31 +219,40 @@ use vars qw(%Lexicon);
  => "Mot inconnu",
 
     "Unknown word: /[_1]/?"
- => "Mot inconnu",
+ => "Mot inconnu : /[_1]/?",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Valid word but more often found in place of /[_1]/",
+    "Valid word but /[_1]/ is more common"
+ => "Mot valide, mais /[_1]/ est plus usuel",
 
     "Not in database but apparently formed from the root /[_1]/"
- => "N'est pas dans la base de données mais apparemment formé à partir de la racine /[_1]/",
+ => "Absent de la base de données, mais apparemment formé à partir de la racine /[_1]/",
 
     "The word /[_1]/ is not needed"
- => "The word /[_1]/ is not needed",
+ => "Le mot /[_1]/ n'est pas obligatoire.",
 
     "Do you mean /[_1]/?"
- => "Entendez-vous /[_1]/?",
+ => "Voulez-vous dire /[_1]/ ?",
 
     "Derived form of common misspelling /[_1]/?"
- => "Forme dérivée d'une erreur d'orthographe commune /[_1]/?",
+ => "Forme dérivée d'une faute d'orthographe fréquente /[_1]/ ?",
 
     "Not in database but may be a compound /[_1]/?"
- => "N'est pas dans la base de données mais peut être composé /[_1]/?",
+ => "N'est pas dans la base de données mais peut-être un mot composé /[_1]/ ?",
 
     "Not in database but may be a non-standard compound /[_1]/?"
- => "N'est pas dans la base de données mais peut être composé de manière non standard /[_1]/?",
+ => "N'est pas dans la base de données mais peut-être un mot composé inhabituel /[_1]/ ?",
 
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
- => "Possiblement un mot étranger (la séquence /[_1]/ est hautement improbable)",
+ => "Peut-être un mot étranger (la séquence /[_1]/ est très peu probable)",
+
+    "Gender disagreement"
+ => "Discordance de genre",
+
+    "Number disagreement"
+ => "Discordance de nombre",
+
+    "Case disagreement"
+ => "Discordance de cas",
 
     "Prefix /h/ missing"
  => "Préfixe /h/ manquant",
@@ -240,64 +261,97 @@ use vars qw(%Lexicon);
  => "Préfixe /t/ manquant",
 
     "Prefix /d'/ missing"
- => "Préfixe /h/ manquant",
+ => "Le préfixe /d'/ est manquant",
 
     "Unnecessary prefix /h/"
- => "préfixe non nécessaire /h/",
+ => "Le préfixe /h/ n'est pas nécessaire",
 
     "Unnecessary prefix /t/"
- => "préfixe non nécessaire /t/",
+ => "Le préfixe /t/ n'est pas nécessaire",
 
     "Unnecessary prefix /d'/"
- => "préfixe non nécessaire /h/",
+ => "Le préfixe /d'/ n'est pas nécessaire",
+
+    "Unnecessary prefix /b'/"
+ => "Le préfixe /b'/ n'est pas nécessaire",
 
     "Unnecessary initial mutation"
- => "Lénition non nécessaire",
+ => "Cette mutation initiale n'est pas nécessaire",
 
     "Initial mutation missing"
  => "Mutation initiale manquante",
 
     "Unnecessary lenition"
- => "Lénition non nécessaire",
+ => "Cette lénition n'est pas nécessaire",
+
+    "The second lenition is unnecessary"
+ => "La seconde lénition n'est pas nécessaire",
 
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
- => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
+ => "Souvent la préposition /[_1]/ provoque une lénition, mais ce cas n'est pas clair",
 
     "Lenition missing"
  => "Lénition manquante",
 
     "Unnecessary eclipsis"
- => "Lénition non nécessaire",
+ => "Cette éclipse n'est pas nécessaire",
 
     "Eclipsis missing"
- => "Éclipsis manquante",
+ => "Éclipse manquante",
 
     "The dative is used only in special phrases"
- => "The dative is used only in special phrases",
+ => "La partie au datif est utilisée seulement dans des phrases spécifiques",
 
     "The dependent form of the verb is required here"
- => "le cas génitif est requis ici",
+ => "La forme dépendante du verbe est requise ici",
 
     "Unnecessary use of the dependent form of the verb"
- => "usage non nécessaire de l'article défini",
+ => "Usage non nécessaire de la forme dépendante du verbe",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
- => "The synthetic (combined) form, ending in /[_1]/, is often used here",
+ => "La forme synthétique (combinée) se terminant par /[_1]/ est souvent utilisé ici",
 
     "Second (soft) mutation missing"
- => "Mutation initiale manquante",
+ => "Seconde mutation (adoucissement) manquante",
 
     "Third (breathed) mutation missing"
- => "Mutation initiale manquante",
+ => "Troisième mutation (breathed) manquante",
 
     "Fourth (hard) mutation missing"
- => "Mutation initiale manquante",
+ => "Quatrième mutation (durcissement) manquante",
 
     "Fifth (mixed) mutation missing"
- => "Mutation initiale manquante",
+ => "Quatrième mutation (mixte) manquante",
 
     "Fifth (mixed) mutation after 'th missing"
- => "Mutation initiale manquante",
+ => "Cinquième mutation (mixte) après la nième manquante",
+
+    "Aspirate mutation missing"
+ => "Mutation aspirée manquante",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "Ce mot porte une violation des règles de l'harmonie des voyelles dans la langue Igbo",
+
+    "Valid word but more often found in place of /[_1]/"
+ => "Mot vlaide mais trouvé plus d'une fois à la place de /[_1]/",
+
+    "#~ \"    --teanga=XX    specify the language of the text to be checked \"#~ \"(default=ga)\""
+ => "#~ \"    --teanga=XX    spécifier le langage du texte à vérifier (par \"#~ \"défaut=ga)\"",
+
+    "aspell-[_1] is not installed"
+ => "aspell-[_1] n'est pas installé",
+
+    "Unknown word (ignoring remainder in this sentence)"
+ => "Mot inconnu (le reste de la phrase est ignoré)",
+
+    "[_1]: out of memory\n"
+ => "[_1]: mémoire épuisée\n",
+
+    "[_1]: warning: check size of [_2]: %d?\n"
+ => "[_1]: AVERTISSEMENT: vérifier la taille de [_2]: %d?\n",
+
+    "problem with the `cuardach' command\n"
+ => "problème avec la commande « cuardach »\n",
 
 );
 1;

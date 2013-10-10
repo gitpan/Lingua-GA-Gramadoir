@@ -6,8 +6,8 @@ package Lingua::GA::Gramadoir::Languages::mn;
 #msgid ""
 #msgstr ""
 #"Project-Id-Version: gramadoir-0.4\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-09-05 17:20-0500\n"
 #"PO-Revision-Date: 2004-01-11 13:26+0100\n"
 #"Last-Translator: Sanlig Badral <badral@users.sourceforge.net>\n"
 #"Language-Team: Mongolian <openmn-translation@lists.sourceforge.net>\n"
@@ -154,7 +154,7 @@ use vars qw(%Lexicon);
     "[_1]: unrecognized error macro: [_2]\n"
  => "танигдахгүй сонголт [_1]",
 
-    "Valid word but extremely rare in actual usage"
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
  => "Хүчинтэй үг гэхдээ идэвхитэй хэрэглээнд туйлын ховор",
 
     "Repeated word"
@@ -169,6 +169,9 @@ use vars qw(%Lexicon);
     "The singular form is required here"
  => "Харъяалахын тийн ялгал энд шаардлагатай",
 
+    "Plural adjective required"
+ => "тэмдэг нэрийн харьцуулал шаардлагатай",
+
     "Comparative adjective required"
  => "тэмдэг нэрийн харьцуулал шаардлагатай",
 
@@ -178,11 +181,20 @@ use vars qw(%Lexicon);
     "Unnecessary use of the definite article"
  => "Хүйс тодорхойлох шаардлагагүй хэрэглээ",
 
+    "No need for the first definite article"
+ => "Хүйс тодорхойлох шаардлагагүй хэрэглээ",
+
     "Unnecessary use of the genitive case"
  => "Хүйс тодорхойлох шаардлагагүй хэрэглээ",
 
     "The genitive case is required here"
  => "Харъяалахын тийн ялгал энд шаардлагатай",
+
+    "You should use the present tense here"
+ => "Та оронд нь /[_1]/ гэж хэрэглэх ёстой",
+
+    "You should use the conditional here"
+ => "Та оронд нь /[_1]/ гэж хэрэглэх ёстой",
 
     "It seems unlikely that you intended to use the subjunctive here"
  => "It seems unlikely that you intended to use the subjunctive here",
@@ -208,8 +220,8 @@ use vars qw(%Lexicon);
     "Unknown word: /[_1]/?"
  => "Мэдэгдэхүй үг",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Valid word but more often found in place of /[_1]/",
+    "Valid word but /[_1]/ is more common"
+ => "Valid word but /[_1]/ is more common",
 
     "Not in database but apparently formed from the root /[_1]/"
  => "Not in database but apparently formed from the root /[_1]/",
@@ -232,6 +244,15 @@ use vars qw(%Lexicon);
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
  => "Possibly a foreign word (the sequence /[_1]/ is highly improbable)",
 
+    "Gender disagreement"
+ => "Gender disagreement",
+
+    "Number disagreement"
+ => "Number disagreement",
+
+    "Case disagreement"
+ => "Case disagreement",
+
     "Prefix /h/ missing"
  => "Угтвар /h/ дутуу",
 
@@ -250,6 +271,9 @@ use vars qw(%Lexicon);
     "Unnecessary prefix /d'/"
  => "Угтвар шаардлагагүй /h/",
 
+    "Unnecessary prefix /b'/"
+ => "Угтвар шаардлагагүй /h/",
+
     "Unnecessary initial mutation"
  => "шаардлагагүй зөөлрүүлэлт",
 
@@ -258,6 +282,9 @@ use vars qw(%Lexicon);
 
     "Unnecessary lenition"
  => "шаардлагагүй зөөлрүүлэлт",
+
+    "The second lenition is unnecessary"
+ => "The second lenition is unnecessary",
 
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
  => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
@@ -297,6 +324,33 @@ use vars qw(%Lexicon);
 
     "Fifth (mixed) mutation after 'th missing"
  => "Анхдагч өөрчлөлт дутуу",
+
+    "Aspirate mutation missing"
+ => "Анхдагч өөрчлөлт дутуу",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "This word violates the rules of Igbo vowel harmony",
+
+    "#~ \"    --aspell       suggest corrections for misspellings (requires GNU \"#~ \"aspell)\""
+ => "#~ \"    --aspell       зөв бичгийн алдаа засалт санал болгох (ГНУ aspell \"#~ \"шаардлагатай)\"",
+
+    "#~ \"    --teanga=XX    specify the language of the text to be checked \"#~ \"(default=ga)\""
+ => "#~ \"    --teanga=XX    шалгагдах текстийн хэлийг сонгоно (стандартаар=ga)\"",
+
+    "aspell-[_1] is not installed"
+ => "aspell-[_1] суулгагдаагүй байна",
+
+    "Unknown word (ignoring remainder in this sentence)"
+ => "Мэдэгдэхгүй үг (энэ өгүүлбэрийн үлдэгдлийг үл хэрэгсэх)",
+
+    "[_1]: out of memory\n"
+ => "[_1]: санах ойгоос халилаа\n",
+
+    "[_1]: warning: check size of [_2]: %d?\n"
+ => "[_1]: сануулга: [_2]-н хэмжээг шалгах: %d?\n",
+
+    "problem with the `cuardach' command\n"
+ => "`cuardach' тушаалд асуудал гарав\n",
 
 );
 1;

@@ -2,14 +2,14 @@ package Lingua::GA::Gramadoir::Languages::sk;
 # translation of gramadoir to Slovak
 # Copyright (C) 2004 Kevin P. Scannell.
 # This file is distributed under the same license as the gramadoir package.
-# Andrej Kacian <andrej@kacian.sk>, 2004.
+# Andrej Kacian <andrej@kacian.sk>, 2004, 2005.
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: gramadoir 0.5\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
-#"PO-Revision-Date: 2004-08-25 21:20+0200\n"
+#"Project-Id-Version: gramadoir 0.6\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-09-05 17:20-0500\n"
+#"PO-Revision-Date: 2005-03-05 12:09+0100\n"
 #"Last-Translator: Andrej Kacian <andrej@kacian.sk>\n"
 #"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
 #"MIME-Version: 1.0\n"
@@ -39,7 +39,7 @@ use vars qw(%Lexicon);
  => "chyba pri čítaní parametrov príkazového riadku",
 
     "Unable to set output color to [_1]"
- => "Unable to set output color to [_1]",
+ => "Nepodarilo sa nastaviť farbu výstupu na [_1]",
 
     "Language [_1] is not supported."
  => "Jazyk [_1] nie je podporovaný.",
@@ -153,9 +153,9 @@ use vars qw(%Lexicon);
  => "[_1]: žiadne gramatické kódy: [_2]\n",
 
     "[_1]: unrecognized error macro: [_2]\n"
- => "neznáma voľba [_1]",
+ => "[_1]: neznáme chybové makro: [_2]\n",
 
-    "Valid word but extremely rare in actual usage"
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
  => "Platné slovo, ale extrémne vzácne v bežnom použití",
 
     "Repeated word"
@@ -165,28 +165,40 @@ use vars qw(%Lexicon);
  => "Nezvyklá kombinácia slov",
 
     "The plural form is required here"
- => "Je tu potrebný genitív",
+ => "Je tu potrebné množné číslo",
 
     "The singular form is required here"
- => "Je tu potrebný genitív",
+ => "Je tu potrebné jednotné číslo",
+
+    "Plural adjective required"
+ => "Je potrebné porovnávacie prídavné meno",
 
     "Comparative adjective required"
  => "Je potrebné porovnávacie prídavné meno",
 
     "Definite article required"
- => "Definite article required",
+ => "Je tu potrebný určitý člen",
 
     "Unnecessary use of the definite article"
  => "Nepotrebné použitie určitého člena",
 
-    "Unnecessary use of the genitive case"
+    "No need for the first definite article"
  => "Nepotrebné použitie určitého člena",
+
+    "Unnecessary use of the genitive case"
+ => "Nepotrebné použitie genitívu",
 
     "The genitive case is required here"
  => "Je tu potrebný genitív",
 
+    "You should use the present tense here"
+ => "Mali by ste tu radšej použiť /[_1]/",
+
+    "You should use the conditional here"
+ => "Mali by ste tu radšej použiť /[_1]/",
+
     "It seems unlikely that you intended to use the subjunctive here"
- => "It seems unlikely that you intended to use the subjunctive here",
+ => "Tu ste pravdepodobne nechceli použiť subjunktív",
 
     "Usually used in the set phrase /[_1]/"
  => "Väčšinou použité vo fráze /[_1]/",
@@ -207,16 +219,16 @@ use vars qw(%Lexicon);
  => "Neznáme slovo",
 
     "Unknown word: /[_1]/?"
- => "Neznáme slovo",
+ => "Neznáme slovo: /[_1]/?",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Valid word but more often found in place of /[_1]/",
+    "Valid word but /[_1]/ is more common"
+ => "Valid word but /[_1]/ is more common",
 
     "Not in database but apparently formed from the root /[_1]/"
  => "Nenašlo sa v databáze, ale očividne získané z koreňa /[_1]/",
 
     "The word /[_1]/ is not needed"
- => "The word /[_1]/ is not needed",
+ => "Slovo /[_1]/ nie je potrebné",
 
     "Do you mean /[_1]/?"
  => "Mysleli ste /[_1]/?",
@@ -233,6 +245,15 @@ use vars qw(%Lexicon);
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
  => "Pravdepodobne cudzie slovo (sekvencia /[_1]/ je veľmi nepravdepodobná)",
 
+    "Gender disagreement"
+ => "Gender disagreement",
+
+    "Number disagreement"
+ => "Number disagreement",
+
+    "Case disagreement"
+ => "Case disagreement",
+
     "Prefix /h/ missing"
  => "Predpona /h/ chýba",
 
@@ -240,7 +261,7 @@ use vars qw(%Lexicon);
  => "Predpona /t/ chýba",
 
     "Prefix /d'/ missing"
- => "Predpona /h/ chýba",
+ => "Predpona /d'/ chýba",
 
     "Unnecessary prefix /h/"
  => "Nepotrebná predpona /h/",
@@ -249,10 +270,13 @@ use vars qw(%Lexicon);
  => "Nepotrebná predpona /t/",
 
     "Unnecessary prefix /d'/"
- => "Nepotrebná predpona /h/",
+ => "Nepotrebná predpona /d'/",
+
+    "Unnecessary prefix /b'/"
+ => "Nepotrebná predpona /d'/",
 
     "Unnecessary initial mutation"
- => "Nepotrebná lenícia",
+ => "Nepotrebná počiatočná mutácia",
 
     "Initial mutation missing"
  => "Počiatočná mutácia chýba",
@@ -260,44 +284,56 @@ use vars qw(%Lexicon);
     "Unnecessary lenition"
  => "Nepotrebná lenícia",
 
+    "The second lenition is unnecessary"
+ => "The second lenition is unnecessary",
+
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
- => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
+ => "Predložka /[_1]/ často spôsobuje leníciu, ale tento prípad je nejasný",
 
     "Lenition missing"
  => "Chýba eklipsa",
 
     "Unnecessary eclipsis"
- => "Nepotrebná lenícia",
+ => "Nepotrebná eklipsia",
 
     "Eclipsis missing"
  => "Chýba eklipsa",
 
     "The dative is used only in special phrases"
- => "The dative is used only in special phrases",
+ => "Datív sa používa len v špeciálnych frázach",
 
     "The dependent form of the verb is required here"
- => "Je tu potrebný genitív",
+ => "Je tu potrebná závislý tvar slovesa",
 
     "Unnecessary use of the dependent form of the verb"
- => "Nepotrebné použitie určitého člena",
+ => "Nepotrebné použitie závislého tvaru slovesa",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
- => "The synthetic (combined) form, ending in /[_1]/, is often used here",
+ => "Tu sa často používa umelý (kombinovaný) tvar, končiaci na /[_1]/",
 
     "Second (soft) mutation missing"
- => "Počiatočná mutácia chýba",
+ => "Druhá (mäkká) mutácia chýba",
 
     "Third (breathed) mutation missing"
- => "Počiatočná mutácia chýba",
+ => "Tretia (dychová) mutácia chýba",
 
     "Fourth (hard) mutation missing"
- => "Počiatočná mutácia chýba",
+ => "Štvrtá (tvrdá) mutácia chýba",
 
     "Fifth (mixed) mutation missing"
- => "Počiatočná mutácia chýba",
+ => "Piata (zmiešaná) mutácia chýba",
 
     "Fifth (mixed) mutation after 'th missing"
+ => "Chýba piata (zmiešaná) mutácia po 'th",
+
+    "Aspirate mutation missing"
  => "Počiatočná mutácia chýba",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "This word violates the rules of Igbo vowel harmony",
+
+    "Valid word but more often found in place of /[_1]/"
+ => "Platné slovo, ale častejšie nájdené namiesto /[_1]/",
 
 );
 1;

@@ -1,19 +1,18 @@
-package Lingua::GA::Gramadoir::Languages::ro;
-# Mesajele în limba română pentru pachetul gramadoir.
-# Copyright (C) 2003 Free Software Foundation, Inc.
-# Acest fişier este distribuit sub aceeaşi licenţă ca pachetul gramadoir.
-# Eugen Hoanca <eugenh@urban-grafx.ro>, 2003.
+package Lingua::GA::Gramadoir::Languages::sv;
+# Copyright (C) 2005 Kevin P. Scannell
+# This file is distributed under the same license as the gramadoir package.
+# Daniel Nylander <po@danielnylander.se>, 2005
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: gramadoir 0.3\n"
+#"Project-Id-Version: gramadoir 0.6\n"
 #"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
 #"POT-Creation-Date: 2008-09-05 17:20-0500\n"
-#"PO-Revision-Date: 2003-10-28 12:23+0200\n"
-#"Last-Translator: Eugen Hoanca <eugenh@urban-grafx.ro>\n"
-#"Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
+#"PO-Revision-Date: 2006-01-11 21:38+0100\n"
+#"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+#"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 #"MIME-Version: 1.0\n"
-#"Content-Type: text/plain; charset=ISO-8859-2\n"
+#"Content-Type: text/plain; charset=utf-8\n"
 #"Content-Transfer-Encoding: 8bit\n"
 
 use strict;
@@ -24,109 +23,109 @@ use vars qw(%Lexicon);
 
 %Lexicon = (
     "Line %d: [_1]\n"
- => "Linia %d: [_1]\n",
+ => "Rad %d: [_1]\n",
 
     "unrecognized option [_1]"
- => "opţiune necunoscută [_1].",
+ => "okänd flagga [_1]",
 
     "option [_1] requires an argument"
- => "opţiunea [_1] necesită un parametru",
+ => "flaggan [_1] kräver ett argument",
 
     "option [_1] does not allow an argument"
- => "opţiunea [_1] nu permite parametri",
+ => "flaggan [_1] tillåter inte ett argument",
 
     "error parsing command-line options"
- => "error parsing command-line options",
+ => "fel vid tolkning av kommandoradsflaggor",
 
     "Unable to set output color to [_1]"
- => "Unable to set output color to [_1]",
+ => "Kunde inte sätta färg till [_1] för utdata",
 
     "Language [_1] is not supported."
- => "Limba [_1] nu este suportată.",
+ => "Språket [_1] stöds inte.",
 
     "An Gramadoir"
- => "Un Gramadoir",
+ => "En Gramadoir",
 
     "Try [_1] for more information."
- => "Încercaţi [_1] pentru mai multe informaţii.",
+ => "Försök med [_1] för mer information.",
 
     "version [_1]"
- => "versiunea [_1]",
+ => "version [_1]",
 
     "This is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE,\nto the extent permitted by law."
- => "Acesta este software liber; citiţi sursele pentru condiţiile de copiere.  NU există\nNICI o garanţie; nici măcar pentru VANDABILITATE SAU MODIFICARE ÎNTR-UN SCOP PRIVAT,\npe întinderea permisă de lege.",
+ => "Detta är fri programvara; se källkoden för villkor för kopiering.  Det finns INGEN\ngaranti; inte ens för SÄLJBARHET eller LÄMPLIGHET FÖR NÅGOT SPECIELLT ÄNDAMÅL,\ntill den omfattning som tillåts enligt lag.",
 
     "Usage: [_1] ~[OPTIONS~] ~[FILES~]"
- => "Folosire: [_1] ~[OPŢIUNI~] ~[FIŞIERE~]",
+ => "Användning: [_1] ~[FLAGGOR~] ~[FILER~]",
 
     "Options for end-users:"
- => "Options for end-users:",
+ => "Flaggor för slutanvändare:",
 
     "    --iomlan       report all errors (i.e. do not use ~/.neamhshuim)"
- => "    --iomlan       raportează toate erorile (i.e. nu se foloseşte ~/.neamhshuim)",
+ => "    --iomlan       rapportera alla fel (alltså, använd inte ~/.neamhshuim)",
 
     "    --ionchod=ENC  specify the character encoding of the text to be checked"
- => "    --ionchod=ENC  specifică codarea(encoding) de textului ce urmează a fi verificat",
+ => "    --ionchod=KOD  ange teckenkodning av texten som ska kontrolleras",
 
     "    --aschod=ENC   specify the character encoding for output"
- => "    --aschod=ENC   specify the character encoding for output",
+ => "    --aschod=KOD   ange teckenkodning för utdata",
 
     "    --comheadan=xx choose the language for error messages"
- => "    --comheadan=xx choose the language for error messages",
+ => "    --comheadan=xx välj språk för felmeddelanden",
 
     "    --dath=COLOR   specify the color to use for highlighting errors"
- => "    --dath=COLOR   specify the color to use for highlighting errors",
+ => "    --dath=FÄRG    ange färgen att använda för att framhäva fel",
 
     "    --litriu       write misspelled words to standard output"
- => "    --litriu       scrie cuvintele greşite la ieşirea standard",
+ => "    --litriu       skriv felstavade ord till standard ut",
 
     "    --aspell       suggest corrections for misspellings"
- => "    --aspell       suggest corrections for misspellings",
+ => "    --aspell       föreslå rättningar till felstavningar",
 
     "    --aschur=FILE  write output to FILE"
- => "    --aschur=FILE  write output to FILE",
+ => "    --aschur=FIL   skriv utdata till FIL",
 
     "    --help         display this help and exit"
- => "    --help         afişează acest help şi iese",
+ => "    --help         visa denna hjälptext och avsluta",
 
     "    --version      output version information and exit"
- => "    --version      afişează informaţii despre versiune şi iese",
+ => "    --version      skriv ut versionsinformation och avsluta",
 
     "Options for developers:"
- => "Options for developers:",
+ => "Flaggor för utvecklare:",
 
     "    --api          output a simple XML format for use with other applications"
- => "    --api          output a simple XML format for use with other applications",
+ => "    --api          skriv ut ett enkelt XML-format för användning med andra program",
 
     "    --html         produce HTML output for viewing in a web browser"
- => "    --html         produce output HTML pentru vizualizarea într-un browser de web",
+ => "    --html         producera HTML-utdata för visning i en webbläsare",
 
     "    --no-unigram   do not resolve ambiguous parts of speech by frequency"
- => "    --no-unigram   do not resolve ambiguous parts of speech by frequency",
+ => "    --no-unigram   slå inte upp tvetydiga delar av talet efter frekvens",
 
     "    --xml          write tagged XML stream to standard output, for debugging"
- => "    --xml          scrie secvenţă XML marcat(tagged) la ieşirea standard, pentru debugging",
+ => "    --xml          write tagged XML stream to standard output, for debugging",
 
     "If no file is given, read from standard input."
- => "Dacă nu este furnizat nici un fişier, se citeşte de la intrarea standard.",
+ => "Om ingen fil angivits, läs från standard in.",
 
     "Send bug reports to <[_1]>."
- => "Trimiteţi rapoarte de bug-uri la <[_1]>.",
+ => "Skicka felrapporter till <[_1]>.",
 
     "There is no such file."
- => "Nu a existat acest fişier.",
+ => "Det finns ingen sådan fil.",
 
     "Is a directory"
- => "E un director.",
+ => "Är en katalog",
 
     "Permission denied"
- => "Permisiune neacordată.",
+ => "Åtkomst nekad",
 
     "[_1]: warning: problem closing [_2]\n"
- => "[_1]: avertisment: problemă la închiderea [_2]\n",
+ => "[_1]: varning: problem vid stängning av [_2]\n",
 
     "Currently checking [_1]"
- => "În prezent se verifică [_1]",
+ => "Kontrollerar för närvarande [_1]",
 
     "    --ilchiall     report unresolved ambiguities, sorted by frequency"
  => "    --ilchiall     report unresolved ambiguities, sorted by frequency",
@@ -138,37 +137,37 @@ use vars qw(%Lexicon);
  => "    --brill        find disambiguation rules via Brill's unsupervised algorithm",
 
     "[_1]: problem reading the database\n"
- => "[_1]: problemă în citirea bazei de date\n",
+ => "[_1]: problem vid läsning av databas\n",
 
     "[_1]: `[_2]' corrupted at [_3]\n"
- => "[_1]: `[_2]' corupt la [_3]\n",
+ => "[_1]: \"[_2]\" skadad vid [_3]\n",
 
     "conversion from [_1] is not supported"
- => "Limba [_1] nu este suportată.",
+ => "konvertering från [_1] stöds ej",
 
     "[_1]: illegal grammatical code\n"
- => "[_1]: cod gramatical incorect\n",
+ => "[_1]: otillåten grammatisk kod\n",
 
     "[_1]: no grammar codes: [_2]\n"
- => "[_1]: nu există codecuri de gramatică: [_2]\n",
+ => "[_1]: inga grammatiska koder: [_2]\n",
 
     "[_1]: unrecognized error macro: [_2]\n"
- => "opţiune necunoscută [_1].",
+ => "[_1]: okänt felmakro: [_2]\n",
 
     "Valid word but extremely rare in actual usage. Is this the word you want?"
- => "Valid word but extremely rare in actual usage. Is this the word you want?",
+ => "Giltigt ord men mycket ovanlig i aktuell användning",
 
     "Repeated word"
- => "Repeated word",
+ => "Upprepat ord",
 
     "Unusual combination of words"
- => "Unusual combination of words",
+ => "Ovanlig kombination av ord",
 
     "The plural form is required here"
- => "The plural form is required here",
+ => "Pluralformen krävs här",
 
     "The singular form is required here"
- => "The singular form is required here",
+ => "Singularformen krävs här",
 
     "Plural adjective required"
  => "Plural adjective required",
@@ -186,16 +185,16 @@ use vars qw(%Lexicon);
  => "No need for the first definite article",
 
     "Unnecessary use of the genitive case"
- => "Indulgenţă(lenition) nenecesară",
+ => "Unnecessary use of the genitive case",
 
     "The genitive case is required here"
  => "The genitive case is required here",
 
     "You should use the present tense here"
- => "Ar trebui să folosiţi mai bine /[_1]/ aici",
+ => "Du bör använda /[_1]/ här istället",
 
     "You should use the conditional here"
- => "Ar trebui să folosiţi mai bine /[_1]/ aici",
+ => "Du bör använda /[_1]/ här istället",
 
     "It seems unlikely that you intended to use the subjunctive here"
  => "It seems unlikely that you intended to use the subjunctive here",
@@ -204,10 +203,10 @@ use vars qw(%Lexicon);
  => "Usually used in the set phrase /[_1]/",
 
     "You should use /[_1]/ here instead"
- => "Ar trebui să folosiţi mai bine /[_1]/ aici",
+ => "Du bör använda /[_1]/ här istället",
 
     "Non-standard form of /[_1]/"
- => "Formă nestandardizată: mai bine folosiţi  /[_1]/?",
+ => "Icke-standard form av /[_1]/",
 
     "Derived from a non-standard form of /[_1]/"
  => "Derived from a non-standard form of /[_1]/",
@@ -216,10 +215,10 @@ use vars qw(%Lexicon);
  => "Derived incorrectly from the root /[_1]/",
 
     "Unknown word"
- => "Cuvânt necunoscut",
+ => "Okänt ord",
 
     "Unknown word: /[_1]/?"
- => "Cuvânt necunoscut",
+ => "Okänt ord: /[_1]/?",
 
     "Valid word but /[_1]/ is more common"
  => "Valid word but /[_1]/ is more common",
@@ -228,10 +227,10 @@ use vars qw(%Lexicon);
  => "Not in database but apparently formed from the root /[_1]/",
 
     "The word /[_1]/ is not needed"
- => "The word /[_1]/ is not needed",
+ => "Ordet /[_1]/ behövs inte",
 
     "Do you mean /[_1]/?"
- => "Do you mean /[_1]/?",
+ => "Menar du /[_1]/?",
 
     "Derived form of common misspelling /[_1]/?"
  => "Derived form of common misspelling /[_1]/?",
@@ -255,34 +254,34 @@ use vars qw(%Lexicon);
  => "Case disagreement",
 
     "Prefix /h/ missing"
- => "Lipseşte prefixul /h/",
+ => "Prefix /h/ saknas",
 
     "Prefix /t/ missing"
- => "Lipseşte prefixul /t/",
+ => "Prefix /t/ saknas",
 
     "Prefix /d'/ missing"
- => "Lipseşte prefixul /h/",
+ => "Prefix /d'/ saknas",
 
     "Unnecessary prefix /h/"
- => "Unnecessary prefix /h/",
+ => "Onödigt prefix /h/",
 
     "Unnecessary prefix /t/"
- => "Unnecessary prefix /t/",
+ => "Onödigt prefix /t/",
 
     "Unnecessary prefix /d'/"
- => "Indulgenţă(lenition) nenecesară",
+ => "Onödigt prefix /d'/",
 
     "Unnecessary prefix /b'/"
- => "Indulgenţă(lenition) nenecesară",
+ => "Onödigt prefix /d'/",
 
     "Unnecessary initial mutation"
- => "Indulgenţă(lenition) nenecesară",
+ => "Unnecessary initial mutation",
 
     "Initial mutation missing"
- => "Mutaţie iniţială lipsă",
+ => "Initial mutation missing",
 
     "Unnecessary lenition"
- => "Indulgenţă(lenition) nenecesară",
+ => "Unnecessary lenition",
 
     "The second lenition is unnecessary"
  => "The second lenition is unnecessary",
@@ -291,13 +290,13 @@ use vars qw(%Lexicon);
  => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
 
     "Lenition missing"
- => "Indulgenţă(lenition) lipsă",
+ => "Lenition missing",
 
     "Unnecessary eclipsis"
- => "Indulgenţă(lenition) nenecesară",
+ => "Unnecessary eclipsis",
 
     "Eclipsis missing"
- => "Eclipsare(eclipsis) lipsă",
+ => "Eclipsis missing",
 
     "The dative is used only in special phrases"
  => "The dative is used only in special phrases",
@@ -306,46 +305,31 @@ use vars qw(%Lexicon);
  => "The dependent form of the verb is required here",
 
     "Unnecessary use of the dependent form of the verb"
- => "Indulgenţă(lenition) nenecesară",
+ => "Unnecessary use of the dependent form of the verb",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
  => "The synthetic (combined) form, ending in /[_1]/, is often used here",
 
     "Second (soft) mutation missing"
- => "Mutaţie iniţială lipsă",
+ => "Second (soft) mutation missing",
 
     "Third (breathed) mutation missing"
- => "Mutaţie iniţială lipsă",
+ => "Third (breathed) mutation missing",
 
     "Fourth (hard) mutation missing"
- => "Mutaţie iniţială lipsă",
+ => "Fourth (hard) mutation missing",
 
     "Fifth (mixed) mutation missing"
- => "Mutaţie iniţială lipsă",
+ => "Fifth (mixed) mutation missing",
 
     "Fifth (mixed) mutation after 'th missing"
- => "Mutaţie iniţială lipsă",
+ => "Fifth (mixed) mutation after 'th missing",
 
     "Aspirate mutation missing"
- => "Mutaţie iniţială lipsă",
+ => "Aspirate mutation missing",
 
     "This word violates the rules of Igbo vowel harmony"
  => "This word violates the rules of Igbo vowel harmony",
-
-    "#~ \"    --teanga=XX    specify the language of the text to be checked \"#~ \"(default=ga)\""
- => "#~ \"    --teanga=XX    specifică limba textului care urmează a fi verificat\"#~ \"(implicit=ga)\"",
-
-    "Unknown word (ignoring remainder in this sentence)"
- => "#~ \"Cuvânt necunoscut (se ignoră marcajul(remainder) în această propoziţie)\"",
-
-    "[_1]: out of memory\n"
- => "[_1]: Memorie plină\n",
-
-    "[_1]: warning: check size of [_2]: %d?\n"
- => "[_1]: avertisment: verificaţi mărimea lui [_2]: %d?\n",
-
-    "problem with the `cuardach' command\n"
- => "problemă cu comanda `cuardach'\n",
 
 );
 1;

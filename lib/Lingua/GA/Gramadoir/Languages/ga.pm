@@ -6,14 +6,14 @@ package Lingua::GA::Gramadoir::Languages::ga;
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: gramadoir 0.6\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
-#"PO-Revision-Date: 2005-03-02 23:33-0600\n"
-#"Last-Translator: Kevin Patrick Scannell <scannell@SLU.EDU>\n"
-#"Language-Team: Irish <ga@li.org>\n"
+#"Project-Id-Version: gramadoir 0.7\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-09-05 17:20-0500\n"
+#"PO-Revision-Date: 2008-08-17 12:08-0500\n"
+#"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+#"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 #"MIME-Version: 1.0\n"
-#"Content-Type: text/plain; charset=ISO-8859-1\n"
+#"Content-Type: text/plain; charset=UTF-8\n"
 #"Content-Transfer-Encoding: 8bit\n"
 
 use strict;
@@ -30,7 +30,7 @@ use vars qw(%Lexicon);
  => "rogha anaithnid [_1]",
 
     "option [_1] requires an argument"
- => "ní foláir argóint don rogha [_1]",
+ => "tá argóint de dhíth i ndiaidh na rogha [_1]",
 
     "option [_1] does not allow an argument"
  => "ní cheadaítear argóint i ndiaidh na rogha [_1]",
@@ -78,7 +78,7 @@ use vars qw(%Lexicon);
  => "    --dath=DATH    aibhsigh earráidí sa DATH seo",
 
     "    --litriu       write misspelled words to standard output"
- => "    --litriu       scríobh focail mílitrithe chuig an aschur caighdeánach",
+ => "    --litriu       scríobh focail mhílitrithe chuig an aschur caighdeánach",
 
     "    --aspell       suggest corrections for misspellings"
  => "    --aspell       mol ceartúcháin d'fhocail mílitrithe",
@@ -126,7 +126,7 @@ use vars qw(%Lexicon);
  => "[_1]: rabhadh: fadhb ag dúnadh [_2]\n",
 
     "Currently checking [_1]"
- => "Ag seiceáil [_1]",
+ => "[_1] á sheiceáil",
 
     "    --ilchiall     report unresolved ambiguities, sorted by frequency"
  => "    --ilchiall     taispeáin focail ilchiallacha, de réir minicíochta",
@@ -155,11 +155,11 @@ use vars qw(%Lexicon);
     "[_1]: unrecognized error macro: [_2]\n"
  => "[_1]: macra anaithnid earráide: [_2]\n",
 
-    "Valid word but extremely rare in actual usage"
- => "Focal ceart ach an-neamhchoitianta",
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
+ => "Focal ceart ach an-neamhchoitianta - an é atá uait anseo?",
 
     "Repeated word"
- => "Focal céanna faoi dhó",
+ => "An focal céanna faoi dhó",
 
     "Unusual combination of words"
  => "Cor cainte aisteach",
@@ -170,6 +170,9 @@ use vars qw(%Lexicon);
     "The singular form is required here"
  => "Tá gá leis an leagan uatha anseo",
 
+    "Plural adjective required"
+ => "Ba chóir duit aidiacht iolra a úsáid anseo",
+
     "Comparative adjective required"
  => "Ba chóir duit an bhreischéim a úsáid anseo",
 
@@ -177,79 +180,100 @@ use vars qw(%Lexicon);
  => "Ba chóir duit an t-alt cinnte a úsáid",
 
     "Unnecessary use of the definite article"
- => "Ní gá leis an alt cinnte anseo",
+ => "Níl gá leis an alt cinnte anseo",
+
+    "No need for the first definite article"
+ => "Níl gá leis an gcéad alt cinnte anseo",
 
     "Unnecessary use of the genitive case"
- => "Ní gá leis an leagan ginideach anseo",
+ => "Níl gá leis an leagan ginideach anseo",
 
     "The genitive case is required here"
  => "Tá gá leis an leagan ginideach anseo",
+
+    "You should use the present tense here"
+ => "Ba chóir duit an aimsir láithreach a úsáid anseo",
+
+    "You should use the conditional here"
+ => "Ba chóir duit an modh coinníollach a úsáid anseo",
 
     "It seems unlikely that you intended to use the subjunctive here"
  => "Ní dócha go raibh intinn agat an modh foshuiteach a úsáid anseo",
 
     "Usually used in the set phrase /[_1]/"
- => "Ní úsáidtear an focal seo ach san abairtín «[_1]» de ghnáth",
+ => "Ní úsáidtear an focal seo ach san abairtín ‘[_1]’ de ghnáth",
 
     "You should use /[_1]/ here instead"
- => "Ba chóir duit «[_1]» a úsáid anseo",
+ => "Ba chóir duit ‘[_1]’ a úsáid anseo",
 
     "Non-standard form of /[_1]/"
- => "Foirm neamhchaighdeánach de «[_1]»",
+ => "Foirm neamhchaighdeánach de ‘[_1]’",
 
     "Derived from a non-standard form of /[_1]/"
- => "Bunaithe ar fhoirm neamhchaighdeánach de «[_1]»",
+ => "Bunaithe ar fhoirm neamhchaighdeánach de ‘[_1]’",
 
     "Derived incorrectly from the root /[_1]/"
- => "Bunaithe go mícheart ar an bhfréamh «[_1]»",
+ => "Bunaithe go mícheart ar an bhfréamh ‘[_1]’",
 
     "Unknown word"
  => "Focal anaithnid",
 
     "Unknown word: /[_1]/?"
- => "Focal anaithnid: «[_1]»?",
+ => "Focal anaithnid: ‘[_1]’?",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Focal ceart ach aimsítear é níos minice in ionad «[_1]»",
+    "Valid word but /[_1]/ is more common"
+ => "Focal ceart ach tá ‘[_1]’ níos coitianta",
 
     "Not in database but apparently formed from the root /[_1]/"
- => "Focal anaithnid ach bunaithe ar «[_1]» is dócha",
+ => "Focal anaithnid ach bunaithe ar ‘[_1]’ is dócha",
 
     "The word /[_1]/ is not needed"
- => "Ní gá leis an fhocal «[_1]»",
+ => "Níl gá leis an fhocal ‘[_1]’",
 
     "Do you mean /[_1]/?"
- => "An raibh «[_1]» ar intinn agat?",
+ => "An raibh ‘[_1]’ ar intinn agat?",
 
     "Derived form of common misspelling /[_1]/?"
- => "Bunaithe ar fhocal mílitrithe go coitianta «[_1]»?",
+ => "Bunaithe ar fhocal mílitrithe go coitianta ‘[_1]’?",
 
     "Not in database but may be a compound /[_1]/?"
- => "Focal anaithnid ach is féidir gur comhfhocal «[_1]» é?",
+ => "Focal anaithnid ach b'fhéidir gur comhfhocal ‘[_1]’ é?",
 
     "Not in database but may be a non-standard compound /[_1]/?"
- => "Focal anaithnid ach is féidir gur comhfhocal neamhchaighdeánach «[_1]» é?",
+ => "Focal anaithnid ach b'fhéidir gur comhfhocal neamhchaighdeánach ‘[_1]’ é?",
 
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
- => "Is féidir gur focal iasachta é seo (tá na litreacha «[_1]» neamhdhóchúil)",
+ => "B'fhéidir gur focal iasachta é seo (tá na litreacha ‘[_1]’ neamhchoitianta)",
+
+    "Gender disagreement"
+ => "Inscne mhícheart",
+
+    "Number disagreement"
+ => "Uimhir mhícheart",
+
+    "Case disagreement"
+ => "Tuiseal mícheart",
 
     "Prefix /h/ missing"
- => "Réamhlitir «h» ar iarraidh",
+ => "Réamhlitir ‘h’ ar iarraidh",
 
     "Prefix /t/ missing"
- => "Réamhlitir «t» ar iarraidh",
+ => "Réamhlitir ‘t’ ar iarraidh",
 
     "Prefix /d'/ missing"
- => "Réamhlitir «d'» ar iarraidh",
+ => "Réamhlitir ‘d'’ ar iarraidh",
 
     "Unnecessary prefix /h/"
- => "Réamhlitir «h» gan ghá",
+ => "Réamhlitir ‘h’ gan ghá",
 
     "Unnecessary prefix /t/"
- => "Réamhlitir «t» gan ghá",
+ => "Réamhlitir ‘t’ gan ghá",
 
     "Unnecessary prefix /d'/"
- => "Réamhlitir «d'» gan ghá",
+ => "Réamhlitir ‘d'’ gan ghá",
+
+    "Unnecessary prefix /b'/"
+ => "Réamhlitir ‘b'’ gan ghá",
 
     "Unnecessary initial mutation"
  => "Urú nó séimhiú gan ghá",
@@ -260,8 +284,11 @@ use vars qw(%Lexicon);
     "Unnecessary lenition"
  => "Séimhiú gan ghá",
 
+    "The second lenition is unnecessary"
+ => "Ní gá leis an dara séimhiú",
+
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
- => "Leanann séimhiú an réamhfhocal «[_1]» go minic, ach ní léir é sa chás seo",
+ => "Leanann séimhiú an réamhfhocal ‘[_1]’ go minic, ach ní léir é sa chás seo",
 
     "Lenition missing"
  => "Séimhiú ar iarraidh",
@@ -279,10 +306,10 @@ use vars qw(%Lexicon);
  => "Tá gá leis an fhoirm spleách anseo",
 
     "Unnecessary use of the dependent form of the verb"
- => "Ní gá leis an fhoirm spleách",
+ => "Níl gá leis an fhoirm spleách",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
- => "Is an fhoirm tháite, leis an iarmhír «[_1]», a úsáidtear go minic",
+ => "Is an fhoirm tháite, leis an iarmhír ‘[_1]’, a úsáidtear go minic",
 
     "Second (soft) mutation missing"
  => "An dara claochlú (bog) ar iarraidh",
@@ -297,7 +324,37 @@ use vars qw(%Lexicon);
  => "An cúigiú claochlú (measctha) ar iarraidh",
 
     "Fifth (mixed) mutation after 'th missing"
- => "An cúigiú claochlú (measctha) i ndiaidh «'th» ar iarraidh",
+ => "An cúigiú claochlú (measctha) i ndiaidh ‘'th’ ar iarraidh",
+
+    "Aspirate mutation missing"
+ => "Claochlú análaithe ar iarraidh",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "Tagann an focal seo salach ar chomhréir na ngutaí in Íogbóis",
+
+    "Valid word but more often found in place of /[_1]/"
+ => "Focal ceart ach aimsítear é níos minice in ionad ‘[_1]’",
+
+    "#~ \"    --aspell       suggest corrections for misspellings (requires GNU \"#~ \"aspell)\""
+ => "#~ \"    --aspell       mol ceartúcháin d'fhocail mílitrithe (is gá le GNU \"#~ \"aspell)\"",
+
+    "#~ \"    --teanga=XX    specify the language of the text to be checked \"#~ \"(default=ga)\""
+ => "#~ \"    --teanga=XX    socraigh an teanga den téacs le seiceáil (loicthe=ga)\"",
+
+    "aspell-[_1] is not installed"
+ => "Níl aspell-[_1] ar fáil",
+
+    "Unknown word (ignoring remainder in this sentence)"
+ => "Focal anaithnid (scaoilfear an chuid eile san abairt seo)",
+
+    "[_1]: out of memory\n"
+ => "[_1]: cuimhne ídithe\n",
+
+    "[_1]: warning: check size of [_2]: %d?\n"
+ => "[_1]: rabhadh: deimhnigh méid de [_2]: %d?\n",
+
+    "problem with the `cuardach' command\n"
+ => "fadhb leis an ordú 'cuardach'\n",
 
 );
 1;

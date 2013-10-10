@@ -1,19 +1,21 @@
 package Lingua::GA::Gramadoir::Languages::de;
-# Deutsche �bersetzungen f�r gramadoir
+# Deutsche Ãbersetzungen fÃ¼r gramadoir
 # Copyright (C) 2003 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gramadoir package.
 # Karl Eichwalder <ke@gnu.franken.de>, 2003.
 # Martin Gregory <martin.gregory@sas.com>, 2003.
 # Roland Illig <roland.illig@gmx.de>, 2004.
+# Roland Illig <roland.illig@gmx.de>, 2008.
+# Roland Illig <roland.illig@gmx.de>, 2009.
 #
 #msgid ""
 #msgstr ""
-#"Project-Id-Version: gramadoir 0.5\n"
-#"Report-Msgid-Bugs-To: <scannell@slu.edu>\n"
-#"POT-Creation-Date: 2005-03-02 22:40-0600\n"
-#"PO-Revision-Date: 2004-10-16 08:54+0100\n"
+#"Project-Id-Version: gramadoir 0.7\n"
+#"Report-Msgid-Bugs-To: <kscanne@gmail.com>\n"
+#"POT-Creation-Date: 2008-08-17 12:05-0500\n"
+#"PO-Revision-Date: 2009-11-08 23:52+0100\n"
 #"Last-Translator: Roland Illig <roland.illig@gmx.de>\n"
-#"Language-Team: German <de@li.org>\n"
+#"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 #"MIME-Version: 1.0\n"
 #"Content-Type: text/plain; charset=ISO-8859-1\n"
 #"Content-Transfer-Encoding: 8bit\n"
@@ -41,7 +43,7 @@ use vars qw(%Lexicon);
  => "Fehler beim Interpretieren der Kommandozeilenoptionen",
 
     "Unable to set output color to [_1]"
- => "Unable to set output color to [_1]",
+ => "Kann Ausgabefarbe [_1] nicht einstellen",
 
     "Language [_1] is not supported."
  => "Die Sprache [_1] wird nicht unterstützt.",
@@ -155,10 +157,10 @@ use vars qw(%Lexicon);
  => "[_1]: keine grammatischen Codes: [_2]\n",
 
     "[_1]: unrecognized error macro: [_2]\n"
- => "unbekannte Option [_1]",
+ => "[_1]: unbekanntes Makro: [_2]\n",
 
-    "Valid word but extremely rare in actual usage"
- => "Gültiges Wort, wird aber extrem selten wirklich benutzt",
+    "Valid word but extremely rare in actual usage. Is this the word you want?"
+ => "Gültiges Wort, wird aber extrem selten wirklich benutzt. Ist das wirklich das Wort, das Sie haben wollen?",
 
     "Repeated word"
  => "Wortwiederholung",
@@ -167,28 +169,37 @@ use vars qw(%Lexicon);
  => "Ungewöhnliche Wortkombination",
 
     "The plural form is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Hier muss ein Plural stehen",
 
     "The singular form is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Hier muss ein Singular stehen",
+
+    "Plural adjective required"
+ => "Adjektiv im Plural benötigt",
 
     "Comparative adjective required"
  => "Adjektiv im Komparativ benötigt",
 
     "Definite article required"
- => "Definite article required",
+ => "Hier muss ein bestimmter Artikel stehen",
 
     "Unnecessary use of the definite article"
  => "Unnötige Benutzung des bestimmten Artikels",
 
+    "No need for the first definite article"
+ => "Der erste bestimmte Artikel ist hier nicht nötig",
+
     "Unnecessary use of the genitive case"
- => "Unnötige Benutzung des bestimmten Artikels",
+ => "Unnötige Benutzung des Genitivs",
 
     "The genitive case is required here"
  => "Hier muss ein Genitiv stehen",
 
+    "You should use the present tense here"
+ => "An dieser Stelle sollten Sie besser die Gegenwart benutzen",
+
     "It seems unlikely that you intended to use the subjunctive here"
- => "It seems unlikely that you intended to use the subjunctive here",
+ => "Es ist unwahrscheinlich, dass Sie hier einen Subjunktiv verwenden wollen",
 
     "Usually used in the set phrase /[_1]/"
  => "Normalerweise im Satz /[_1]/ benutzt",
@@ -209,16 +220,16 @@ use vars qw(%Lexicon);
  => "Unbekanntes Wort",
 
     "Unknown word: /[_1]/?"
- => "Unbekanntes Wort",
+ => "Unbekanntes Wort: /[_1]/?",
 
-    "Valid word but more often found in place of /[_1]/"
- => "Valid word but more often found in place of /[_1]/",
+    "Valid word but /[_1]/ is more common"
+ => "Gültiges Wort, aber /[_1]/ ist gebräuchlicher",
 
     "Not in database but apparently formed from the root /[_1]/"
  => "Nicht in der Datenbank, aber anscheinend aus der Wurzel /[_1]/ gebildet",
 
     "The word /[_1]/ is not needed"
- => "The word /[_1]/ is not needed",
+ => "Das Wort /[_1]/ ist unnötig",
 
     "Do you mean /[_1]/?"
  => "Meinen Sie /[_1]/?",
@@ -235,6 +246,15 @@ use vars qw(%Lexicon);
     "Possibly a foreign word (the sequence /[_1]/ is highly improbable)"
  => "Wahrscheinlich ein Fremdwort (die Folge /[_1]/ ist sehr unwahrscheinlich)",
 
+    "Gender disagreement"
+ => "Geschlecht stimmt nicht überein",
+
+    "Number disagreement"
+ => "Anzahl stimmt nicht überein",
+
+    "Case disagreement"
+ => "Fall stimmt nicht überein",
+
     "Prefix /h/ missing"
  => "Präfix /h/ fehlt",
 
@@ -242,7 +262,7 @@ use vars qw(%Lexicon);
  => "Präfix /t/ fehlt",
 
     "Prefix /d'/ missing"
- => "Präfix /h/ fehlt",
+ => "Präfix /d/ fehlt",
 
     "Unnecessary prefix /h/"
  => "Unnötiges Präfix /h/",
@@ -251,10 +271,13 @@ use vars qw(%Lexicon);
  => "Unnötiges Präfix /t/",
 
     "Unnecessary prefix /d'/"
- => "Unnötiges Präfix /h/",
+ => "Unnötiges Präfix /d/",
+
+    "Unnecessary prefix /b'/"
+ => "Unnötiges Präfix /b'/",
 
     "Unnecessary initial mutation"
- => "Unnötige Lenierung",
+ => "Unnötige Anlautveränderung",
 
     "Initial mutation missing"
  => "Veränderung am Anfang des Wortes fehlt",
@@ -262,44 +285,56 @@ use vars qw(%Lexicon);
     "Unnecessary lenition"
  => "Unnötige Lenierung",
 
+    "The second lenition is unnecessary"
+ => "Die zweite Lenierung ist unnötig",
+
     "Often the preposition /[_1]/ causes lenition, but this case is unclear"
- => "Often the preposition /[_1]/ causes lenition, but this case is unclear",
+ => "Die Präposition /[_1]/ bewirkt Lenierung, das ist aber in diesem Fall unklar",
 
     "Lenition missing"
  => "Lenierung fehlt",
 
     "Unnecessary eclipsis"
- => "Unnötige Lenierung",
+ => "Unnötige Eclipse",
 
     "Eclipsis missing"
  => "Eklipsis fehlt",
 
     "The dative is used only in special phrases"
- => "The dative is used only in special phrases",
+ => "Der Dativ wird nur in besonderen Satzformen benutzt",
 
     "The dependent form of the verb is required here"
- => "Hier muss ein Genitiv stehen",
+ => "Hier muss ein abhängige Verbform stehen",
 
     "Unnecessary use of the dependent form of the verb"
- => "Unnötige Benutzung des bestimmten Artikels",
+ => "Unnötige Benutzung der abhängigen Verbform",
 
     "The synthetic (combined) form, ending in /[_1]/, is often used here"
- => "The synthetic (combined) form, ending in /[_1]/, is often used here",
+ => "Die zusammengesetzte Form (hört mit /[_1]/ auf) wird hier oft benutzt",
 
     "Second (soft) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Zweite (schwache) Veränderung am Anfang des Wortes fehlt",
 
     "Third (breathed) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Dritte (gehauchte) Veränderung am Anfang des Wortes fehlt",
 
     "Fourth (hard) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Vierte (starke) Veränderung am Anfang des Wortes fehlt",
 
     "Fifth (mixed) mutation missing"
- => "Veränderung am Anfang des Wortes fehlt",
+ => "Fünfte (gemischte) Veränderung am Anfang des Wortes fehlt",
 
     "Fifth (mixed) mutation after 'th missing"
+ => "Fünfte (gemischte) Veränderung nach »th« fehlt",
+
+    "Aspirate mutation missing"
  => "Veränderung am Anfang des Wortes fehlt",
+
+    "This word violates the rules of Igbo vowel harmony"
+ => "Dieses Wort verletzt die Regeln der Igbo-Vokalharmonie",
+
+    "Valid word but more often found in place of /[_1]/"
+ => "Das Wort ist ok, wird aber meist anstelle von /[_1]/ benutzt",
 
 );
 1;
